@@ -6,7 +6,8 @@
       "@data/*": ["src/data/*"],
       "@styles/*": ["src/styles/*"],
       "@components/*": ["src/components/*"],
-      "@js/*": ["src/js/*"]
+      "@js/*": ["src/js/*"],
+      "@assets/*": ["src/assets/*"]
     }
   }
 }

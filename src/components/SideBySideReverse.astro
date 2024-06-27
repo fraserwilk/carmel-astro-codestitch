@@ -1,15 +1,16 @@
-<!-- ============================================ -->
-<!--             Side By Side Reverse             -->
-<!-- ============================================ -->
+---
+import { Image } from 'astro:assets';
+import carmelChairImage from "../assets/images/carmel-in-chair.jpg";
+---
 
 <section id="sbsr-575">
     <div class="cs-container">
         <picture class="cs-picture">
             <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="src/assets/images/carmel-in-chair.jpg">
+            <source media="(max-width: 600px)" srcset={carmelChairImage}>
             <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="src/assets/images/carmel-in-chair.jpg">
-            <img loading="lazy" decoding="async" src="src/assets/images/carmel-in-chair.jpg" alt="room" width="618" height="537">
+            <source media="(min-width: 601px)" srcset={carmelChairImage}>
+            <Image loading="lazy" decoding="async" src={carmelChairImage} alt="room">
         </picture>
         <div class="cs-content">
             <span class="cs-topper">New Beginnings</span>

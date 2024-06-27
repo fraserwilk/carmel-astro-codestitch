@@ -10,6 +10,9 @@ import SideBySide2 from "@components/SideBySide2.astro";
 import Gallery from "@components/Gallery.astro";
 import CTA from "@components/CTA.astro";
 
+import { Image } from 'astro:assets';
+import womenImage from "../assets/images/pexels-photo-4098221.webp";
+
 ---
 
 <BaseLayout
@@ -50,14 +53,11 @@ import CTA from "@components/CTA.astro";
             media="(min-width: 601px)"
             srcset="src/assets/images/pexels-photo-4098221.webp"
           />
-          <img
+          <Image
             aria-hidden="true"
-            decoding="async"
-            src="src/assets/images/pexels-photo-4098221.webp"
+            src={womenImage}
             alt="therapy"
             loading="lazy"
-            width="500"
-            height="750"
           />
         </picture>
 
