@@ -12,13 +12,14 @@ import CTA from "@components/CTA.astro";
 
 import { Image } from 'astro:assets';
 import womenImage from "../assets/images/pexels-photo-4098221.webp";
+import landingImage from "@assets/images/landing.jpg";
 
 ---
 
 <BaseLayout
   title="EMDR therapy with Carmel Pound"
   description="Carmel Pound Psychology"
-  preloadImg={import("src/assets/images/landing.jpg")}
+  preloadImg={import("@assets/images/landing.jpg")}
 >
 
 <Hero />
