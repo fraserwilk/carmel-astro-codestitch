@@ -1,14 +1,16 @@
-<!-- ============================================ -->
-<!--                  Gallery                     -->
-<!-- ============================================ -->
+---
+import { Image } from "astro:assets";
+import babyCactiImage from "@assets/images/baby-cacti.jpg";
+import smallBabyCactiImage from "@assets/images/baby-cacti-150x150.jpg";
+
+---
 
 <div id="gallery-565">
     <picture class="cs-picture">
         <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="src/assets/images/baby-cacti-768x512.jpg">
+        <source media="(max-width: 600px)" srcset="../src/assets/images/baby-cacti-768x512.jpg">
         <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="src/assets/images/baby-cacti-768x512.jpg">
-        <img loading="lazy" decoding="async" src="src/assets/images/baby-cacti-768x512.jpg" alt="baby cacti" width="768" height="512">
+        <Image src={babyCactiImage} alt="baby cacti">
     </picture>
     <picture class="cs-picture">
         <!--Mobile Image-->

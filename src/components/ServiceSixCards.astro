@@ -1,7 +1,11 @@
-<!-- ============================================ -->
-<!--                   Services - 6 cards         -->
-<!-- ============================================ -->
+---
+import { Image } from 'astro:assets';
+import smilingLadyImage from "@assets/images/pexels-photo-3754676.webp";
+import consolingImage from "@assets/images/pexels-photo-8550841.webp";
+import womenImage from "../assets/images/pexels-photo-4098221.webp";
+import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
 
+---
 <section id="services-342">
     <div class="cs-container">
         <div class="cs-content">
@@ -15,9 +19,9 @@
             <li class="cs-item">
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="src/assets/images/pexels-photo-3754676.webp">
-                        <source media="(min-width: 601px)" srcset="src/assets/images/pexels-photo-3754676.webp">
-                        <img loading="lazy" decoding="async" src="src/assets/images/pexels-photo-3754676.webp" alt="happy woman on phone" width="600" height="400" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset={smilingLadyImage}>
+                        <source media="(min-width: 601px)" srcset={smilingLadyImage}>
+                        <Image src={smilingLadyImage} alt="happy woman" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">EMDR</h3>
                     <p class="cs-item-text">
@@ -28,9 +32,9 @@
             <li class="cs-item">
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="src/assets/images/pexels-photo-4098221.webp">
-                        <source media="(min-width: 601px)" srcset="src/assets/images/pexels-photo-4098221.webp">
-                        <img loading="lazy" decoding="async" src="src/assets/images/pexels-photo-4098221.webp" alt="therapy helps" width="500" height="750" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset={womenImage}>
+                        <source media="(min-width: 601px)" srcset={womenImage}>
+                        <Image src={womenImage} alt="therapy helps" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">Therapy</h3>
                     <p class="cs-item-text">
@@ -41,9 +45,9 @@
             <li class="cs-item">
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="src/assets/images/pexels-photo-6135180.webp">
-                        <source media="(min-width: 601px)" srcset="src/assets/images/pexels-photo-6135180.webp">
-                        <img loading="lazy" decoding="async" src="src/assets/images/pexels-photo-6135180.webp" alt="chatting with friends" width="1125" height="750" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset={womenChattingImage}>
+                        <source media="(min-width: 601px)" srcset={womenChattingImage}>
+                        <Image src={womenChattingImage} alt="chatting with friends" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">EMDR Intensive</h3>
                     <p class="cs-item-text">
@@ -54,9 +58,9 @@
             <li class="cs-item">
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="src/assets/images/pexels-photo-8550841.webp">
-                        <source media="(min-width: 601px)" srcset="src/assets/images/pexels-photo-8550841.webp">
-                        <img loading="lazy" decoding="async" src="src/assets/images/pexels-photo-8550841.webp" alt="struggling to cope" width="413" height="240" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset={consolingImage}>
+                        <source media="(min-width: 601px)" srcset={consolingImage}>
+                        <Image src={consolingImage} alt="struggling to cope" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">Trauma</h3>
                     <p class="cs-item-text">
@@ -67,9 +71,9 @@
             <li class="cs-item">
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
-                      <source media="(max-width: 600px)" srcset="src/assets/images/pexels-photo-3754676.webp">
-                      <source media="(min-width: 601px)" srcset="src/assets/images/pexels-photo-3754676.webp">
-                      <img loading="lazy" decoding="async" src="src/assets/images/pexels-photo-3754676.webp" alt="happy woman on phone" width="600" height="400" aria-hidden="true">
+                      <source media="(max-width: 600px)" srcset={smilingLadyImage}>
+                      <source media="(min-width: 601px)" srcset={smilingLadyImage}>
+                      <Image src={smilingLadyImage} alt="happy woman" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">Anxiety</h3>
                     <p class="cs-item-text">
@@ -80,9 +84,9 @@
             <li class="cs-item">
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
-                      <source media="(max-width: 600px)" srcset="src/assets/images/pexels-photo-4098221.webp">
-                        <source media="(min-width: 601px)" srcset="src/assets/images/pexels-photo-4098221.webp">
-                        <img loading="lazy" decoding="async" src="src/assets/images/pexels-photo-4098221.webp" alt="therapy helps" width="500" height="750" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset={womenImage}>
+                        <source media="(min-width: 601px)" srcset={womenImage}>
+                        <Image src={womenImage} alt="therapy helps" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">Addiction</h3>
                     <p class="cs-item-text">

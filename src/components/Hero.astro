@@ -1,6 +1,8 @@
-  <!-- ============================================ -->
-  <!--                    Hero                      -->
-  <!-- ============================================ -->
+---
+import { Image } from "astro:assets";
+import playImage from "@assets/svgs/play.svg";
+import landingImage from "@assets/images/landing.jpg";
+---
 
   <section id="hero-229">
     <div class="cs-container">
@@ -10,11 +12,9 @@
         <p class="cs-text">
         </p>
         <a href="/contact" class="cs-button-solid" style="display:inline-flex">
-          <img
+          <Image
             class="cs-img"
-            loading="lazy"
-            decoding="async"
-            src="src/assets/svgs/play.svg"
+            src={playImage}
             alt="play icon"
             width="24"
             height="24"
@@ -28,16 +28,8 @@
     <!-- Background Image -->
     <picture class="cs-picture">
       <source media="(max-width: 600px)" srcset="/src/assets/images/landing-m.webp" />
-      <source media="(min-width: 601px)" srcset="/src/assets/images/landing.jpg" />
-      <img
-        aria-hidden="true"
-        decoding="async"
-        src="/src/assets/images/landing.jpg"
-        alt="new home"
-        width="2500"
-        height="1667"
-        loading="eager"
-      />
+      <source media="(min-width: 601px)" srcset={landingImage} />
+      <Image aria-hidden="true" src={landingImage} alt="calming trees" />
     </picture>
   </section>
 

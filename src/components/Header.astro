@@ -1,19 +1,15 @@
 ---
 import navData from "@data/navData.json";
+
+import { Image } from 'astro:assets';
+import logo from "@assets/svgs/logo-black.svg";
 ---
 
 <header id="cs-navigation">
   <div class="cs-container">
     <!--Nav Logo-->
     <a href="/" class="cs-logo" aria-label="back to home">
-      <img
-        src="src/assets/svgs/logo-black.svg"
-        alt="logo"
-        width="210"
-        height="29"
-        aria-hidden="true"
-        decoding="async"
-      />
+      <Image src={logo} alt="logo" aria-hidden="true" />
     </a>
     <!--Navigation List-->
     <nav class="cs-nav" role="navigation">
