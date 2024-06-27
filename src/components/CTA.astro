@@ -1,31 +1,151 @@
-<!-- ============================================ --><!--             Final Call to Action             --><!-- ============================================ -->
-<section id="cta">
-  <div class="container">
-    <h2 class="title">
-      Get It Done
-      <br />
-       With Us Today
-    </h2>
-    <p>
-      Say something catchy, informative, and encouraging to click the button to
-      go to the contact page. I like to add these to the bottom of all pages.
-    </p>
-    <a href="/contact" class="cs-button-solid">Get an Estimate Now</a>
+<section id="cta-51">
+  <div class="cs-container">
+    <div class="cs-content"> 
+      <!--<span class="cs-topper">Contact Us</span> -->
+      <h2 class="cs-title">Carmel’s here to support you</h2>
+      <p class="cs-text" style="margin-bottom: 2em;">
+        If you'd like to get in touch, make the move today.
+      </p>
+      <a href="/contact" class="cs-button-solid">Contact Carmel</a>
+    </div>
   </div>
-  <picture>
-    <source
-      media="(max-width: 600px)"
-      srcset="/assets/images/cabinets2-m.jpg"
-    />
-    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg" />
+  <!-- Background Image-->
+  <picture class="cs-picture">
+    <source media="(max-width: 600px)" srcset="src/assets/images/carmel-in-chair.jpg" />
+    <source media="(min-width: 601px)" srcset="src/assets/images/carmel-in-chair.jpg" />
     <img
       aria-hidden="true"
       decoding="async"
-      src="/assets/images/cabinets2.jpg"
-      alt="kitchen cabinets"
+      src="src/assets/images/carmel-in-chair.jpg"
+      alt="Carmel in chair"
       loading="lazy"
       width="2500"
       height="1667"
     />
   </picture>
 </section>
+
+<style>
+/*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #cta-51 {
+        padding: var(--sectionPadding);
+        position: relative;
+
+        .cs-container {
+            width: 80%;
+            max-width: 1280px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            padding: 4rem 0;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-title {
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            color: var(--bodyTextColorWhite);
+            opacity: 0.8;
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            background-color: var(--primary);
+            border-radius: (4/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: (4/16rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-picture {
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            &:before {
+                /* black color overlay */
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: #000;
+                opacity: 0.7;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+                                
+</style>

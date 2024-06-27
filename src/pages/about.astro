@@ -6,28 +6,28 @@ import CTA from "@components/CTA.astro";
 <BaseLayout
   title="About"
   description="Meta description for the page"
-  preloadImg={import("../assets/images/cabinets2.jpg")}
+  preloadImg={import("../assets/images/landing.jpg")}
 >
   <!-- ============================================ -->
   <!--                    LANDING                   -->
   <!-- ============================================ -->
 
   <section id="int-hero">
-    <h1 id="home-h">About Us</h1>
+    <h1 id="home-h">About Me</h1>
     <picture>
       <source
         media="(max-width: 600px)"
-        srcset="/assets/images/cabinets2-m.jpg"
+        srcset="../src/assets/images/parrot-in-tree.jpg"
       />
       <source
         media="(min-width: 601px)"
-        srcset="/assets/images/cabinets2.jpg"
+        srcset="../src/assets/images/parrot-in-tree.jpg"
       />
       <img
         aria-hidden="true"
         decoding="async"
-        src="/assets/images/cabinets2.jpg"
-        alt="kitchen cabinets"
+        src="../src/assets/images/parrot-in-tree.jpg"
+        alt="Carmel Pound"
         loading="eager"
         width="2500"
         height="1667"
@@ -36,296 +36,360 @@ import CTA from "@components/CTA.astro";
   </section>
 
   <!-- ============================================ -->
-  <!--                 Side By Side                 -->
-  <!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
 
-  <section id="sbs">
-    <div class="cs-container">
-      <!-- Left Image Section -->
-      <div class="cs-left">
-        <picture class="cs-picture cs-picture1">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/cabinets2-m.jpg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/cabinets2.jpg"
-          />
-          <img
-            aria-hidden="true"
-            decoding="async"
-            src="/assets/images/cabinets2.jpg"
-            alt="cabinets"
-            loading="lazy"
-            width="400"
-            height="563"
-          />
-        </picture>
-        <picture class="cs-picture cs-picture2">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/construction-m.jpg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/construction.jpg"
-          />
-          <img
-            aria-hidden="true"
-            decoding="async"
-            src="/assets/images/construction.jpg"
-            alt="house"
-            loading="lazy"
-            width="400"
-            height="563"
-          />
-        </picture>
+<!-- ============================================ 
+        This Stitch is used for content heavy interior pages
+        that have no design or layout.  Often times these are 
+        content silos where you talk extensively about a topic
+        to educate your visitors and rank on Google for the 
+        content.  These are great for pages that have a TON
+        of content.  Design isn't important here, it's all 
+        about making the content accessible and easy to read.
+================================================= -->
+
+<section id="content-page-713">
+  <div class="cs-container">
+      <div class="cs-content">
+          <h2 class="cs-title">Meet Carmel</h2>
+          
+          <h3>My background</h3>
+          
+          <p class="cs-text">I grew up in Melbourne where I completed undergraduate and post graduate studies before landing my first job in psychology providing organisational / HR and counselling services. I then lived in Vietnam for several years providing similar services to the expat and national community before returning to Australia, living in Perth and later Sydney. In both locations I started to move away from employee status and more towards contractor work providing psychological services to both government and private organisations.</p>
+          <p class="cs-text">Feeling the need for space I moved to the beautiful Southern Highlands where I have been located for the past 10 or so years working as a private practitioner, bringing a wide and varied life and professional experience into my practice.</p>
+
+          <h3>My qualifications…</h3>
+
+          <ul id="list-1405" class="cs-ul">
+            <li class="cs-li">Bachelor of Applied Science (Psychology)</li>
+            <li class="cs-li">Graduate Diploma of Applied Psychology (Organisational)</li>
+            <li class="cs-li">Accredited Practitioner - EMDR Association of Australia</li>
+            <li class="cs-li">Accredited Practitioner - WorkCover NSW</li>
+          </ul>
+          
+            <h3>My Services…</h3>
+            <p class="cs-text">I work with adults 18 years + using evidence-based psychological therapies including but not limited
+            to:</p>
+            <ul id="list-1405" class="cs-ul">
+              <li class="cs-li">EMDR</li>
+              <li class="cs-li">CBT - Cognitive Behaviour Therapy</li>
+              <li class="cs-li">DBT - Dialectical Behaviour Therapy</li>
+              <li class="cs-li">ACT - Acceptance & Commitment Therapy</li>
+              <li class="cs-li">Schema Therapy</li>
+            </ul>
+            <p class="cs-text">I regularly engage in Professional Development activities to keep me up-to-date with latest advances
+            in my field.</p>
+            
+            <h3>My referrals…</h3>
+            <p class="cs-text">Whilst the majority of my referrals come from word-of-mouth, I also accept referrals from:</p>
+            <ul id="list-1405" class="cs-ul">
+              <li class="cs-li">Insurance companies</li>
+              <li class="cs-li">GP’s</li>
+              <li class="cs-li">NDIS providers / clients</li>
+              <li class="cs-li">EAP providers</li>
+              <li class="cs-li">Open Arms</li>
+              <li class="cs-li">Victims Services</li>
+            </ul>
+            <p class="cs-text">For good self-care I balance my referral base.</p>
+            
+            <h3>My approach…</h3>
+            <p class="cs-text">My overarching philosophy is that whilst I have significant expertise to bring to the therapeutic setting, you, as the client, have your own life experience expertise as well. I find that a collaborative approach works best as does working at your pace.</p>
+            <p class="cs-text">I don’t tend to set ‘homework’ but if this works for you I can do so. More than anything, I will recommend a range of resources (books, podcasts, professional articles, etc) for you to access outside of the therapeutic setting.</p>
+            <p class="cs-text">EMDR does not require homework.</p>
+            <p class="cs-text">To help you find your best match in terms of a therapist, you might want to listen to this podcast.</p>
+            <p class="cs-text">I provide a combination of in-person appointments in my Bowral rooms and telehealth
+            appointments.</p>
+            
+            <h3>The clients I work best with… (in no particular order)</h3>
+            <ul id="list-1405" class="cs-ul">
+              <li class="cs-li">Those who have experienced trauma which may be single incident or attachment trauma.</li>
+              <li class="cs-li">Sometimes trauma presents in a less obvious way… if you find yourself ‘stuck’ or in a cycle of repeating patterns that don’t serve you well, we’d probably work well together.</li>
+              <li class="cs-li">Trauma-informed therapy.</li>
+              <li class="cs-li">People who are experiencing relationship difficulties or navigating relationship or family breakdown.</li>
+              <li class="cs-li">People who are experiencing workplace stress or interested in receiving psychological care in the context of a WorkCover or insurance claim.</li>
+            </ul>
+
       </div>
-      <!-- Right Content Section-->
-      <div class="cs-right">
-        <span class="cs-topper">About Us</span>
-        <h2 class="cs-title">About Company Title</h2>
-        <p class="cs-text">
-          In consequat tincidunt turpis sit amet imperdiet. Praesent Class
-          officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
-          et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
-          nonatourean olei aptent taciti sociosqu ad litora torquent per.
-        </p>
-        <p class="cs-text">
-          In consequat tincidunt turpis sit amet imperdiet. Praesent Class
-          officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
-          et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
-          nonatourean olei aptent taciti sociosqu ad litora torquent per.
-        </p>
-        <div class="cs-flex-group">
-          <p class="cs-flex-p">
-            In consequat tincidunt turpis sit amet imperdiet. Praesent Classei
-            consequat tincidunt turpis sit amet imperdiet for mind.
-          </p>
-          <span class="cs-name">Justin Time</span>
-          <span class="cs-job">CEO-Founder</span>
-          <img
-            class="cs-quote-icon"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-            alt="gavel"
-            width="136"
-            height="77"
-          />
-        </div>
-        <a href="/projects" class="cs-button-solid">Our Projects</a>
+      <div class="cs-image-group">
+          <picture class="cs-picture">
+              <!--Mobile Image-->
+              <source media="(max-width: 600px)" srcset="../src/assets/images/Carmel-crossed-arms-trans.png">
+              <!--Tablet and above Image-->
+              <source media="(min-width: 601px)" srcset="../src/assets/images/Carmel-crossed-arms-trans.png">
+              <img loading="lazy" decoding="async" src="../src/assets/images/Carmel-crossed-arms-trans.png" alt="Carmel" width="570" height="680" aria-hidden="true">
+          </picture>
+
+          <!--Flower Graphic-->
+          <img class="cs-flower" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fbig-abstract-flower.svg" alt="flower graphic" width="362" height="350" aria-hidden="true">
+
+          <!--Spidey Sense Graphic-->
+          <img class="cs-sense" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fspider-sense.svg" alt="spidey sense graphic" width="80" height="89" aria-hidden="true">
       </div>
-    </div>
-  </section>
-  <CTA />
+  </div>
+  <!--Waves Graphic-->
+  <picture class="cs-background">
+      <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Flarge-waves.svg" alt="waves" decoding="async" aria-hidden="true" width="625" height="952">
+  </picture>
+</section>
+                              
+<CTA />
+
 </BaseLayout>
 
 <style lang="less">
-  /* PAGE-SPECIFIC STYLES FOR THE ABOUT PAGE */
-
   /*-- -------------------------- -->
-<---       Side By Side         -->
+<---        Content Page        -->
 <--- -------------------------- -*/
 
-  /* Mobile - 360px */
-  @media only screen and (min-width: 0em) {
-    #sbs {
-      padding: var(--sectionPadding);
-
-      .cs-container {
-        width: 100%;
-        max-width: (1280/16rem);
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: (40/16rem);
-      }
-
-      .cs-left {
-        /* scaling the font size with the view width */
-        font-size: ~"min(2.31vw, .7em)";
-        /* using ems so we can use font size to scale the whole section */
-        width: (631/16em);
-        height: (636/16em);
-        position: relative;
-      }
-
-      .cs-picture {
-        border-radius: (24/16em);
-        display: block;
-        position: absolute;
-        /* clips img tag corners */
-        overflow: hidden;
-        img {
-          width: 100%;
-          height: 100%;
-          /* makes image act like a background image */
-          object-fit: cover;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-      }
-
-      .cs-picture1 {
-        width: (522/16em);
-        height: (581/16em);
-        top: 0;
-        left: 0;
-      }
-
-      .cs-picture2 {
-        width: (414/16em);
-        height: (400/16em);
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #content-page-713 {
+        padding: var(--sectionPadding);
         background-color: #fff;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-        /* 6px - 12px */
-        border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-        right: 0;
-        bottom: 0;
-      }
-
-      .cs-right {
-        max-width: (542/16rem);
-        margin: auto;
-      }
-
-      .cs-topper {
-        text-align: left;
-        margin-bottom: (4/16rem);
-      }
-
-      .cs-title {
-        text-align: left;
-        max-width: (800/16rem);
-      }
-
-      .cs-text {
-        text-align: left;
-        max-width: (750/16rem);
-        margin-bottom: (16/16rem);
-        color: var(--bodyTextColor);
-
-        &:last-of-type {
-          margin-bottom: (32/16rem);
-        }
-      }
-
-      .cs-flex-group {
-        /* 16px - 32px */
-        padding: clamp(1rem, 3vw, 2rem);
-        background-color: #f7f7f7;
-        border-radius: (16/16rem);
+        /* clips the wave background from causing overflow issues when it goes off screen */
+        overflow: hidden;
         position: relative;
-      }
+        z-index: 1;
 
-      .cs-flex-p {
-        /* 14px - 16px */
-        font-size: clamp(0.875rem, 1.5vw, 1rem);
-        line-height: 1.5em;
-        margin: 0 0 (16/16rem);
-        color: #353535;
-      }
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+        }
 
-      .cs-name {
-        font-size: (16/16rem);
-        font-weight: bold;
-        line-height: 1.2em;
-        text-transform: uppercase;
-        margin: 0 0 (4/16rem);
-        color: var(--headerColor);
-        display: block;
-      }
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (738/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
 
-      .cs-job {
-        font-size: (14/16rem);
-        line-height: 1.5em;
-        color: #353535;
-        display: block;
-      }
+            img {
+                width: 100%;
+                height: auto;
+                margin: (16/16rem) 0;
+                display: block;
+            }
+        }
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            text-align: inherit;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--headerColor);
+        }
 
-      .cs-quote-icon {
-        /* 60px - 136px */
-        width: clamp(3.75rem, 10vw, 8.5rem);
-        height: auto;
-        position: absolute;
-        /* 16px - 32px */
-        right: clamp(1rem, 4vw, 2rem);
-        bottom: (0/16rem);
-      }
+        h2 {
+            font-size: (32/16rem);
+            margin-top: (32/16rem);
+        }
 
-      .cs-button-solid {
-        margin-top: (32/16rem);
-      }
+        h3 {
+            font-size: (24/16rem);
+            color: var(--primary);
+        }
+
+        h4,
+        h5,
+        h6 {
+            font-size: (20/16rem);
+        }
+
+        .cs-button-solid {
+            margin-bottom: (32/16rem);
+        }
+
+        .cs-color {
+            color: var(--primary);
+        }
+
+        p {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--bodyTextColor);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+
+            a {
+                font-size: inherit;
+                line-height: inherit;
+                text-decoration: underline;
+                color: var(--primary);
+            }
+        }
+
+        ol,
+        ul {
+            padding-left: (24/16rem);
+            margin: 0 0 (32/16rem) 0;
+            color: var(--bodyTextColor);
+            display: flex;
+            flex-direction: column;
+            gap: (16/16rem);
+        }
+
+        ul {
+            li {
+                list-style: none;
+                color: inherit;
+                position: relative;
+
+                &:before {
+                    /* custom list bullet */
+                    content: "";
+                    width: 3px;
+                    height: 3px;
+                    background: currentColor;
+                    opacity: 1;
+                    border-radius: 50%;
+                    position: absolute;
+                    display: block;
+                    top: (10/16rem);
+                    left: (-12/16rem);
+                }
+            }
+        }
+
+        .cs-image-group {
+            /* scales the whole section down and ties the font size to the vw and stops at 70% of the vale of 1em, changes at desktop */
+            font-size: ~"min(1vw, 1em)";
+            /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+            width: (542/16em);
+            height: (773/16em);
+            display: none;
+            /* prevents flexbox from squishing it */
+            flex: none;
+            position: relative;
+            /* flips it horizontally */
+            transform: scaleX(-1);
+        }
+
+        .cs-picture {
+            width: (542/16em);
+            height: (647/16em);
+            border-radius: (285/16em);
+            border: (12/16em) solid #fff;
+            background-color: #f7f7f7;
+            /* prevents border from affecting height and width */
+            box-sizing: border-box;
+            /* clips img tag corners */
+            overflow: hidden;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                /* makes it act like a background image */
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                /* flips the image to its original orientation */
+                transform: scaleX(-1);
+            }
+        }
+
+        .cs-flower {
+            width: (362/16em);
+            height: auto;
+            display: block;
+            position: absolute;
+            bottom: (-38/16em);
+            right: (-48/16em);
+            z-index: -1;
+            transform: rotate(142deg);
+        }
+
+        .cs-sense {
+            width: (80/16em);
+            height: auto;
+            position: absolute;
+            top: (-4/16em);
+            left: (10/16em);
+            transform: rotate(90deg);
+        }
+
+        .cs-background {
+            display: none;
+        }
     }
-  }
+}
 
-  /* Desktop - 1024px */
-  @media only screen and (min-width: 64em) {
-    #sbs {
-      .cs-container {
-        flex-flow: row;
-        justify-content: space-between;
-        gap: (52/16rem);
-      }
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #content-page-713 {
+        .cs-container {
+            flex-direction: row;
+            align-items: flex-start;
+        }
 
-      .cs-left {
-        font-size: ~"min(1.2vw, 1em)";
-        flex: none;
-      }
+        .cs-image-group {
+            display: block;
+        }
 
-      .cs-right {
-        margin: 0;
-      }
+        .cs-background {
+            width: 20%;
+            height: 100%;
+            background-color: #f7f7f7;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                opacity: 0.2;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+        }
     }
-  }
+}
 
-  /* Dark Mode */
-  @media only screen and (min-width: 0em) {
-    body.dark-mode {
-      #sbs {
-        .cs-left {
-          &:before,
-          &:after {
-            background: var(--accent);
-          }
+/* Large Desktop 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #content-page-713 {
+        .cs-image-group {
+            /* position absolute so we can have it overflow the container as seen in the design. */
+            font-size: inherit;
+            position: absolute;
+            top: (0/16rem);
+            right: (-100/16rem);
         }
 
-        .cs-picture2 {
-          background-color: var(--dark);
-          /* 6px - 12px */
-          border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
+        .cs-background {
+            width: 50%;
+            /* with the left edge always positioned at the center line, we push left of the center line by 335px.  This ensures that this element will stay exactly in this position no matter how wide the screen gets */
+            margin-left: (335/16rem);
+            right: auto;
+            /* sets the left edge of the element to be at the center line */
+            left: 50%;
         }
-
-        .cs-topper {
-          color: var(--primaryLight);
-        }
-
-        .cs-title,
-        .cs-text,
-        .cs-h3,
-        .cs-flex-p,
-        .cs-name {
-          color: var(--bodyTextColorWhite);
-        }
-
-        .cs-flex-group {
-          background-color: var(--accent);
-        }
-
-        .cs-job {
-          color: var(--bodyTextColorWhite);
-          opacity: 0.8;
-        }
-
-        .cs-quote-icon {
-          opacity: 0.2;
-        }
-      }
     }
-  }
+}
 </style>

@@ -1,0 +1,290 @@
+  <!-- ============================================ -->
+  <!--                    Hero                      -->
+  <!-- ============================================ -->
+
+  <section id="hero-229">
+    <div class="cs-container">
+      <div class="cs-flex-group">
+        <span class="cs-topper">EMDR Therapy</span>
+        <h1 class="cs-title">Counselling & EMDR Therapy for Busy People</h1>
+        <p class="cs-text">
+        </p>
+        <a href="/contact" class="cs-button-solid" style="display:inline-flex">
+          <img
+            class="cs-img"
+            loading="lazy"
+            decoding="async"
+            src="src/assets/svgs/play.svg"
+            alt="play icon"
+            width="24"
+            height="24"
+            style="margin:auto 0.5em"
+          />
+           Request an Appointment
+        </a>
+      </div>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-picture">
+      <source media="(max-width: 600px)" srcset="/src/assets/images/landing-m.webp" />
+      <source media="(min-width: 601px)" srcset="/src/assets/images/landing.jpg" />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/src/assets/images/landing.jpg"
+        alt="new home"
+        width="2500"
+        height="1667"
+        loading="eager"
+      />
+    </picture>
+  </section>
+
+  <style>
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #hero-229 {
+        /* changes on tablet */
+        padding: 0 (16/16rem);
+        position: relative;
+        z-index: 1;
+        /* prevents overflow from the lines extending past the screen width */
+        overflow: hidden;
+
+        .cs-picture {
+            /* Background Image */
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+
+            &:before {
+                /* Black Color Overlay */
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: .6;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                /* prevents the cursor from interacting with it */
+                pointer-events: none;
+            }
+            
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* Makes image act like a background-image */
+                object-fit: cover;
+            }
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
+            /* 144px - 280px - leaving extra space for the navigation */
+            /* changes on tablet */
+            padding: clamp(9rem, 25.95vw, 17.5rem) 0 4rem;
+            margin: auto;
+            position: relative;
+        }
+
+        .cs-flex-group {
+            /* 60px - 220px */
+            margin-bottom: clamp(3.75rem, 15.5vw, 13.75rem);
+            margin: auto;
+            width: 80vw;
+            /* 464px - 562px */
+            max-width: clamp(29rem, 60vw, 35.125rem);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: (20/16rem);
+            box-sizing: border-box;
+        }
+
+        .cs-topper {
+            /* 13px - 16px */
+            font-size: clamp(.8125rem, 1.6vw, 1rem);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: .1rem;
+            font-weight: 700;
+            color: var(--primaryLight);
+            margin-bottom: (16/16rem);
+            display: block;
+        }
+
+        .cs-title {
+            /* 39px - 61px */
+            font-size: clamp(2.4375rem, 6.40vw, 3.8125rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            text-align: center;
+            width: 100%;
+            /* 32px - 40px */
+            margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+            color: var(--bodyTextColorWhite);
+            position: relative;
+        }
+
+        .cs-text {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 1.95vw, 1.25rem);
+            line-height: 1.5em;
+            text-align: center;
+            width: 100%;
+            /* 32px - 40px */
+            margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+            /* 40px - 48px */
+            margin-bottom: clamp(2.5rem, 4vw, 3rem);
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            font-weight: 700;
+            /* 46px - 56px */
+            line-height: clamp(2.875em, 5.5vw, 3.5em);
+            text-align: center;
+            text-decoration: none;
+            min-width: (150/16rem);
+            margin: 0;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+            padding: 0 (48/16rem);
+            background-color: var(--primary);
+            overflow: hidden;
+            color: #fff;
+            border: none;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s;
+
+            &:before {
+                content: "";
+                width: 0;
+                height: 100%;
+                background: #000;
+                opacity: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                color: #fff;
+
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-button-transparent {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            width: (180/16rem);
+            /* 46px - 56px */
+            height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+	    	font-weight: 700;
+            margin: 0;
+            color: #fff;
+            padding: 0;
+            background-color: transparent;
+            border: 1px solid var(--bodyTextColorWhite);
+            box-sizing: border-box;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                background: #000;
+                opacity: 1;
+                /* so it sits on top of the border */
+                top: -1px;
+                left: -1px;
+                right: -1px;
+                bottom: -1px;
+                z-index: -1;
+                transform-origin: left;
+                /* this is what creates the grow affect on hover */
+                transform: scaleX(0);
+                transition: transform .3s;
+            }
+
+            &:hover {
+                &:before {
+                    transform: scaleX(1);
+                }
+            }
+
+            .cs-img {
+                display: block;
+                margin-right: (12/16rem);
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #hero-229 {
+        /* 32px - 40px */
+        padding: 0 clamp(2rem, 5vw, 2.5rem);
+
+        .cs-container {
+            padding: clamp(9rem, 25.95vw, 17.5rem) 0 4rem;
+        }
+
+        .cs-button-solid {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* Desktop Parallax Effect - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #hero-229 {
+        background: url("src/assets/images/landing.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+        /* creates parallax effect on background image */
+        background-attachment: fixed;
+        /* remove img tag so we can make parallax work */
+        .cs-picture {
+            img {
+                display: none;
+            }
+        }
+    }
+}
+</style>

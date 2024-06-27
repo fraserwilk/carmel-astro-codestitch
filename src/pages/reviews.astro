@@ -6,7 +6,7 @@ import CTA from "@components/CTA.astro";
 <BaseLayout
   title="Reviews"
   description="Meta description for the page"
-  preloadImg={import("../assets/images/cabinets2.jpg")}
+  preloadImg={import("src/assets/images/landing.jpg")}
 >
   <!-- ============================================ -->
   <!--                    LANDING                   -->
@@ -19,11 +19,11 @@ import CTA from "@components/CTA.astro";
         media="(max-width: 600px)"
         srcset="/assets/images/landing-m.webp"
       />
-      <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg" />
+      <source media="(min-width: 601px)" srcset="src/assets/images/landing.jpg" />
       <img
         aria-hidden="true"
         decoding="async"
-        src="/assets/images/landing.jpg"
+        src="src/assets/images/landing.jpg"
         alt="new home"
         width="2500"
         height="1667"

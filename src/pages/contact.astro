@@ -6,28 +6,31 @@ import client from "@data/client.json";
 <BaseLayout
   title="Contact"
   description="Meta description for the page"
-  preloadImg={import("../assets/images/cabinets2.jpg")}
+  preloadImg={import("src/assets/images/landing.jpg")}
 >
+
+
+                              
   <!-- ============================================ -->
   <!--                    LANDING                   -->
   <!-- ============================================ -->
 
   <section id="int-hero">
-    <h1 id="home-h">Contact Us</h1>
+    <h1 id="home-h">Contact Me</h1>
     <picture>
       <source
         media="(max-width: 600px)"
-        srcset="/assets/images/cabinets2-m.jpg"
+        srcset="src/assets/images/baby-cacti-768x512.jpg"
       />
       <source
         media="(min-width: 601px)"
-        srcset="/assets/images/cabinets2.jpg"
+        srcset="src/assets/images/baby-cacti-768x512.jpg"
       />
       <img
         aria-hidden="true"
         decoding="async"
-        src="/assets/images/cabinets2.jpg"
-        alt="kitchen cabinets"
+        src="src/assets/images/baby-cacti-768x512.jpg"
+        alt="baby cacti"
         loading="eager"
         width="2500"
         height="1667"
@@ -45,10 +48,8 @@ import client from "@data/client.json";
         <div class="cs-content">
           <span class="cs-topper">Contact</span>
           <h2 class="cs-title">Get in Touch</h2>
-          <p class="cs-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus
-            elementum ullamcorper ipsum porttitor aliquam. Id magna urna
-            ultrices odio pulvinar. Sed ut.
+          <p class="cs-text">Most of my clients come from word of mouth and GP referrals.</p>
+          <p class="cs-text">I'd love you to let me know how you found me.</p>
           </p>
         </div>
         <label>
@@ -82,12 +83,12 @@ import client from "@data/client.json";
           />
         </label>
         <label>
-          How Did You Find Us
+          How Did You Find Me
           <input
             type="text"
             id="find"
             name="find-us"
-            placeholder="How did you find us?"
+            placeholder="How did you find me?"
           />
         </label>
         <label class="cs-label-message">
@@ -111,10 +112,8 @@ import client from "@data/client.json";
         >
         <!--Address-->
         <span class="cs-header">Address</span>
-        <a class="cs-link" href={client.address.mapLink}>
+        <a class="cs-link" href={client.address.mapLink} target="_blank">
           {client.address.lineOne},
-          <br />
-          {client.address.lineTwo},
           <br />
           <span class="cs-block">
             {client.address.city}
@@ -127,16 +126,16 @@ import client from "@data/client.json";
         <picture class="cs-bg-picture">
           <source
             media="(min-width: 601px)"
-            srcset="/assets/images/skyscraper.jpg"
+            srcset="src/assets/images/paper-star.png"
           />
           <img
             aria-hidden="true"
             decoding="async"
-            src="/assets/images/skyscraper.jpg"
-            alt="building"
+            src="src/assets/images/paper-star.png"
+            alt="Get in touch"
             loading="lazy"
-            width="2500"
-            height="1667"
+            width="1024"
+            height="1024"
           />
         </picture>
       </div>
@@ -165,7 +164,7 @@ import client from "@data/client.json";
     }
 
     #cs-contact {
-      font-family: "Roboto", "Arial", sans-serif;
+      font-family: "Figtree", "Arial", sans-serif;
       padding: var(--sectionPadding);
 
       .cs-container {

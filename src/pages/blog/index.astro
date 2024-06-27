@@ -15,7 +15,7 @@ posts.sort(
 <BaseLayout
   title="Blog"
   description="Meta description for the page"
-  preloadImg={import("../../assets/images/cabinets2.jpg")}
+  preloadImg={import("src/assets/images/parrot-in-tree-150x150.jpg")}
 >
   <!-- ============================================ -->
   <!--                    LANDING                   -->
@@ -26,17 +26,17 @@ posts.sort(
     <picture>
       <source
         media="(max-width: 600px)"
-        srcset="/assets/images/cabinets2-m.jpg"
+        srcset="/assets/images/coloured-blocks-m.webp"
       />
       <source
         media="(min-width: 601px)"
-        srcset="/assets/images/cabinets2.jpg"
+        srcset="src/assets/images/coloured-blocks.webp"
       />
       <img
         aria-hidden="true"
         decoding="async"
-        src="/assets/images/cabinets2.jpg"
-        alt="kitchen cabinets"
+        src="src/assets/images/coloured-blocks.webp"
+        alt="calming trees"
         loading="eager"
         width="2500"
         height="1667"
@@ -70,20 +70,6 @@ posts.sort(
               </picture>
 
               <div class="article-group">
-                <div class="blog-authorGroup">
-                  <picture class="blog-author-img">
-                    <img
-                      src="/assets/svgs/profile.svg"
-                      alt="house"
-                      width="32"
-                      height="32"
-                      decoding="async"
-                    />
-                  </picture>
-                  <span class="blog-author">{post.data.author}</span>
-                  <span aria-hidden="true" class="blog-dot" />
-                  <span class="blog-date">{formatDate(post.data.date)}</span>
-                </div>
                 <h2 class="blog-h1">{post.data.title}</h2>
                 <p class="blog-desc">{post.data.description}</p>
                 <a href={post.slug} class="blog-link">

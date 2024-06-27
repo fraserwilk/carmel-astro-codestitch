@@ -8,13 +8,13 @@
 @media only screen and (min-width: 0em) {
   // Website colors
   :root {
-    --primary: #ffba19;
-    --primaryLight: #ffd675;
-    --secondary: #001f3f;
-    --secondaryLight: #001f3f;
-    --headerColor: #1a1a1a;
-    --bodyTextColor: #4e4b66;
-    --bodyTextColorWhite: #fafbfc;
+    --primary: #A4C3B2;
+    --primaryLight: #C9D9D0;
+    --secondary: #314a3d;
+    --secondaryLight: #416250;
+    --headerColor: #223329;
+    --bodyTextColor: #121b16;
+    --bodyTextColorWhite: #f7faf8;
 
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -26,33 +26,45 @@
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
   }
 
-  // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
-  .cs-topper {
+*,
+*:before,
+*:after {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+.cs-topper {
     font-size: var(--topperFontSize);
-    font-weight: 700;
     line-height: 1.2em;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--secondary);
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: (4/16rem);
     display: block;
-  }
+}
 
-  .cs-title {
+.cs-title {
     font-size: var(--headerFontSize);
     font-weight: 900;
     line-height: 1.2em;
-    margin: 0 auto (16/16rem);
+    text-align: inherit;
+    max-width: (900/16rem);
+    margin: 0 0 (16/16rem) 0;
     color: var(--headerColor);
     position: relative;
-  }
-
+}
   .cs-text {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
+    text-align: inherit;
     width: 100%;
-    margin: 0 auto;
+    max-width: (850/16rem);
+    margin: 0;
     color: var(--bodyTextColor);
-  }
+}
+     
 
   // Button - can be replaced using CodeStitch's "Button" Stitches
   .cs-button-solid {
@@ -102,45 +114,44 @@
 
 /* Fonts and general styles */
 @media only screen and (min-width: 0em) {
-  // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
 
-  /* roboto-regular - latin */
+  /* Figtree-Regular */
   @font-face {
     font-style: normal;
-    font-family: "Roboto";
+    font-family: "Figtree";
     font-weight: 400;
     font-display: swap;
     src: local(""),
-      url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
+      url("/assets/fonts/Figtree-Regular.woff2") format("woff2"),
       /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        url("/assets/fonts/Figtree-Regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-  /* roboto-700 - latin */
+  /* Figtree-Medium */
   @font-face {
     font-style: normal;
-    font-family: "Roboto";
+    font-family: "Figtree";
     font-weight: 700;
     font-display: swap;
     src: local(""),
-      url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
+      url("/assets/fonts/Figtree-Medium.woff2") format("woff2"),
       /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        url("/assets/fonts/Figtree-Medium.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-  /* roboto-900 - latin */
+  /* Figtree-SemiBold */
   @font-face {
     font-style: normal;
-    font-family: "Roboto";
+    font-family: "Figtree";
     font-weight: 900;
     font-display: swap;
     src: local(""),
-      url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
+      url("/assets/fonts/Figtree-SemiBold.woff2") format("woff2"),
       /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        url("/assets/fonts/Figtree-SemiBold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 
   body,
   html {
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: "Figtree", Arial, sans-serif;
     font-size: 100%;
     margin: 0;
     padding: 0;
@@ -148,20 +159,15 @@
     overflow-x: hidden;
   }
 
-  *,
-  *:before,
-  *:after {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-  }
+
 
   body {
     transition: background-color 0.3s;
   }
 
-  .container {
-    width: 92%;
+  .cs-container {
+    width: 80%;
+    max-width: 1280px;
     margin: auto;
     position: relative;
   }
@@ -316,7 +322,7 @@
 
   #cs-navigation {
     /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-    font-family: "Roboto", "Arial", sans-serif;
+    font-family: "Figtree", "Arial", sans-serif;
     width: 100%;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
@@ -370,7 +376,7 @@
 
     .cs-logo {
       width: 40%;
-      max-width: (146/16rem);
+      max-width: 6rem;
       height: 100%;
       margin: 0 auto 0 0;
       /* prevents padding from affecting height and width */
@@ -593,6 +599,12 @@
       .cs-li-link {
         color: var(--bodyTextColorWhite);
       }
+    }
+
+    #cs-footer-269 {.cs-logo {
+      /* makes it white */
+      filter: grayscale(1) brightness(1000%);
+    }
     }
   }
 }
@@ -830,7 +842,7 @@
 @media only screen and (min-width: 64rem) {
   #cs-navigation {
     /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-    font-family: "Roboto", "Arial", sans-serif;
+    // font-family: "Roboto", "Arial", sans-serif;
     width: 100%;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
@@ -1048,381 +1060,25 @@
   }
 }
 
-/*-- -------------------------- -->
-<---    Final Call To Action    -->
-<--- -------------------------- -*/
 
-/* Mobile */
-@media only screen and (min-width: 0em) {
-  #cta {
-    padding: (50/16rem) 0;
-    position: relative;
-
-    &:before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: #000;
-      opacity: 0.7;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-
-    .container {
-      text-align: center;
-    }
-
-    picture {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -2;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    }
-
-    .title {
-      font-size: ~"min(9vw, 3rem)";
-      font-weight: 900;
-      line-height: 58/48;
-      text-align: center;
-      margin-bottom: (36/16rem);
-      color: #fff;
-      position: relative;
-    }
-
-    p {
-      text-align: center;
-      width: 96%;
-      max-width: (598/16rem);
-      margin: auto;
-      margin-bottom: (36/16rem);
-      color: #fff;
-      opacity: 1;
-    }
-  }
-}
-
-/* Small Desktop */
+/* Desktop - 1024px */
 @media only screen and (min-width: 64em) {
-  #cta {
-    padding: (168/16rem) 0;
-  }
-}
-
-/* Large Desktop */
-@media only screen and (min-width: 1300px) {
-  #cta {
-    margin-top: (100/16rem);
-    position: relative;
-    &:before {
-      display: none;
-    }
-    &:after {
-      content: "";
-      width: (2000/16rem);
-      height: (1108/16rem);
-      background: url("/assets/svgs/cta-squares.svg");
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      opacity: 1;
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      z-index: -3;
-      transform: translateX(-50%);
-    }
-    .container {
-      width: 90.0625%;
-      margin: auto;
-    }
-
-    picture {
-      width: 90.0625%;
-      left: 50%;
-      transform: translateX(-50%);
-
-      &:before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: #000;
-        opacity: 0.7;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-      }
-    }
-  }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode {
-    #cta {
-      &:after {
-        display: none;
-      }
-    }
-  }
-}
-
-/*-- -------------------------- -->
-<---           Footer           -->
-<--- -------------------------- -*/
-
-/* Mobile */
-@media only screen and (min-width: 0em) {
-  #footer {
-    font-size: ~"min(4vw, 1.2em)";
-    padding: (84/16rem) 0 (20/16rem);
-    background: #1c1c1c;
-
-    .left-section {
-      text-align: center;
-      margin: auto;
-      margin-bottom: (50/16rem);
-      .logo {
-        text-align: center;
-        width: auto;
-        height: (32/16em);
-        margin: auto;
-        margin-bottom: (30/16em);
-        display: inline-block;
-
-        img {
-          width: auto;
-          height: 100%;
-          display: block;
-        }
-      }
-
-      p {
-        font-size: (14/16rem);
-        line-height: 27/14;
-        text-align: center;
-        width: 100%;
-        width: 307/14rem;
-        margin: auto;
-        color: #fff;
-        opacity: 0.9;
-      }
-    }
-
-    .right-section {
-      width: 96%;
-      max-width: (407/16rem);
-      margin: auto;
-      .lists {
-        width: 96%;
-        max-width: (307/16rem);
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        ul {
-          margin-top: 0;
-          margin-bottom: 0;
-          padding: 0;
-
-          &:nth-of-type(3) {
-            margin-top: (50/16rem);
-            li {
-              margin-bottom: (16/16rem);
-              display: flex;
-              justify-content: flex-start;
-              align-items: center;
-
-              &:last-of-type {
-                margin-bottom: 0;
-              }
-            }
-          }
-
-          li {
-            font-size: (18/16rem);
-            list-style: none;
-            margin-bottom: (12/16rem);
-            color: #fff;
-            opacity: 0.9;
-
-            a {
-              line-height: 21/18em;
-              text-decoration: none;
-              color: #fff;
-              transition: color 0.3s;
-              &:hover {
-                color: var(--primary);
-              }
-            }
-          }
-          h2 {
-            font-size: (18/16rem);
-            font-weight: bold;
-            line-height: 21/18em;
-            text-transform: uppercase;
-            margin-bottom: (37/16rem);
-            color: #fff;
-            position: relative;
-
-            &:before {
-              content: "";
-              width: (97/16rem);
-              height: (2/16rem);
-              background: var(--primary);
-              opacity: 1;
-              display: block;
-              position: absolute;
-              bottom: (-16/16rem);
-              left: 0;
-            }
-          }
-        }
-      }
-
-      .buttons {
-        display: flex;
-        justify-content: center;
-      }
-
-      .cs-button-solid {
-        width: (250/16rem);
-        height: (53/16rem);
-        margin: 0;
-        padding-top: (3/16rem);
-      }
-    }
-
-    .credit {
-      font-size: (16/16rem);
-      line-height: (36/16rem);
-      text-align: center;
-      width: 96%;
-      margin: auto;
-      margin-top: (100/16rem);
-      color: #fff;
-
-      a {
-        font-size: (16/16rem);
-        text-decoration: none;
-        color: var(--primary);
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-      .copyright {
-        font-size: (16/16rem);
-        display: block;
-      }
-    }
-  }
-}
-
-/* Small Desktop */
-@media only screen and (min-width: 64em) {
-  #footer {
-    font-size: ~"min(1.2vw, 1em)";
-    .container {
-      width: 96%;
-      max-width: (1320/16rem);
-      margin: auto;
-      padding: 0;
-      display: flex;
-      flex-direction: row;
+  #sbs-r {
+    .cs-container {
+      flex-flow: row;
       justify-content: space-between;
-      flex-wrap: nowrap;
+      gap: 3.25rem;
     }
 
-    .left-section {
-      text-align: left;
-      width: (409/16rem);
+    .cs-left {
+      font-size: ~"min(1.2vw, 1em)";
+      /* sends it to the right */
+      order: 2;
+      flex: none;
+    }
+
+    .cs-right {
       margin: 0;
-
-      .logo {
-        text-align: left;
-        height: (40/16rem);
-        margin-left: 0;
-      }
-
-      p {
-        text-align: left;
-        margin-left: 0;
-      }
-    }
-
-    .right-section {
-      width: (609/16rem);
-      max-width: none;
-      margin: 0;
-      .lists {
-        width: 96%;
-        max-width: (769/16rem);
-        max-width: initial;
-        margin: 0;
-
-        ul {
-          &:nth-of-type(3) {
-            margin-top: 0;
-
-            li:first-of-type {
-              margin-bottom: 0;
-            }
-          }
-
-          li {
-            a {
-              position: relative;
-
-              &:before {
-                content: "";
-                width: 0%;
-                height: (2/16rem);
-                background: var(--primary);
-                opacity: 1;
-                display: block;
-                position: absolute;
-                bottom: (-3/16rem);
-                left: 0;
-                transition: width 0.3s;
-              }
-
-              &:hover {
-                &:before {
-                  width: 100%;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .buttons {
-        justify-content: flex-start;
-      }
-    }
-
-    .credit {
-      .copyright {
-        display: inline-block;
-      }
     }
   }
 }
@@ -1430,8 +1086,44 @@
 /* Dark Mode */
 @media only screen and (min-width: 0em) {
   body.dark-mode {
-    #footer {
-      background: #061623;
+    #sbs-r {
+      .cs-left {
+        &:before,
+        &:after {
+          background: var(--accent);
+        }
+      }
+
+      .cs-picture2 {
+        background-color: var(--dark);
+        /* 6px - 12px */
+        border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
+      }
+
+      .cs-topper {
+        color: var(--primaryLight);
+      }
+
+      .cs-title,
+      .cs-text,
+      .cs-h3,
+      .cs-flex-p,
+      .cs-name {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-flex-group {
+        background-color: var(--accent);
+      }
+
+      .cs-job {
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+      }
+
+      .cs-quote-icon {
+        opacity: 0.2;
+      }
     }
   }
 }

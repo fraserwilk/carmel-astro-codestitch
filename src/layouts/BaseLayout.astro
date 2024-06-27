@@ -1,12 +1,15 @@
 ---
+import { Image } from 'astro:assets';
 import client from "@data/client.json";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import "@styles/root.less";
 import "@styles/dark.less";
 
-const {description, title, preloadImg = ""} = Astro.props;
+const {description, title, preloadImg } = Astro.props;
+
 ---
+
 <!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
 <html lang="en">
         <head>
@@ -35,14 +38,14 @@ const {description, title, preloadImg = ""} = Astro.props;
             <meta name="theme-color" content="#ffffff">
     
             <!-- Preloads -->
-            <link rel="preload" as="image" href="/assets/svgs/logo-white.svg">
-            <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
-            <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
+            <link rel="preload" as="image" href="src/assets/svgs/logo-white.svg">
+            <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Figtree-Regular.woff2" crossorigin>
+            <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Figtree-Medium.woff2" crossorigin>
     
             <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
-            { (preloadImg) !== "" &&
-                <link rel="preload" as="image" href={preloadImg} />
-            }
+            <!-- { (preloadImg) !== "" &&
+                <Image src={preloadImg} alt="calming trees" loading="eager" />
+            } -->
     
             <!-- Sitewide Scripts -->
             <script defer src="/assets/js/nav.js"></script>
