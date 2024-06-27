@@ -1,7 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import playImage from "@assets/svgs/play.svg";
-import landingImage from "@assets/images/landing.jpg";
+import landingImage from "src/assets/images/landing.jpg";
+import landingSmallImage from "@assets/images/landing-m.webp";
 ---
 
   <section id="hero-229">
@@ -27,8 +28,8 @@ import landingImage from "@assets/images/landing.jpg";
 
     <!-- Background Image -->
     <picture class="cs-picture">
-      <source media="(max-width: 600px)" srcset="/src/assets/images/landing-m.webp" />
-      <source media="(min-width: 601px)" srcset={landingImage} />
+      <source media="(max-width: 600px)" srcset="src/assets/images/landing-m.webp" />
+      <source media="(min-width: 601px)" srcset="src/assets/images/landing.jpg" />
       <Image aria-hidden="true" src={landingImage} alt="calming trees" />
     </picture>
   </section>
