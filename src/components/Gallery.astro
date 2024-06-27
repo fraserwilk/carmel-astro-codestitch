@@ -1,32 +1,22 @@
 ---
+import { Picture } from "astro:assets";
 import { Image } from "astro:assets";
 import babyCactiImage from "@assets/images/baby-cacti.jpg";
-import smallBabyCactiImage from "@assets/images/baby-cacti-150x150.jpg";
+import parrotImage from "@assets/images/parrot-in-tree-768x512.jpg";
+import oceanImage from "@assets/images/ocean-waves-768x512.jpg";
 
 ---
 
 <div id="gallery-565">
-    <picture class="cs-picture">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="../src/assets/images/baby-cacti-768x512.jpg">
-        <!--Tablet and above Image-->
-        <Image src={babyCactiImage} alt="baby cacti">
-    </picture>
-    <picture class="cs-picture">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="src/assets/images/parrot-in-tree-768x512.jpg">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="src/assets/images/parrot-in-tree-768x512.jpg">
-        <img loading="lazy" decoding="async" src="src/assets/images/parrot-in-tree-768x512.jpg" alt="picture" width="768" height="512">
-    </picture>
-    <picture class="cs-picture">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="src/assets/images/ocean-waves-768x512.jpg">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="src/assets/images/ocean-waves-768x512.jpg">
-        <img loading="lazy" decoding="async" src="src/assets/images/ocean-waves-768x512.jpg" alt="picture" width="768" height="512">
-    </picture>
-
+    <div class="cs-picture">
+        <Picture src={babyCactiImage} formats={['webp', 'jpg']} alt="baby cacti" />
+    </div>
+    <div class="cs-picture">
+        <Picture src={parrotImage} formats={['webp','jpg']} alt="parrot" />
+    </div>
+    <div class="cs-picture">
+        <Picture src={oceanImage} formats={['webp','jpg']} alt="ocean waves" />
+    </div>
 </div>
 
 <style>

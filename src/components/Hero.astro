@@ -1,4 +1,5 @@
 ---
+import { Picture } from "astro:assets";
 import { Image } from "astro:assets";
 import playImage from "@assets/svgs/play.svg";
 import landingImage from "src/assets/images/landing.jpg";
@@ -27,11 +28,10 @@ import landingSmallImage from "@assets/images/landing-m.webp";
     </div>
 
     <!-- Background Image -->
-    <picture class="cs-picture">
-      <source media="(max-width: 600px)" srcset="src/assets/images/landing-m.webp" />
-      <source media="(min-width: 601px)" srcset="src/assets/images/landing.jpg" />
-      <Image aria-hidden="true" src={landingImage} alt="calming trees" />
-    </picture>
+    <div class="cs-picture">
+        <Picture class="cs-picture" src={landingImage} formats={['webp', 'jpg']} alt="calming trees" />
+    </div>
+
   </section>
 
   <style>
@@ -266,7 +266,7 @@ import landingSmallImage from "@assets/images/landing-m.webp";
 /* Desktop Parallax Effect - 1300px */
 @media only screen and (min-width: 81.25rem) {
     #hero-229 {
-        background: url("src/assets/images/landing.jpg");
+        background: url({"assets/images/landing.jpg"});
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;

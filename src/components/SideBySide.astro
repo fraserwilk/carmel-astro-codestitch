@@ -1,27 +1,15 @@
-<!-- ============================================ -->
-<!--                 Side By Side                 -->
-<!-- ============================================ -->
+---
+import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 
-
+import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
+---
 <section id="services-564">
   <div class="cs-container">
     <!-- Left Image Section --> 
-      <picture class="cs-picture">
-        <!-- Mobile Image -->
-        <source media="(max-width: 600px)" srcset="src/assets/images/Carmel-crossed-arms-trans.png" />
-        <!-- Table and above Image -->
-        <source media="(min-width: 601px)" srcset="src/assets/images/Carmel-crossed-arms-trans.png" />
-        <img
-          aria-hidden="true"
-          decoding="async"
-          src="/assets/images/Carmel-crossed-arms-trans.png"
-          alt="Carmel"
-          loading="lazy"
-          width="375"
-          height="600"
-          style="object-fit: contain;"
-        />
-      </picture>
+     <div class="cs-picture">
+      <Picture src={carmelImage} formats={['png','webp']} alt="Carmel smiling" />
+     </div>
     <div class="cs-content">
     <!-- Right Content Section-->
     <div class="cs-right">
