@@ -583,11 +583,6 @@
     #cs-navigation {
       background-color: var(--dark);
 
-      .cs-logo {
-        /* makes it white */
-        filter: grayscale(1) brightness(1000%);
-      }
-
       .cs-line {
         background-color: #fff;
       }
@@ -601,11 +596,15 @@
       }
     }
 
-    #cs-footer-269 {.cs-logo {
+    #cs-footer-269 {.cs-logo-img {
       /* makes it white */
-      filter: grayscale(1) brightness(1000%);
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(132deg) brightness(106%) contrast(101%);
     }
-    }
+  }
+  .cs-logo {
+    /* makes it white */
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(132deg) brightness(106%) contrast(101%);
+  }
   }
 }
 
@@ -950,7 +949,7 @@
 
       .cs-logo {
         /* makes it turn white */
-        filter: grayscale(1) brightness(1000%);
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(132deg) brightness(106%) contrast(101%);
       }
 
       .cs-li-link {

@@ -10,7 +10,7 @@ export default defineConfig({
           name: "git-gateway",
           branch: "master",
         },
-        logo_url: "https://codestitch.app/frontend/images/logo.png",
+        logo_url: "https://carmelpoundpsychology.com.au/wp-content/uploads/2023/10/logo-siteicon-512px.png",
         media_folder: "public/assets/images/blog",
         public_folder: "/assets/images/blog",
         collections: [

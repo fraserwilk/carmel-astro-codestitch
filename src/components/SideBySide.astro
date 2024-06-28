@@ -239,5 +239,38 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
         }
     }
 }
-                                
+                   
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #services-564 {
+            .cs-topper {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-color {
+                color: var(--primaryLight);
+            }
+            .cs-title,
+            .cs-text,
+            .cs-h3,
+            .cs-li {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+
+            .cs-icon {
+                filter: brightness(150%);
+            }
+
+            .cs-name,
+            .cs-job {
+              color: var(--bodyTextColorWhite);
+            }
+        }
+    }
+}
 </style>

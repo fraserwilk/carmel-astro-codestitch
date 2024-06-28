@@ -16,6 +16,11 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { title, date, description, image, imageAlt, author } = post.data;
 const { Content } = await post.render();
+
+import { Picture } from 'astro:assets';
+import { Image } from 'astro:assets';
+import blocksImage from "@assets/images/coloured-blocks.jpg";
+import profileImage from "@assets/svgs/profile-woman.svg";
 ---
 
 <BaseLayout {title} {description}>
@@ -24,25 +29,7 @@ const { Content } = await post.render();
   <!-- ============================================ -->
 
   <section id="int-hero">
-    <picture>
-      <source
-        media="(max-width: 600px)"
-        srcset="/assets/images/coloured-blocks-m.webp"
-      />
-      <source
-        media="(min-width: 601px)"
-        srcset="/assets/images/coloured-blocks.webp"
-      />
-      <img
-        aria-hidden="true"
-        decoding="async"
-        src="/assets/images/coloured-blocks.webp"
-        alt="coloured blocks"
-        loading="eager"
-        width="1344"
-        height="768"
-      />
-    </picture>
+    <Picture src={blocksImage} aria-hidden="true" alt="coloured blocks" />
   </section>
 
   <!-- ============================================ -->
@@ -74,13 +61,7 @@ const { Content } = await post.render();
           <div class="blog-authorGroup">
             <!--Author Image-->
             <picture class="blog-author-img">
-              <img
-                src="/src/assets/svgs/profile-woman.svg"
-                alt="house"
-                width="32"
-                height="32"
-                decoding="async"
-              />
+              <Image src={profileImage} alt="profile" decoding="async" />
             </picture>
             <span class="blog-author">{author}</span>
             <span aria-hidden="true" class="blog-dot"></span>

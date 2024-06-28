@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import logo from "@assets/svgs/logo-white.svg";
+import logoWhiteImage from "@assets/svgs/logo-white.svg";
+import logoBlackImage from "@assets/svgs/logo-black.svg";
 
 import client from "@data/client.json";
 ---
@@ -13,8 +14,8 @@ import client from "@data/client.json";
   <div class="cs-container">
       <!-- Logo Group -->
       <div class="cs-logo-group">
-          <a aria-label="go back to home" class="cs-logo" href="">
-              <Image class="cs-logo-img light" aria-hidden="true" src={logo} alt="logo">
+          <a aria-label="go back to home" class="cs-logo" href="/">
+              <Image class="cs-logo-img" aria-hidden="true" src={logoWhiteImage} alt="logo">
           </a>
       </div>
       <!-- Links -->
@@ -254,6 +255,7 @@ import client from "@data/client.json";
         }
     }
 }
+
 
 
 </style>
