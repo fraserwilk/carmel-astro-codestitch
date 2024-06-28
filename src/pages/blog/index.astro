@@ -10,12 +10,15 @@ const posts = await getCollection("blog");
 posts.sort(
   (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
 );
+
+import { Picture } from 'astro:assets';
+import blocksImage from "@assets/images/coloured-blocks.jpg";
 ---
 
 <BaseLayout
   title="Blog"
   description="Meta description for the page"
-  preloadImg={import("src/assets/images/parrot-in-tree-150x150.jpg")}
+  preloadImg={import("@assets/images/parrot-in-tree.jpg")}
 >
   <!-- ============================================ -->
   <!--                    LANDING                   -->
@@ -23,25 +26,8 @@ posts.sort(
 
   <section id="int-hero">
     <h1 id="home-h">Blog</h1>
-    <picture>
-      <source
-        media="(max-width: 600px)"
-        srcset="/assets/images/coloured-blocks-m.webp"
-      />
-      <source
-        media="(min-width: 601px)"
-        srcset="src/assets/images/coloured-blocks.webp"
-      />
-      <img
-        aria-hidden="true"
-        decoding="async"
-        src="src/assets/images/coloured-blocks.webp"
-        alt="calming trees"
-        loading="eager"
-        width="2500"
-        height="1667"
-      />
-    </picture>
+    <Picture decoding="async" src={blocksImage} alt="coloured blocks" />
+
   </section>
 
   <!-- ============================================ -->

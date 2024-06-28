@@ -1,3 +1,10 @@
+---
+import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
+
+import carmelChairImage from "@assets/images/carmel-in-chair.jpg";
+---
+
 <section id="cta-51">
   <div class="cs-container">
     <div class="cs-content"> 
@@ -10,19 +17,9 @@
     </div>
   </div>
   <!-- Background Image-->
-  <picture class="cs-picture">
-    <source media="(max-width: 600px)" srcset="src/assets/images/carmel-in-chair.jpg" />
-    <source media="(min-width: 601px)" srcset="src/assets/images/carmel-in-chair.jpg" />
-    <img
-      aria-hidden="true"
-      decoding="async"
-      src="src/assets/images/carmel-in-chair.jpg"
-      alt="Carmel in chair"
-      loading="lazy"
-      width="2500"
-      height="1667"
-    />
-  </picture>
+  <div class="cs-picture">
+    <Picture src={carmelChairImage} formats={['webp','jpg']} alt="Carmel in chair" />
+  </div>
 </section>
 
 <style>

@@ -3,132 +3,80 @@ import BaseLayout from "src/layouts/BaseLayout.astro";
 import CTA from "@components/CTA.astro";
 
 import { Picture } from 'astro:assets';
-import parrotImage from "@assets/images/parrot-in-tree.jpg";
-import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
+import blocksImage from "@assets/images/coloured-blocks.jpg";
 ---
 
 <BaseLayout
-  title="About"
-  description="About me"
-  preloadImg={import("../assets/images/landing.jpg")}
+  title="Services"
+  description="Carmel Pound Psychology services"
+  preloadImg={import("@assets/images/landing.jpg")}
 >
 <!-- ============================================ -->
 <!--                    LANDING                   -->
 <!-- ============================================ -->
 
-  <section id="int-hero">
-    <h1 id="home-h">About Me</h1>
-    <div class="cs-picture">
-        <Picture src={parrotImage} alt="parrot in tree" aria-hidden="true" />
-    </div>
-  </section>
+<section id="int-hero">
+  <h1 id="home-h">Services</h1>
+  <div class="cs-picture">
+      <Picture src={blocksImage} alt="coloured blocks" aria-hidden="true" />
+  </div>
+</section>
 
-<!-- ============================================ -->
-<!--                 Content Page                 -->
-<!-- ============================================ -->
-
-<!-- ============================================ 
-        This Stitch is used for content heavy interior pages
-        that have no design or layout.  Often times these are 
-        content silos where you talk extensively about a topic
-        to educate your visitors and rank on Google for the 
-        content.  These are great for pages that have a TON
-        of content.  Design isn't important here, it's all 
-        about making the content accessible and easy to read.
-================================================= -->
-
-<section id="content-page-713">
+<section id="content-page-715">
   <div class="cs-container">
       <div class="cs-content">
-          <h2 class="cs-title">Meet Carmel</h2>
-          
-          <h3>My background</h3>
-          
-          <p class="cs-text">I grew up in Melbourne where I completed undergraduate and post graduate studies before landing my first job in psychology providing organisational / HR and counselling services. I then lived in Vietnam for several years providing similar services to the expat and national community before returning to Australia, living in Perth and later Sydney. In both locations I started to move away from employee status and more towards contractor work providing psychological services to both government and private organisations.</p>
-          <p class="cs-text">Feeling the need for space I moved to the beautiful Southern Highlands where I have been located for the past 10 or so years working as a private practitioner, bringing a wide and varied life and professional experience into my practice.</p>
-
-          <h3>My qualifications…</h3>
-
-          <ul id="list-1405" class="cs-ul">
-            <li class="cs-li">Bachelor of Applied Science (Psychology)</li>
-            <li class="cs-li">Graduate Diploma of Applied Psychology (Organisational)</li>
-            <li class="cs-li">Accredited Practitioner - EMDR Association of Australia</li>
-            <li class="cs-li">Accredited Practitioner - WorkCover NSW</li>
+          <h1 class="cs-title">h1 - A Personalized Approach To Your <span class="cs-color">Well-Being</span></h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4-6</h4>
+          <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam eum quae in temporibus cumque tempora expedita mollitia nostrum adipisci, ipsum commodi, cupiditate, sequi quos enim! Quaerat esse non sunt! Lorem ipsum dolor sit amet <a href="">link example</a>. Est, quis!
+          </p>
+          <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam eum quae in temporibus cumque tempora expedita mollitia nostrum <strong>adipisci, ipsum commodi</strong>, cupiditate, sequi quos enim! 
+          </p>
+          <h3>Heading 3</h3>
+          <ol>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          </ol>
+          <h4>Heading 4-6</h4>
+          <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
           </ul>
-          
-            <h3>My Services…</h3>
-            <p class="cs-text">I work with adults 18 years + using evidence-based psychological therapies including but not limited
-            to:</p>
-            <ul id="list-1405" class="cs-ul">
-              <li class="cs-li">EMDR</li>
-              <li class="cs-li">CBT - Cognitive Behaviour Therapy</li>
-              <li class="cs-li">DBT - Dialectical Behaviour Therapy</li>
-              <li class="cs-li">ACT - Acceptance & Commitment Therapy</li>
-              <li class="cs-li">Schema Therapy</li>
-            </ul>
-            <p class="cs-text">I regularly engage in Professional Development activities to keep me up-to-date with latest advances
-            in my field.</p>
-            
-            <h3>My referrals…</h3>
-            <p class="cs-text">Whilst the majority of my referrals come from word-of-mouth, I also accept referrals from:</p>
-            <ul id="list-1405" class="cs-ul">
-              <li class="cs-li">Insurance companies</li>
-              <li class="cs-li">GP’s</li>
-              <li class="cs-li">NDIS providers / clients</li>
-              <li class="cs-li">EAP providers</li>
-              <li class="cs-li">Open Arms</li>
-              <li class="cs-li">Victims Services</li>
-            </ul>
-            <p class="cs-text">For good self-care I balance my referral base.</p>
-            
-            <h3>My approach…</h3>
-            <p class="cs-text">My overarching philosophy is that whilst I have significant expertise to bring to the therapeutic setting, you, as the client, have your own life experience expertise as well. I find that a collaborative approach works best as does working at your pace.</p>
-            <p class="cs-text">I don’t tend to set ‘homework’ but if this works for you I can do so. More than anything, I will recommend a range of resources (books, podcasts, professional articles, etc) for you to access outside of the therapeutic setting.</p>
-            <p class="cs-text">EMDR does not require homework.</p>
-            <p class="cs-text">To help you find your best match in terms of a therapist, you might want to listen to this podcast.</p>
-            <p class="cs-text">I provide a combination of in-person appointments in my Bowral rooms and telehealth
-            appointments.</p>
-            
-            <h3>The clients I work best with… (in no particular order)</h3>
-            <ul id="list-1405" class="cs-ul">
-              <li class="cs-li">Those who have experienced trauma which may be single incident or attachment trauma.</li>
-              <li class="cs-li">Sometimes trauma presents in a less obvious way… if you find yourself ‘stuck’ or in a cycle of repeating patterns that don’t serve you well, we’d probably work well together.</li>
-              <li class="cs-li">Trauma-informed therapy.</li>
-              <li class="cs-li">People who are experiencing relationship difficulties or navigating relationship or family breakdown.</li>
-              <li class="cs-li">People who are experiencing workplace stress or interested in receiving psychological care in the context of a WorkCover or insurance claim.</li>
-            </ul>
-
       </div>
-      <div class="cs-image-group">
+      <!-- <div class="cs-image-group">
         <div class="cs-picture">
-            <Picture src={carmelImage} alt="Carmel smiling" />
+          <Picture src={carmelImage} formats={['png','webp','jpg']} alt="Carmel smiling" />
         </div>
 
           <!--Flower Graphic-->
-          <img class="cs-flower" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fbig-abstract-flower.svg" alt="flower graphic" width="362" height="350" aria-hidden="true">
+          <!--<img class="cs-flower" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fbig-abstract-flower.svg" alt="flower graphic" width="362" height="350" aria-hidden="true"> -->
 
           <!--Spidey Sense Graphic-->
-          <img class="cs-sense" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fspider-sense.svg" alt="spidey sense graphic" width="80" height="89" aria-hidden="true">
-      </div>
+          <!-- <img class="cs-sense" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fspider-sense.svg" alt="spidey sense graphic" width="80" height="89" aria-hidden="true"> -->
+      <!-- </div> -->
   </div>
-  <!--Waves Graphic-->
-  <picture class="cs-background">
-      <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Flarge-waves.svg" alt="waves" decoding="async" aria-hidden="true" width="625" height="952">
-  </picture>
+
 </section>
                               
-<CTA />
 
+
+<CTA />
 </BaseLayout>
 
 <style lang="less">
-  /*-- -------------------------- -->
+
+/*-- -------------------------- -->
 <---        Content Page        -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #content-page-713 {
+    #content-page-715 {
         padding: var(--sectionPadding);
         background-color: #fff;
         /* clips the wave background from causing overflow issues when it goes off screen */
@@ -152,7 +100,7 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
             /* set text align to left if content needs to be left aligned */
             text-align: left;
             width: 100%;
-            max-width: (738/16rem);
+            max-width: 1280px;
             display: flex;
             flex-direction: column;
             /* centers content horizontally, set to flex-start to left align */
@@ -266,8 +214,8 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
         }
 
         .cs-picture {
-            width: (542/16em);
-            height: (647/16em);
+            width: 33em;
+            height: 40em;
             border-radius: (285/16em);
             border: (12/16em) solid #fff;
             background-color: #f7f7f7;
@@ -321,7 +269,7 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #content-page-713 {
+    #content-page-715 {
         .cs-container {
             flex-direction: row;
             align-items: flex-start;
@@ -357,7 +305,7 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
 
 /* Large Desktop 1300px */
 @media only screen and (min-width: 81.25rem) {
-    #content-page-713 {
+    #content-page-715 {
         .cs-image-group {
             /* position absolute so we can have it overflow the container as seen in the design. */
             font-size: inherit;
@@ -368,7 +316,7 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
 
         .cs-background {
             width: 50%;
-            /* with the left edge always positioned at the center line, we push left of the center line by 335px.  This ensures that this element will stay exactly in this position no matter how wide the screen gets */
+            /* with the left edge always positioned at the center line, we push left of the center line by 335px.  This ensures that this element will stay exactly in this position no matter hoe wide the screen gets */
             margin-left: (335/16rem);
             right: auto;
             /* sets the left edge of the element to be at the center line */
@@ -376,4 +324,6 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
         }
     }
 }
+
+                                
 </style>
