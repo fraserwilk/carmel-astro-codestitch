@@ -95,7 +95,7 @@ import carmelChairImage from "../assets/images/carmel-in-chair.jpg";
             min-width: (150/16rem);
             padding: 0 2rem;
             background-color: var(--bodyTextColorWhite);
-            border-radius: (4/16rem);
+            border-radius: 0.25rem;
             display: inline-block;
             position: relative;
             z-index: 1;
@@ -113,7 +113,7 @@ import carmelChairImage from "../assets/images/carmel-in-chair.jpg";
                 top: 0;
                 left: 0;
                 z-index: -1;
-                border-radius: (4/16rem);
+                border-radius: 0.25rem;
                 transition: width 0.3s;
             }
 
@@ -147,7 +147,7 @@ import carmelChairImage from "../assets/images/carmel-in-chair.jpg";
 @media only screen and (min-width: 48rem) {
     #sbsr-575 {
         /* we use margin here instead of padding because we want to create the space OUTSIDE the section.  The overflow on the section clips the boxes we made to make the slanted designs, so we need to push from the outside of the section with margin to create space between it and the next section.  If the section above this Stitch has a white background, add margin-top: 0. If it has a white section below it, add margin-bottom: 0. This will allow more proper spacing and not have too much empty space.  If both sections above and below this Stitch have white backgrounds, you can just remove this margin all together */
-        margin: var(--sectionPadding);
+        /* margin: var(--sectionPadding); */
         margin-left: 0;
         margin-right: 0;
         padding: var(--sectionPadding);

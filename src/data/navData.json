@@ -4,8 +4,12 @@
     "url": "/"
   },
   {
-    "key": "Services",
-    "url": "/services/"
+    "key": "EMDR",
+    "url": "/emdr/"
+  },
+  {
+    "key": "Best Fit",
+    "url": "/work-with-me/"
   },
   {
     "key": "About Me",

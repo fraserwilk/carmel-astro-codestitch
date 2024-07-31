@@ -6,14 +6,14 @@ import ServiceSixCards from "@components/ServiceSixCards.astro";
 import ServicesThreeCards from "@components/ServicesThreeCards.astro";
 import SideBySideReverse from "@components/SideBySideReverse.astro";
 import SideBySide from "@components/SideBySide.astro";
-import SideBySide2 from "@components/SideBySide2.astro";
+import SideBySideReverse1279 from "@components/SideBySideReverse1279.astro";
 import Gallery from "@components/Gallery.astro";
 import CTA from "@components/CTA.astro";
 
-import { Image } from 'astro:assets';
+// import { Image } from 'astro:assets';
 import { Picture} from 'astro:assets';
 import womenImage from "../assets/images/pexels-photo-4098221.webp";
-import landingImage from "@assets/images/landing.jpg";
+// import landingImage from "@assets/images/landing.jpg";
 
 ---
 
@@ -25,17 +25,9 @@ import landingImage from "@assets/images/landing.jpg";
 
 <Hero />
 
-<Content title="Where compassion and evidence-based therapy meet" content="Welcome to Carmel Pound Psychology, where we will support you on your journey towards personal growth and well-being. Carmel understands how difficult it can be to deal with trauma and post-traumatic stress disorder (PTSD) </p><br><p>With Carmel, you’re not just a client; you’re a valued person on a path towards positive life changes. With a focus on EMDR Therapy, Carmel is committed to supporting adults, kids, teenagers, couples, and families. Whether in-person in the Southern Highlands or via telehealth across Australia, Carmel is here for you." />
+<SideBySideReverse1279 />
 
-<SideBySideReverse />
-
-<ServiceSixCards />
-
-<Content title="Carmel’s here to support you" content="Carmel has expertise in trauma-informed care and EMDR Therapy. Carmel has many life experiences, making your therapy practical and relatable. Change is possible, no matter how long you’ve been struggling with your issues.</p><br><p>Carmel’s main goal is to provide high-quality services with a strong focus on respect and collaboration. Together with you, Carmel aims to empower you to make real and lasting improvements in your life." />
-
-<Gallery />
-
-<SideBySide />
+<ServicesThreeCards />
 
 
   <!-- ============================================ -->
@@ -197,6 +189,48 @@ import landingImage from "@assets/images/landing.jpg";
         right: clamp(1rem, 4vw, 2rem);
         bottom: (0/16rem);
       }
+      .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            background-color: var(--primary);
+            border-radius: 0.25rem;
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+            transition: color .3s;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: 0.25rem;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                color: #fff;
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
     }
   }
 

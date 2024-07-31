@@ -23,6 +23,21 @@ function ariaExpanded() {
 	}
 }
 
+// This script adds a class to the body after scrolling 100px
+// and we used these body.scroll styles to create some onscroll 
+// animations with the navbar
+
+document.addEventListener('scroll', () => {
+	const scroll = window.scrollY;
+   
+   if (scroll >= 100) {
+	   document.querySelector('body').classList.add('scroll');
+   } else {
+	   document.querySelector('body').classList.remove('scroll');
+   }
+});
+
+
 // mobile nav toggle code
 const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropdown'));
 for (const item of dropDowns) {
