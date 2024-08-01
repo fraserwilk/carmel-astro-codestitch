@@ -23,19 +23,6 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
     </div>
   </section>
 
-<!-- ============================================ -->
-<!--                 Content Page                 -->
-<!-- ============================================ -->
-
-<!-- ============================================ 
-        This Stitch is used for content heavy interior pages
-        that have no design or layout.  Often times these are 
-        content silos where you talk extensively about a topic
-        to educate your visitors and rank on Google for the 
-        content.  These are great for pages that have a TON
-        of content.  Design isn't important here, it's all 
-        about making the content accessible and easy to read.
-================================================= -->
 
 <section id="content-page-713">
   <div class="cs-container">
@@ -47,7 +34,7 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
           <p class="cs-text">I grew up in Melbourne where I completed undergraduate and post graduate studies before landing my first job in psychology providing organisational / HR and counselling services. I then lived in Vietnam for several years providing similar services to the expat and national community before returning to Australia, living in Perth and later Sydney. In both locations I started to move away from employee status and more towards contractor work providing psychological services to both government and private organisations.</p>
           <p class="cs-text">Feeling the need for space I moved to the beautiful Southern Highlands where I have been located for the past 10 or so years working as a private practitioner, bringing a wide and varied life and professional experience into my practice.</p>
 
-          <h3>My qualifications…</h3>
+          <h3 id="">My qualifications</h3>
 
           <ul id="list-1405" class="cs-ul">
             <li class="cs-li">Bachelor of Applied Science (Psychology)</li>
@@ -55,21 +42,18 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
             <li class="cs-li">Accredited Practitioner - EMDR Association of Australia</li>
             <li class="cs-li">Accredited Practitioner - WorkCover NSW</li>
           </ul>
-          
-            <h3>My Services…</h3>
-            <p class="cs-text">I work with adults 18 years + using evidence-based psychological therapies including but not limited
-            to:</p>
-            <ul id="list-1405" class="cs-ul">
-              <li class="cs-li">EMDR</li>
-              <li class="cs-li">CBT - Cognitive Behaviour Therapy</li>
-              <li class="cs-li">DBT - Dialectical Behaviour Therapy</li>
-              <li class="cs-li">ACT - Acceptance & Commitment Therapy</li>
-              <li class="cs-li">Schema Therapy</li>
-            </ul>
+
+        
+            <h3 id="">My approach</h3>
+            <p class="cs-text">My overarching philosophy is that whilst I have significant expertise to bring to the therapeutic setting, you, as the client, have your own life experience expertise as well.  I find that a collaborative approach works best as does working at your pace.</p>
+            <p class="cs-text">I don't tend to set 'homework' but if this works for you I can do so.  More than anything, I will recommend a range of resources (books, podcasts, professional articles, etc) for you to access outside of the therapeutic setting.</p>
+            <p class="cs-text">It is worth noting that EMDR, generally speaking, does not require homework.</p>
+            <p class="cs-text">To help you find your best match in terms of a therapist, you might want to listen to this podcast.</p>
+            
             <p class="cs-text">I regularly engage in Professional Development activities to keep me up-to-date with latest advances
             in my field.</p>
             
-            <h3>My referrals…</h3>
+            <h3 id="">My referrals…</h3>
             <p class="cs-text">Whilst the majority of my referrals come from word-of-mouth, I also accept referrals from:</p>
             <ul id="list-1405" class="cs-ul">
               <li class="cs-li">Insurance companies</li>
@@ -81,22 +65,6 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
             </ul>
             <p class="cs-text">For good self-care I balance my referral base.</p>
             
-            <h3>My approach…</h3>
-            <p class="cs-text">My overarching philosophy is that whilst I have significant expertise to bring to the therapeutic setting, you, as the client, have your own life experience expertise as well. I find that a collaborative approach works best as does working at your pace.</p>
-            <p class="cs-text">I don’t tend to set ‘homework’ but if this works for you I can do so. More than anything, I will recommend a range of resources (books, podcasts, professional articles, etc) for you to access outside of the therapeutic setting.</p>
-            <p class="cs-text">EMDR does not require homework.</p>
-            <p class="cs-text">To help you find your best match in terms of a therapist, you might want to listen to this podcast.</p>
-            <p class="cs-text">I provide a combination of in-person appointments in my Bowral rooms and telehealth
-            appointments.</p>
-            
-            <h3>The clients I work best with… (in no particular order)</h3>
-            <ul id="list-1405" class="cs-ul">
-              <li class="cs-li">Those who have experienced trauma which may be single incident or attachment trauma.</li>
-              <li class="cs-li">Sometimes trauma presents in a less obvious way… if you find yourself ‘stuck’ or in a cycle of repeating patterns that don’t serve you well, we’d probably work well together.</li>
-              <li class="cs-li">Trauma-informed therapy.</li>
-              <li class="cs-li">People who are experiencing relationship difficulties or navigating relationship or family breakdown.</li>
-              <li class="cs-li">People who are experiencing workplace stress or interested in receiving psychological care in the context of a WorkCover or insurance claim.</li>
-            </ul>
 
       </div>
       <div class="cs-image-group">
@@ -184,6 +152,15 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
         h3 {
             font-size: (24/16rem);
             color: var(--primary);
+
+            &[id]::before { 
+            display: block; 
+            content: ""; 
+            margin-top: -155px; 
+            height: 285px; 
+            visibility:visible; 
+            pointer-events: none;
+            }
         }
 
         h4,

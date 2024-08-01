@@ -3,103 +3,81 @@ import BaseLayout from "src/layouts/BaseLayout.astro";
 import CTA from "@components/CTA.astro";
 
 import { Picture } from 'astro:assets';
-import blocksImage from "@assets/images/coloured-blocks.jpg";
+import greenEyesImage from "@assets/images/green-eyes-01.webp";
 ---
 
 <BaseLayout
-  title="Work With Me"
-  description="Best Fit for Working With Me"
+  title="What is EMDR?"
+  description="EMDR (Eye Movement Desensitisation and Reprocessing) Therapy is an evidence-based therapy and has been used in a variety of settings and countries over the last 30 years."
   preloadImg={import("@assets/images/landing.jpg")}
 >
 
 
 <section id="int-hero">
-  <h1 id="home-h">Best Fit</h1>
+  <h1 id="home-h">What is EMDR?</h1>
   <div class="cs-picture">
-      <Picture src={blocksImage} alt="coloured blocks" aria-hidden="true" />
+      <Picture src={greenEyesImage} alt="EMDR therapy" aria-hidden="true" />
   </div>
 </section>
 
 <section id="content-page-715">
   <div class="cs-container">
       <div class="cs-content">
-        <h1 class="cs-title">Who would work <span class="cs-color">best</span> with me?</h1>
-        <h2>All of these groups:</h2>
-          <ul>
-            <li><a href="#serviceworkers" data-tooltip="I am particularly well-suited to working with individuals who are seeking psychological support for workplace injuries – my early career experience in organisational psychology places me in a unique position to confidently help injured workers navigate the insurance system and return-to-work process, in the context of their psychological injury.  
-                I have a SIRA provider number and years of experience working with clients seeking support under the banner of insurance companies.">Service workers, eg. NSW Police Force, NSW Ambulance, Fire & Rescue NSW, ADF</a></li>
-            <li><a href="#serviceworkers" data-tooltip="I am particularly well-suited to working with individuals who are seeking psychological support for workplace injuries – my early career experience in organisational psychology places me in a unique position to confidently help injured workers navigate the insurance system and return-to-work process, in the context of their psychological injury.
-                I have a SIRA provider number and years of experience working with clients seeking support under the banner of insurance companies.">People who have psychological injuries covered by CTP insurance</a></li>
-            <li><a href="#trauma" data-tooltip="Whilst many of us can identify with what might be called 'obvious' trauma, eg. a motor vehicle accident, assault, being bitten by a dog, there is a less obvious trauma, one in which our childhood developmental needs have not been fully met.  This can be referred to as Attachment Trauma.
-What is most important is identifying and treating signs and symptoms that are creating difficulties for you NOW.  You may find yourself 'stuck' or in a cycle of repeating patterns that don't service you well or you might find yourself experiencing: 
-performance anxiety, nightmares, flashbacks, depression, anxiety, phobias, panic attacks, grief, addictions, sleeplessness.
-If you've experienced or currently experience any of the above then we'd probably work well together using EMDR. ">Individuals who have experienced trauma or are feeling 'stuck'</a></li>
-            </a>
+        <h1 class="cs-title">What is <span class="cs-color">EMDR</span>?</h1>
+        
+        <p>EMDR (Eye Movement Desensitisation and Reprocessing) Therapy is an evidence-based therapy and has been used in a variety of settings and countries over the last 30 years.</p>
 
-            <li><a href="#relationships" data-tooltip="Relationship and/or family breakups can not only be difficult but traumatic for all parties involved.  With the right guidance on how to navigate this process the pain and suffering can be minimised, especially for children.  In this context I work with individuals/parents.">Individuals dealing with relationship breakdowns/family changes</a></li>
-            <li><a href="#relocating" data-tooltip="As someone who has lived and worked overseas I understand the challenges this can bring and am well-placed to support you during this transition.  
-I also recognise the difficulty that can be associated with sourcing good professional supports in either a new environment or in general and as such welcome the value telehealth can bring to the provision of psychological services.  I have provided telehealth psychology services before COVID entered our world and am confident working with clients in this context.
-">Individuals living/working interstate and overseas</a></li>
-            <li><a href="#relocating" data-tooltip="As someone who has lived and worked overseas I understand the challenges this can bring and am well-placed to support you during this transition.  
-                I also recognise the difficulty that can be associated with sourcing good professional supports in either a new environment or in general and as such welcome the value telehealth can bring to the provision of psychological services.  I have provided telehealth psychology services before COVID entered our world and am confident working with clients in this context.
-                ">Expats/people relocating to new work/living areas</a></li>
-            <li><a href="#EMDRsupervisees" data-tooltip="It's rewarding to share my knowledge and experience with new and developing EMDR therapists.">EMDR supervisees</a></li>
-          </ul>
+        <h2>Who is suitable for EMDR therapy?</h2>
+        <p>Whilst EMDR was originally developed for those with a PTSD diagnosis (Post traumatic Stress Disorder) more and more research supports its use for a variety of presentations including, but not limited to: </p>
+        <ul>
+            <li>Performance anxiety</li>
+            <li>Nightmares</li>
+            <li>Flashbacks</li>
+            <li>Depression</li>
+            <li>Anxiety</li>
+            <li>Phobias</li>
+            <li>Panic attacks</li>
+            <li>Grief</li>
+            <li>Addictions</li>
+            <li>Sleeplessness</li>
+        </ul>
 
-        <h3 id="serviceworkers">Service workers</h3>
-            <p>eg. NSW Police Force, NSW Ambulance, Fire & Rescue NSW, ADF</p>
-            <p>I am particularly well-suited to working with individuals who are seeking psychological support for workplace injuries - my early career experience in organisational psychology places me in a unique position to confidently help injured workers navigate the insurance system and return-to-work process, in the context of their psychological injury.</p>
-            <p>I have a SIRA provider number and years of experience working with clients seeking support under the banner of insurance companies.</p>
-            <p><a href="#top">Back to Top</a></p>
-            
-        <h3 id="">CTP insurance</h3>
-        <p> (? How word this… people who have psych injuries under CTP insurance)</p>
-        <p><a href="#top">Back to Top</a></p>
-
-        <h3 id="trauma">Individuals who have experienced trauma or are feeling 'stuck'</h3>
-            <p>Whilst many of us can identify with what might be called 'obvious' trauma, eg. a motor vehicle accident, assault, being bitten by a dog, there is a less obvious trauma, one in which our childhood developmental needs have not been fully met.  This can be referred to as Attachment Trauma.</p>
-            <p>What is most important is identifying and treating signs and symptoms that are creating difficulties for you NOW.  You may find yourself 'stuck' or in a cycle of repeating patterns that don't service you well or you might find yourself experiencing:</p>
-                <ul>
-                    <li>Performance anxiety</li>
-                    <li>Nightmares</li>
-                    <li>Flashbacks</li>
-                    <li>Depression</li>
-                    <li>Anxiety</li>
-                    <li>Phobias</li>
-                    <li>Panic attacks</li>
-                    <li>Grief</li>
-                    <li>Addictions</li>
-                    <li>Sleeplessness</li>
-                </ul>
-            <p>If you've experienced or currently experience any of the above then we'd probably work well together using EMDR. </p>
-            <p><a href="#top">Back to Top</a></p>
-
-        <h3 id="relationships">Individuals dealing with relationship breakdowns/family changes</h3>
-        <p>Relationship and/or family breakups can not only be difficult but traumatic for all parties involved.  With the right guidance on how to navigate this process the pain and suffering can be minimised, especially for children.  In this context I work with individuals/parents.</p>
         <p><a href="#top">Back to Top</a></p>
         
-        <h3 id="relocating">Living/working/relocating to new work/living areas or overseas</h3>
+        <h2>How does EMDR work?</h2>
+        <p>During EMDR, the therapist works with the client to identify a specific problem as a focus for the treatment session. The client then calls to mind the disturbing issue or event (in as little or as much detail as feels comfortable) regarding what was seen, felt, heard, thought, etc. The therapist will then guide the client asking them to track hand movements which result in side to side eye movements or another form of bilateral stimulation.  These bilateral movements are used until the memory becomes less disturbing and is associated with a positive thought or belief about yourself.</p>
+        <p>A typical EMDR session lasts between 60-90 minutes and can be provided on a weekly basis (a more traditional model of therapy) or more intensive basis with multiple weekly sessions taking place over a 2-4 week period.  The number of sessions you will need depends on the type of problem you are presenting with, your life circumstances and your experience of previous trauma.</p>
+        <p>We will work out together what approach will suit you best.</p>
+        <p>For more information re intensive EMDR treatment click here.  (? Include payment plan ideas)</p>
 
-        <p>As someone who has lived and worked overseas I understand the challenges this can bring and am well-placed to support you during this transition.  
-            I also recognise the difficulty that can be associated with sourcing good professional supports in either a new environment or in general and as such welcome the value telehealth can bring to the provision of psychological services.  I have provided telehealth psychology services before COVID entered our world and am confident working with clients in this context.
-            </p>
-            <p><a href="#top">Back to Top</a></p>
-        
-        
-        <h3 id="EMDRsupervisees">EMDR supervisees</h3>
-        <p>Having attained my Accredited Consultant credentials with EMDRAA I am excited to provide case consultation to therapists training in EMDR.  I have completed all of my training and continue to receive individual supervision with Graham Taylor - a previous EMDRAA President who originally trained with Dr Francine Shapiro.  With this support and my own professional history it's rewarding to share this knowledge and experience with new and developing EMDR therapists.</p>
         <p><a href="#top">Back to Top</a></p>
-       
 
-          <h2>Referrals</h2>
-          <ul>
-              <li>Insurance companies</li>
-              <li>GP's</li>
-              <li>NDIS providers / clients</li>
-              <li>EAP providers</li>
-          </ul>
-          <p><a href="#top">Back to Top</a></p>
-      </div>
+        <h2>Why use EMDR as a treatment model?</h2>
+        <ul>
+            <li>Clients do not have to talk about their trauma in detail</li>
+            <li>It does not require the completion of homework</li>
+            <li>It often produces quicker results than other therapies</li>
+            <li>The benefits of treatment continue to be experienced long after treatment has finished</li>
+        </ul>
+
+        <p><a href="#top">Back to Top</a></p>
+
+        <h2>EMDR is endorsed by:</h2>
+        <ul>
+            <li>World Health Organisation (WHO)</li>
+            <li>Phoenix Australia - Centre for Posttraumatic Mental Health</li>
+            <li>Substance Abuse and Mental Health Services America</li>
+            <li>International Society for Traumatic Stress Studies</li>
+            <li>National Institute for Health and Care Excellence</li>
+            <li>Department of Veteran Affairs & Department of Defence</li>
+            <li>American Psychiatric Association</li>
+        </ul>
+
+        <p><a href="#top">Back to Top</a></p>
+
+        
+        
+    
 
   </div>
 
