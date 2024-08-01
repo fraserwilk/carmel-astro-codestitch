@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import smilingLadyImage from "@assets/images/pexels-photo-3754676.webp";
-import consolingImage from "@assets/images/pexels-photo-8550841.webp";
 import womenImage from "../assets/images/pexels-photo-4098221.webp";
 import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
 
@@ -17,7 +16,7 @@ import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
-                <a href="" class="cs-link">
+                <a href="/work-with-me" class="cs-link">
                     <picture class="cs-picture">
                         <source media="(max-width: 600px)" srcset={womenImage}>
                         <source media="(min-width: 601px)" srcset={womenImage}>
@@ -32,7 +31,7 @@ import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
                         •	Living/working away from home<br />
                         •	Relocating to new work/living areas<br />
                         <br />
-                        <strong style="color:var(--secondary);">Read more...</strong>
+                        <p class="cs-item-text cs-item-readmore">Read more...</p>
                     </p>
                 </a>
             </li>
@@ -52,7 +51,7 @@ import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
                         • It often produces quicker results<br />
                         • The benefits continue long after treatment has finished<br />
                         <br />
-                        <strong style="color:var(--secondary);">Read more...</strong>
+                        <p class="cs-item-text cs-item-readmore">Read more...</p>
                     </p>
                 </a>
             </li>
@@ -70,7 +69,7 @@ import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
                         <i>Diverse Australian Experience:</i><br />Perth and Sydney<br />
                         <i>Southern Highlands:</i><br />A Decade of Private Practice<br />
                         <br />
-                        <strong style="color:var(--secondary);">Read more...</strong>
+                        <p class="cs-item-text cs-item-readmore">Read more...</p>
                     </p>
                 </a>
             </li>
@@ -241,5 +240,26 @@ import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
     }
 }
 
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #services-333 {
+            .cs-h3,
+            .cs-item-text,
+            .cs-item-readmore {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-item-text,
+            .cs-item-readmore {
+                opacity: 0.8;
+            }
+
+            .cs-background {
+                background-color: rgba(44, 81, 38, 1.0);
+            }
+        }
+    }
+}
                                 
   </style>

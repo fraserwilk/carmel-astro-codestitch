@@ -22,9 +22,9 @@ import landingSmallImage from "@assets/images/landing-m.webp";
             alt="play icon"
             width="24"
             height="24"
-            style="margin:auto 0.5em"
+            style="margin:auto 1rem"
           />
-           Request an Appointment
+           <div class="cs-button-text">Request an Appointment</div>
         </a>
       </div>
     </div>
@@ -36,7 +36,7 @@ import landingSmallImage from "@assets/images/landing-m.webp";
 
   </section>
 
-  <style>
+  <style lang="less">
 /*-- -------------------------- -->
 <---           Hero             -->
 <--- -------------------------- -*/
@@ -103,7 +103,7 @@ import landingSmallImage from "@assets/images/landing-m.webp";
             /* 60px - 220px */
             margin-bottom: clamp(3.75rem, 15.5vw, 13.75rem);
             margin: auto;
-            width: 80vw;
+            width: 91vw;
             /* 464px - 562px */
             max-width: clamp(29rem, 60vw, 35.125rem);
             display: flex;
@@ -164,7 +164,7 @@ import landingSmallImage from "@assets/images/landing-m.webp";
             margin: 0;
             /* prevents padding from adding to the width */
             box-sizing: border-box;
-            padding: 0 (48/16rem);
+            padding: 0 (34/16rem);
             background-color: var(--primary);
             border-radius: 0.25rem;
             overflow: hidden;
@@ -195,6 +195,10 @@ import landingSmallImage from "@assets/images/landing-m.webp";
                 &:before {
                     width: 100%;
                 }
+            }
+
+            .cs-button-text {
+                padding: 0;
             }
         }
 
