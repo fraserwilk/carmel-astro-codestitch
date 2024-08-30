@@ -14,11 +14,6 @@ import paperStarImage from "@assets/images/paper-star.png";
 >
 
 
-                              
-  <!-- ============================================ -->
-  <!--                    LANDING                   -->
-  <!-- ============================================ -->
-
   <section id="int-hero">
     <h1 id="home-h">Contact Me</h1>
     <div class="cs-picture">
@@ -26,18 +21,14 @@ import paperStarImage from "@assets/images/paper-star.png";
     </div>
   </section>
 
-  <!-- ============================================ -->
-  <!--                Contact Form                  -->
-  <!-- ============================================ -->
-
   <section id="cs-contact">
     <div class="cs-container">
-      <form id="cs-form" name="Contact Form" method="post">
+      <form id="cs-form" name="CPP Contact Form" method="post" netlify>
         <div class="cs-content">
-          <span class="cs-topper">Contact</span>
-          <h2 class="cs-title">Get in Touch</h2>
-          <p class="cs-text">Most of my clients come from word of mouth and GP referrals.</p>
-          <p class="cs-text">I'd love you to let me know how you found me.</p>
+          <h2 class="">To book an initial consultation please enter your details below. 
+            I will reply with further details including my fees.</h2>
+          <br />
+            <p class="cs-text">I'd love you to let me know how you found me.</p>
           </p>
         </div>
         <label>
@@ -79,6 +70,17 @@ import paperStarImage from "@assets/images/paper-star.png";
             placeholder="How did you find me?"
           />
         </label>
+
+        <label class="checkbox">
+          Is your query related to an insurance matter?
+          <input 
+            type="checkbox"
+            id="insurance"
+            name="Insurance related?"
+            />
+          <!-- <span class="checkmark"></span> -->
+        </label>
+        
         <label class="cs-label-message">
           Message
           <textarea
@@ -93,11 +95,7 @@ import paperStarImage from "@assets/images/paper-star.png";
         <!--Email-->
         <span class="cs-header">Email</span>
         <a class="cs-link" href={`mailto:${client.email}`}>{client.email}</a>
-        <!--Phone-->
-        <span class="cs-header">Phone</span>
-        <a class="cs-link" href={`tel:${client.phoneForTel}`}
-          >{client.phoneFormatted}</a
-        >
+        <!--  -->
         <!--Address-->
         <span class="cs-header">Address</span>
         <a class="cs-link" href={client.address.mapLink} target="_blank">
@@ -217,6 +215,25 @@ import paperStarImage from "@assets/images/paper-star.png";
         width: 100%;
         border: none;
       }
+
+      .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .checkbox input[type="checkbox"] {
+        font-size: 1rem;
+        width: 100%;
+        height: 2rem;
+        margin-top: (4/16rem);
+        /* prevents border & padding from affecting height */
+        box-sizing: border-box;
+        padding-left: (20/16rem);
+        border: 1px solid #b4b2c7;
+        border-radius: (8/16rem);
+        transition: border 0.3s; 
+      }
     }
 
     .cs-right-section {
@@ -323,6 +340,9 @@ import paperStarImage from "@assets/images/paper-star.png";
       }
     }
   }
+
+
+
 }
 
 /* Tablet - 700px */

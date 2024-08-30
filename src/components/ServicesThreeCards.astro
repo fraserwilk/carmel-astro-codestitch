@@ -8,11 +8,7 @@ import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
 <section id="services-333">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Therapy</span>
             <h2 class="cs-title">My Services</h2>
-            <p class="cs-text">
-                I offer various forms of therapy to help give you a process to set you on your way to recovery and fulfillment.
-            </p>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
@@ -22,17 +18,18 @@ import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
                         <source media="(min-width: 601px)" srcset={womenImage}>
                         <Image src={womenImage} alt="therapy helps" aria-hidden="true">
                     </picture>
-                    <h3 class="cs-h3">Areas I Can Help You</h3>
-                    <p class="cs-item-text">
-                        •	Service workers, eg. NSW Police Force, NSW Ambulance, Fire & Rescue NSW, ADF<br />
-                        •	CTP insurance<br />
-                        •	Experiencing trauma or are feeling ‘stuck’<br />
-                        •	Dealing with relationship breakdowns/family changes<br />
-                        •	Living/working away from home<br />
-                        •	Relocating to new work/living areas<br />
-                        <br />
-                        <p class="cs-item-text cs-item-readmore">Read more...</p>
-                    </p>
+                    <h3 class="cs-h3">My Clients Include:</h3>
+                                     
+                    <ul class="cs-item-text" style="padding-left:2.7rem;">
+                        <li>Service workers, eg. NSW Police Force, NSW Ambulance, Fire & Rescue NSW, ADF</li>
+                        <li>CTP insurance</li>
+                        <li>Experiencing trauma or are feeling 'stuck'</li>
+                        <li>Dealing with relationship breakdowns/family changes</li>
+                        <li>Living/working away from home</li>
+                        <li>Relocating to new work/living areas</li>
+                    </ul>
+                    <p class="cs-item-text cs-item-readmore">Read more...</p>
+                    
                 </a>
             </li>
             <li class="cs-item">
@@ -43,14 +40,17 @@ import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
                         <Image src={smilingLadyImage} alt="happy woman" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">EMDR</h3>
-                    <p class="cs-item-text">
+                    <p class="cs-item-text cs-justify">
                         Eye Movement Desensitisation and Reprocessing (EMDR) Therapy is an evidence-based therapy and has been used in a variety of settings and countries over the last 30 years.<br />
                         <br />
-                        • You don't have to talk about your trauma in detail<br />
-                        • It doesn't require homework<br />
-                        • It often produces quicker results<br />
-                        • The benefits continue long after treatment has finished<br />
-                        <br />
+
+                        <ul class="cs-item-text" style="padding-left:2.7rem;">
+                            <li>You don't have to talk about your trauma in detail</li>
+                            <li>It doesn't require homework</li>
+                            <li>It often produces quicker results</li>
+                            <li>The benefits continue long after treatment has finished</li>
+                        </ul>
+
                         <p class="cs-item-text cs-item-readmore">Read more...</p>
                     </p>
                 </a>
@@ -64,9 +64,9 @@ import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
                     </picture>
                     <h3 class="cs-h3">About Carmel</h3>
                     <p class="cs-item-text">
-                        <i>Professional Journey:</i><br />From Melbourne to the Southern Highlands<br />
+                        <i>Professional Journey:</i><br />
+                        Melbourne, Perth, Sydney and Rural NSW<br />
                         <i>International Experience:</i><br />Expat Psychology in Vietnam<br />
-                        <i>Diverse Australian Experience:</i><br />Perth and Sydney<br />
                         <i>Southern Highlands:</i><br />A Decade of Private Practice<br />
                         <br />
                         <p class="cs-item-text cs-item-readmore">Read more...</p>
@@ -221,6 +221,15 @@ import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
             margin: 0;
             /* 16px - 24px */
             padding: 0 clamp(1rem, 2.2vw, 1.5rem);
+        }
+
+        .cs-justify {
+            text-align: justify;
+        }
+
+        .cs-item-readmore {
+            padding-top: 1rem;
+            color: var(--primary);
         }
     }
 }
