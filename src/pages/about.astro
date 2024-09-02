@@ -132,10 +132,10 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
     .podcast-card {
         width: clamp(25vw, 18rem, 70vw);
         display: flex;
-        height: 30rem;
+        height: 20rem;
         flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
+        gap: 0;
         flex: 1 0 0;
         }
 
@@ -143,7 +143,8 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
             height: 10rem;
             flex-shrink: 0;
             align-self: stretch;
-            border-radius: 1.5rem;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
             border: 2px #898989;
             background: url(/images/podcast.png) rgb(226, 226, 226) 50% / contain no-repeat;
         }
@@ -155,7 +156,8 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
             align-items: flex-start;
             gap: 1rem;
             align-self: stretch;
-            border-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
             background: #0C6E45;
         }
 
