@@ -57,13 +57,34 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
                 More than anything, I will recommend a range of resources (books, podcasts, professional 
                 articles, etc) for you to access outside of the therapeutic setting.</p>
             <p class="cs-text">It is worth noting that EMDR, generally speaking, does not require homework.</p>
-            <p class="cs-text">To help you find your best match in terms of a therapist, you might want to 
-                listen to this podcast.</p>
-            
             <p class="cs-text">I regularly engage in Professional Development activities to keep me up-to-date 
                 with latest advances in my field.</p>
+            <p class="cs-text">To help you find your best match in terms of a therapist, you might want to 
+                listen to this podcast below.</p>
             
-            
+            <a href="https://podcasts.apple.com/au/podcast/the-emdr-podcast/id1570958116" target="_blank" class="podcast-card-link">
+                <div class="podcast-card">
+                    <div class="podcast-image">
+                    </div>
+                    <div class="podcast-content">
+                        <div class="podcast-content-frame">
+                            <div class="podcast-content-frame-title">
+                                EMDR Podcast series recommended by Carmel
+                            </div>
+                            <div class="podcast-content-frame-button">
+                                <div class="play"></div>
+                            </div>
+                        </div>
+                        <div class="podcast-content-info">
+                            <div class="date">
+                                <div class="calendar"></div>
+                                2 Sept 2024
+                            </div>
+                            <div class="tags">Podcast</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
             
       </div>
       <div class="cs-image-group">
@@ -80,6 +101,135 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
 </BaseLayout>
 
 <style lang="less">
+    .podcast-card-link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        }
+
+        .podcast-card {
+        cursor: pointer;
+        /* Add other styles for the card appearance */
+        transition: all 0.3s ease;
+        }
+
+        .podcast-card:hover {
+        /* Add hover effects for the entire card */
+        outline: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Preserve default styling for any links inside the card */
+        .podcast-card a {
+        color: inherit;
+        text-decoration: underline;
+        }
+
+        .podcast-card a:hover {
+        text-decoration: none;
+        }
+    
+
+    .podcast-card {
+        width: clamp(25vw, 18rem, 70vw);
+        display: flex;
+        height: 30rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        flex: 1 0 0;
+        }
+
+        .podcast-image {
+            height: 10rem;
+            flex-shrink: 0;
+            align-self: stretch;
+            border-radius: 1.5rem;
+            border: 2px #898989;
+            background: url(/images/podcast.png) rgb(226, 226, 226) 50% / contain no-repeat;
+        }
+
+        .podcast-content {
+            display: flex;
+            padding: 1.25rem;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            align-self: stretch;
+            border-radius: 1.5rem;
+            background: #0C6E45;
+        }
+
+        .podcast-content-frame {
+            display: flex;
+            padding-bottom: 1rem;
+            align-items: flex-end;
+            gap: 1.5rem;
+            align-self: stretch;
+            border-bottom: 1px solid var(--primary, #FDA38A);
+        }
+
+        .podcast-content-frame-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1 0 0;
+            align-self: stretch;
+            color: var(--bodyTextColorWhite, #fff);
+            font-family: Figtree;
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%; /* 1.875rem */
+        }
+
+        .podcast-content-frame-button {
+            display: flex;
+            padding: 1rem;
+            justify-content: center;
+            align-items: center;
+            gap: 0.625rem;
+            border-radius: 4rem;
+            // border: 1px solid var(--bodyTextColorWhite, #fff);
+
+            .play {
+                background-image:url(/assets/svgs/play-button.svg);
+                background-size: cover;
+                width: 100%;
+                height: 0;
+                padding: 40px;
+            }
+        }
+
+        .podcast-content-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            align-self: stretch;
+
+            .date {
+                display: flex;
+                align-items: center;
+                color: var(--primary, #fff);
+                gap: 0.5rem;
+                flex: 1 0 0;
+
+                .calendar {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    background: url(/assets/svgs/calendar.svg);
+                }
+            }
+
+            .tags {
+                display: flex;
+                padding: 0.25rem 1rem;
+                align-items: center;
+                gap: 0.25rem;
+                border-radius: 5rem;
+                background: #FDA38A;
+            }
+        }
+
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
