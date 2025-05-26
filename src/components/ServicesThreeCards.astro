@@ -1,31 +1,28 @@
 ---
-import { Image } from 'astro:assets';
-import smilingLadyImage from "@assets/images/pexels-photo-3754676.webp";
-import womenImage from "../assets/images/pexels-photo-4098221.webp";
-import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
+import { Picture } from 'astro:assets';
+import tile1Image from "@assets/images/pexels-photo-3754676.webp";
+import tile2Image from "@assets/images/emdr-cp.jpg";
+import tile3Image from "@assets/images/about me option B.webp";
 
 ---
 <section id="services-333">
     <div class="cs-container">
         <div class="cs-content">
-            <h2 class="cs-title">My Services</h2>
+            <h2 class="cs-title">More Information</h2>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
                 <a href="/work-with-me" class="cs-link">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset={womenImage}>
-                        <source media="(min-width: 601px)" srcset={womenImage}>
-                        <Image src={womenImage} alt="therapy helps" aria-hidden="true">
-                    </picture>
-                    <h3 class="cs-h3">My Clients Include:</h3>
-                                     
+                    <Picture class="cs-picture" src={tile1Image} formats={['webp', 'jpeg']} alt="Client base image" loading="lazy" />
+                        
+                    <h3 class="cs-h3">My client base</h3>
+                    <div class="cs-item-text">I have success in working with clients who are:</div>
                     <ul class="cs-item-text" style="padding-left:2.7rem;">
                         <li>Service workers, eg. NSW Police Force, NSW Ambulance, Fire & Rescue NSW, ADF</li>
                         <li>CTP insurance</li>
                         <li>Experiencing trauma or are feeling 'stuck'</li>
                         <li>Dealing with relationship breakdowns/family changes</li>
-                        <li>Living/working away from home</li>
+                        <li>NDIS clients</li>
                         <li>Relocating to new work/living areas</li>
                     </ul>
                     <p class="cs-item-text cs-item-readmore">Read more...</p>
@@ -34,12 +31,8 @@ import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
             </li>
             <li class="cs-item">
                 <a href="/emdr" class="cs-link">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset={smilingLadyImage}>
-                        <source media="(min-width: 601px)" srcset={smilingLadyImage}>
-                        <Image src={smilingLadyImage} alt="happy woman" aria-hidden="true">
-                    </picture>
-                    <h3 class="cs-h3">EMDR</h3>
+                    <Picture class="cs-picture" src={tile2Image} formats={['webp', 'jpeg']} alt="EMDR expertise" loading="lazy" />
+                    <h3 class="cs-h3">EMDR - what is it?</h3>
                     <p class="cs-item-text cs-justify">
                         Eye Movement Desensitisation and Reprocessing (EMDR) Therapy is an evidence-based therapy and has been used in a variety of settings and countries over the last 30 years.<br />
                         <br />
@@ -57,17 +50,16 @@ import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
             </li>
             <li class="cs-item">
                 <a href="../about/" class="cs-link">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset={womenChattingImage}>
-                        <source media="(min-width: 601px)" srcset={womenChattingImage}>
-                        <Image src={womenChattingImage} alt="chatting with friends" aria-hidden="true">
-                    </picture>
-                    <h3 class="cs-h3">About Carmel</h3>
+                    <Picture class="cs-picture" src={tile3Image} formats={['webp', 'jpeg']} alt="About me" loading="lazy" />
+                    
+                    <h3 class="cs-h3">About me</h3>
                     <p class="cs-item-text">
-                        <i>Professional Journey:</i><br />
-                        Melbourne, Perth, Sydney and Rural NSW<br />
-                        <i>International Experience:</i><br />Expat Psychology in Vietnam<br />
-                        <i>Southern Highlands:</i><br />A Decade of Private Practice<br />
+                        <i>Australian professional journey:</i><br />
+                        Melbourne, Perth, Sydney and rural NSW<br />
+                        <i>International professional experience:</i><br />
+                        Lived and worked as a psychologist in Vietnam for 3 years.<br />
+                        <i>Rural professional experience:</i><br />
+                        Successful private practice in the Southern Highlands for over a decade.<br />
                         <br />
                         <p class="cs-item-text cs-item-readmore">Read more...</p>
                     </p>
@@ -114,9 +106,8 @@ import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
             margin: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: stretch;
             flex-direction: column;
-            /* 16px - 20px */
             gap: clamp(1rem, 1.6vw, 1.25rem);
         }
 
@@ -183,6 +174,8 @@ import womenChattingImage from "@assets/images/pexels-photo-6135180.webp";
             display: block;
             position: relative;
             z-index: 10;
+            object-fit: cover;
+            object-position: 30% 10%;
 
             img {
                 position: absolute;
