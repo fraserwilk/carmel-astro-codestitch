@@ -4,7 +4,7 @@ import CTA from "@components/CTA.astro";
 
 import { Picture } from 'astro:assets';
 import parrotImage from "@assets/images/parrot-in-tree.jpg";
-import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
+import carmelImage from "@assets/images/about me A.webp";
 ---
 
 <BaseLayout
@@ -259,11 +259,12 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
             /* set text align to left if content needs to be left aligned */
             text-align: left;
             width: 100%;
-            max-width: (738/16rem);
+            max-width: (580/16rem);
             display: flex;
             flex-direction: column;
             /* centers content horizontally, set to flex-start to left align */
             align-items: flex-start;
+            order: 2;
 
             img {
                 width: 100%;
@@ -373,8 +374,8 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
             /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
             width: (542/16em);
             height: (773/16em);
-            display: none;
-            /* prevents flexbox from squishing it */
+            display: flex;
+            order: 1;
             flex: none;
             position: relative;
             /* flips it horizontally */
@@ -382,14 +383,12 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
         }
 
         .cs-picture {
-            width: (542/16em);
-            height: (647/16em);
-            border-radius: (285/16em);
+            width: 100%;
+            height: 100%;
+            border-radius: 4em;
             border: (12/16em) solid #fff;
             background-color: #f7f7f7;
-            /* prevents border from affecting height and width */
-            box-sizing: border-box;
-            /* clips img tag corners */
+            // box-sizing: border-box;
             overflow: hidden;
             display: block;
             position: absolute;
@@ -400,33 +399,13 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
                 width: 100%;
                 height: 100%;
                 /* makes it act like a background image */
-                object-fit: contain;
+                object-fit: cover;
                 position: absolute;
                 top: 0;
                 left: 0;
                 /* flips the image to its original orientation */
                 transform: scaleX(-1);
             }
-        }
-
-        .cs-flower {
-            width: (362/16em);
-            height: auto;
-            display: block;
-            position: absolute;
-            bottom: (-38/16em);
-            right: (-48/16em);
-            z-index: -1;
-            transform: rotate(142deg);
-        }
-
-        .cs-sense {
-            width: (80/16em);
-            height: auto;
-            position: absolute;
-            top: (-4/16em);
-            left: (10/16em);
-            transform: rotate(90deg);
         }
 
         .cs-background {
@@ -445,6 +424,7 @@ import carmelImage from "@assets/images/Carmel-crossed-arms-trans.png"
 
         .cs-image-group {
             display: block;
+            order: 2;
         }
 
         .cs-background {

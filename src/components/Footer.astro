@@ -30,6 +30,9 @@ import client from "@data/client.json";
               <a class="cs-nav-link" href="/emdr">EMDR</a>
           </li>
           <li class="cs-nav-li">
+              <a class="cs-nav-link" href="/work-with-me">Services</a>
+          </li>
+          <li class="cs-nav-li">
               <a class="cs-nav-link" href="/about">About Carmel</a>
           </li>
       </ul>
@@ -37,6 +40,9 @@ import client from "@data/client.json";
       <ul class="cs-contact">
           <li class="cs-nav-li">
               <span class="cs-header">Contact</span>
+          </li>
+          <li class="cs-nav-li">
+              <a class="cs-nav-link" href="/contact">Contact</a>
           </li>
           <li class="cs-contact-li">
               <a class="cs-contact-link" href={`mailto:${client.email}`}>Click to Email</a>
@@ -103,13 +109,14 @@ import client from "@data/client.json";
             list-style: none;
             line-height: 1.5em;
             margin-bottom: (8/16rem);
+            text-transform: uppercase;
             &:last-of-type {
                 margin-bottom: 0;
             }
         }
 
         .cs-header {
-            font-size: 1rem;
+            font-size: 1.2rem;
             line-height: 1.5em;
             font-weight: 900;
             text-transform: uppercase;

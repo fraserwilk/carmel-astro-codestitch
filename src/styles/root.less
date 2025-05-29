@@ -2,9 +2,9 @@
 @media only screen and (min-width: 0em) {
   // Website colors
   :root {
-    --primary: #A4C3B2;
+    --primary: #314a3d; // was #A4C3B2;
     --primaryLight: #C9D9D0;
-    --secondary: #314a3d;
+    --secondary: #C26440;
     --secondaryLight: #416250;
     --headerColor: #223329;
     --bodyTextColor: #121b16;
@@ -64,7 +64,7 @@
   .cs-button-solid {
     font-size: (16/16rem);
     font-weight: bold;
-    line-height: (50/16em);
+    line-height: clamp(1.5em, 5.5vw, 3.2em);
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
@@ -74,7 +74,7 @@
     border-radius: 0.25rem;
 
     // Transition Properties
-    color: #000;
+    color: var(--bodyTextColorWhite);
     background-color: var(--primary);
     display: inline-block;
     position: relative;
@@ -95,7 +95,7 @@
       //Transition properties
       width: 0;
       height: 100%;
-      background-color: #000;
+      background-color: var(--secondary);
       opacity: 1;
       display: block;
       position: absolute;

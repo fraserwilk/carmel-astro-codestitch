@@ -10,8 +10,7 @@ import landingSmallImage from "@assets/images/landing-m.webp";
     <div class="cs-container">
       <div class="cs-flex-group">
         <!-- <span class="cs-topper">EMDR Therapy</span> -->
-        <h1 class="cs-title">CARMEL POUND</h1>
-        <p>&nbsp;</p>
+        <h1 class="cs-title">Carmel Pound</h1>
         <div class="cs-title">Psychologist</div>
         <div class="cs-title">EMDR Therapist</div>
         </p>
@@ -101,7 +100,6 @@ import landingSmallImage from "@assets/images/landing-m.webp";
             margin-bottom: clamp(3.75rem, 15.5vw, 13.75rem);
             margin: auto;
             width: 91vw;
-            /* 464px - 562px */
             max-width: clamp(29rem, 60vw, 35.125rem);
             display: flex;
             align-items: flex-start;
@@ -109,6 +107,10 @@ import landingSmallImage from "@assets/images/landing-m.webp";
             flex-wrap: wrap;
             column-gap: (20/16rem);
             box-sizing: border-box;
+            padding: 2rem;
+            border: solid var(--secondaryLight) 1px;
+            border-radius: 0.25rem;
+            backdrop-filter: blur(2px);
         }
 
         .cs-topper {
@@ -124,6 +126,10 @@ import landingSmallImage from "@assets/images/landing-m.webp";
             display: block;
         }
 
+        h1.cs-title {
+            margin-bottom: 4rem;
+        }
+
         .cs-title {
             /* 39px - 61px */
             font-size: clamp(2.4375rem, 6.40vw, 3.8125rem);
@@ -132,7 +138,7 @@ import landingSmallImage from "@assets/images/landing-m.webp";
             text-align: center;
             width: 100%;
             /* 32px - 40px */
-            margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+            margin: 0 auto clamp(0.5rem, 2vw, 1rem) 0;
             color: var(--bodyTextColorWhite);
             position: relative;
         }
@@ -150,16 +156,14 @@ import landingSmallImage from "@assets/images/landing-m.webp";
             color: var(--bodyTextColorWhite);
         }
 
-        .cs-button-solid {
+/*         .cs-button-solid {
             font-size: (16/16rem);
             font-weight: 700;
-            /* 46px - 56px */
-            line-height: clamp(2.875em, 5.5vw, 3.5em);
+            line-height: clamp(1.5em, 6.5vw, 3.2em);
             text-align: center;
             text-decoration: none;
             min-width: (150/16rem);
             margin: 0;
-            /* prevents padding from adding to the width */
             box-sizing: border-box;
             padding: 0 (34/16rem);
             background-color: var(--primary);
@@ -167,7 +171,7 @@ import landingSmallImage from "@assets/images/landing-m.webp";
             overflow: hidden;
             color: #fff;
             border: none;
-            display: inline-block;
+            display: inline-flex;
             position: relative;
             z-index: 1;
             transition: color 0.3s;
@@ -197,7 +201,7 @@ import landingSmallImage from "@assets/images/landing-m.webp";
             .cs-button-text {
                 padding: 0;
             }
-        }
+        } */
 
         .cs-button-transparent {
             font-size: (16/16rem);
