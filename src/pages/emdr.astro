@@ -44,7 +44,7 @@ import greenEyesImage from "@assets/images/green-eyes-01.webp";
             <li>Sleeplessness</li>
         </ul>
 
-        <p><a href="#top">Back to Top</a></p>
+        <p><a class="cs-link" href="#top">Back to Top</a></p>
         
         <h3>How does EMDR work?</h3>
         <p>During EMDR, the therapist works with the client to identify a specific problem as a focus for the treatment session. The client then calls to mind the disturbing issue or event (in as little or as much detail as feels comfortable) regarding what was seen, felt, heard, thought, etc. The therapist will then guide the client asking them to track hand movements which result in side to side eye movements or another form of bilateral stimulation.  These bilateral movements are used until the memory becomes less disturbing and is associated with a positive thought or belief about yourself.</p>
@@ -52,7 +52,7 @@ import greenEyesImage from "@assets/images/green-eyes-01.webp";
         <p>We will work out together what approach will suit you best.</p>
         <p>For more information re intensive EMDR treatment click here.  (? Include payment plan ideas)</p>
 
-        <p><a href="#top">Back to Top</a></p>
+        <p><a class="cs-link" href="#top">Back to Top</a></p>
 
         <h3>Why use EMDR as a treatment model?</h3>
         <ul>
@@ -62,7 +62,7 @@ import greenEyesImage from "@assets/images/green-eyes-01.webp";
             <li>The benefits of treatment continue to be experienced long after treatment has finished</li>
         </ul>
 
-        <p><a href="#top">Back to Top</a></p>
+        <p><a class="cs-link" href="#top">Back to Top</a></p>
 
         <h3>EMDR is endorsed by:</h3>
         <ul>
@@ -75,7 +75,7 @@ import greenEyesImage from "@assets/images/green-eyes-01.webp";
             <li>American Psychiatric Association</li>
         </ul>
 
-        <p><a href="#top">Back to Top</a></p>
+        <p><a class="cs-link" href="#top">Back to Top</a></p>
 
         
         
@@ -204,13 +204,6 @@ html {
             &:last-of-type {
                 margin-bottom: (32/16rem);
             }
-
-            a {
-                font-size: inherit;
-                line-height: inherit;
-                text-decoration: underline;
-                color: var(--primary);
-            }
         }
 
         ol,
@@ -241,27 +234,7 @@ html {
                     display: block;
                     top: (10/16rem);
                     left: (-12/16rem);
-                }
-
-                a {
-                    text-decoration: underline dotted;
-                    text-underline-offset: 0.4rem;
-                    color: var(--secondary);
-
-                    &:visited {
-                        color: var(--secondary);
-                    }
-
-                    &:visited {
-                    color: var(--primary);
-                    }
-
-                    &:hover {
-                    color: var(--secondary);
-                    }
-                }
-
-                
+                }                
             }
         }
 
@@ -307,26 +280,6 @@ html {
             }
         }
 
-        .cs-flower {
-            width: (362/16em);
-            height: auto;
-            display: block;
-            position: absolute;
-            bottom: (-38/16em);
-            right: (-48/16em);
-            z-index: -1;
-            transform: rotate(142deg);
-        }
-
-        .cs-sense {
-            width: (80/16em);
-            height: auto;
-            position: absolute;
-            top: (-4/16em);
-            left: (10/16em);
-            transform: rotate(90deg);
-        }
-
         .cs-background {
             display: none;
         }
@@ -363,31 +316,12 @@ html {
             // padding-bottom: clamp(3rem, 7vw, 4rem);
             color: var(--secondary);
         }
+
         .cs-item-text {
             font-size: var(--bodyFontSize);
             line-height: 1.5em;
             margin: 0 0 2rem;
             color: var(--primary);
-        }
-        .cs-link {
-            text-decoration: none;
-            line-height: 1.5em;
-            font-weight: 700;
-            margin: auto 0 0 0;
-            color: #986B1D;
-            position: relative;
-            z-index: 1;
-        }
-        .cs-link:before {
-            content: '';
-            width: 100%;
-            height: 1px;
-            background: currentColor;
-            opacity: 1;
-            display: block;
-            position: absolute;
-            bottom: 0;
-            left: 0;
         }
     }
 }

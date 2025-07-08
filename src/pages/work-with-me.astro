@@ -44,7 +44,7 @@ import blocksImage from "@assets/images/clients.webp";
             <p>eg. NSW Police Force, NSW Ambulance, Fire & Rescue NSW</p>
             <p>I am particularly well-suited to working with individuals who are seeking psychological support for workplace injuries - my early career experience in organisational psychology places me in a unique position to confidently help injured workers navigate the insurance system and return-to-work process, in the context of their psychological injury.</p>
             <p>I have a SIRA provider number and years of experience working with clients seeking support under the banner of insurance companies.</p>
-            <p><a href="#top">Back to Top</a></p>
+            <p><a class="cs-link" href="#top">Back to Top</a></p>
 
         <h4 id="trauma">Individuals who have experienced trauma or are feeling 'stuck'</h4>
             <p>Whilst many of us can identify with what might be called 'obvious' trauma, eg. a motor vehicle accident, assault, being bitten by a dog, there is a less obvious trauma, one in which our childhood developmental needs have not been fully met.  This can be referred to as Attachment Trauma.</p>
@@ -63,13 +63,13 @@ import blocksImage from "@assets/images/clients.webp";
                 </ul>
             <p>If you've experienced or currently experience any of the above then we'd probably work well together 
                 using EMDR. </p>
-            <p><a href="#top">Back to Top</a></p>
+            <p><a class="cs-link" href="#top">Back to Top</a></p>
 
         <h4 id="relationships">Individuals dealing with relationship breakdowns/family changes</h4>
         <p>Relationship and/or family breakups can not only be difficult but traumatic for all parties involved. 
             With the right guidance on how to navigate this process the pain and suffering can be minimised, 
             especially for children.  In this context I work with individuals/parents.</p>
-        <p><a href="#top">Back to Top</a></p>
+        <p><a class="cs-link" href="#top">Back to Top</a></p>
         
         <h4 id="relocating">Living/working/relocating to new work/living areas or overseas</h4>
 
@@ -80,26 +80,26 @@ import blocksImage from "@assets/images/clients.webp";
             the provision of psychological services.  I have provided telehealth psychology services before 
             COVID entered our world and am confident working with clients in this context.
             </p>
-            <p><a href="#top">Back to Top</a></p>
+            <p><a class="cs-link" href="#top">Back to Top</a></p>
         
         
         <h4 id="EMDRsupervisees">EMDR supervisees</h4>
         <p>Having attained my Accredited Consultant credentials with EMDRAA I am excited to provide case 
             consultation to therapists training in EMDR.  I have completed all of my training and continue 
             to receive individual supervision with a previous EMDRAA President who originally trained with Dr Francine Shapiro.  With this support and my own professional history it's rewarding to share this knowledge and experience with new and developing EMDR therapists.</p>
-        <p><a href="#top">Back to Top</a></p>
+        <p><a class="cs-link" href="#top">Back to Top</a></p>
             
         <h4 id="ctp">CTP insurance</h4>
         <p class="cs-text">As a trauma-focussed therapist with extensive experience in navigating the insurance company landscape, I am well-placed to support you if you have been impacted by a compulsory third-party injury.</p>
-        <p><a href="#top">Back to Top</a></p>
+        <p><a class="cs-link" href="#top">Back to Top</a></p>
         
         <h4 id="psychologists">Psychologists - General & Probationary</h4>
         <p>As a Board Approved Supervisor, AHPRA, I provide competency-based supervision ensuring psychologists are practicing to the highest standards whilst balancing this with good self-care.</p>
-        <p><a href="#top">Back to Top</a></p>
+        <p><a class="cs-link" href="#top">Back to Top</a></p>
         
         <h4 id="ndis">NDIS Clients</h4>
         <p>My work in this area is focused on capacity building for participants (eg. social skills, emotional regulation) and to address cognitive, emotional or behavioural barriers to growth and development.  My overarching goal is to promote greater independence over time.</p>
-        <p><a href="#top">Back to Top</a></p>
+        <p><a class="cs-link" href="#top">Back to Top</a></p>
        
 
         <h4 id="referrals">My referrals…</h4>
@@ -114,7 +114,7 @@ import blocksImage from "@assets/images/clients.webp";
         </ul>
         <p class="cs-text">For good self-care I balance my referral base.</p>
 
-          <p><a href="#top">Back to Top</a></p>
+          <p><a class="cs-link" href="#top">Back to Top</a></p>
       </div>
 
   </div>
@@ -196,7 +196,7 @@ html {
             pointer-events: none;
             }
 
-        h2 {
+        h2, h4 {
             font-size: (32/16rem);
             margin-top: (32/16rem);
         }
@@ -286,68 +286,6 @@ html {
                     color: var(--secondary);
                     }
                 }
-
-                /* Add this attribute to the element that needs a tooltip */
-                [data-tooltip] {
-                position: relative;
-                z-index: 2;
-                cursor: pointer;
-                }
-
-                /* Hide the tooltip content by default */
-                [data-tooltip]:before,
-                [data-tooltip]:after {
-                visibility: hidden;
-                opacity: 0;
-                pointer-events: none;
-                }
-
-                /* Position tooltip above the element */
-                [data-tooltip]:before {
-                position: absolute;
-                bottom: 150%;
-                left: 50%;
-                margin-bottom: 5px;
-                margin-left: -80px;
-                padding: 7px;
-                width: 80%;
-                max-width: 660px;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                border-radius: 3px;
-                background-color: #000;
-                background-color: hsla(0, 0%, 20%, 0.9);
-                color: #fff;
-                content: attr(data-tooltip);
-                text-align: left;
-                font-size: 1rem;
-                line-height: 1.2;
-                white-space: pre-line;
-                z-index: 1 !important;
-                }
-
-                /* Triangle hack to make tooltip look like a speech bubble */
-                [data-tooltip]:after {
-                position: absolute;
-                bottom: 150%;
-                left: 50%;
-                margin-left: -5px;
-                width: 0;
-                border-top: 5px solid #000;
-                border-top: 5px solid hsla(0, 0%, 20%, 0.9);
-                border-right: 5px solid transparent;
-                border-left: 5px solid transparent;
-                content: " ";
-                font-size: 0;
-                line-height: 0;
-                }
-
-                /* Show tooltip content on hover */
-                [data-tooltip]:hover:before,
-                [data-tooltip]:hover:after {
-                visibility: visible;
-                opacity: 1;
-                }
             }
         }
 
@@ -391,26 +329,6 @@ html {
                 /* flips the image to its original orientation */
                 transform: scaleX(-1);
             }
-        }
-
-        .cs-flower {
-            width: (362/16em);
-            height: auto;
-            display: block;
-            position: absolute;
-            bottom: (-38/16em);
-            right: (-48/16em);
-            z-index: -1;
-            transform: rotate(142deg);
-        }
-
-        .cs-sense {
-            width: (80/16em);
-            height: auto;
-            position: absolute;
-            top: (-4/16em);
-            left: (10/16em);
-            transform: rotate(90deg);
         }
 
         .cs-background {
