@@ -23,13 +23,13 @@ import greenEyesImage from "@assets/images/green-eyes-01.webp";
 <section id="content-page-715">
   <div class="cs-container">
       <div class="cs-content">
-        <h1 class="cs-title">What is <span class="cs-color">EMDR</span>?</h1>
+        <h2 class="cs-title">What is <span class="cs-color">EMDR</span>?</h2>
         
         <p>EMDR (Eye Movement Desensitisation and Reprocessing) Therapy is an evidence-based therapy 
             and has been used in a variety of settings and countries over the last 30 years.</p>
             <p>EMDR is an effective treatment for both in-person and telehealth settings.</p>
 
-        <h2>Who is suitable for EMDR therapy?</h2>
+        <h3>Who is suitable for EMDR therapy?</h3>
         <p>Whilst EMDR was originally developed for those with a PTSD diagnosis (Post traumatic Stress Disorder) more and more research supports its use for a variety of presentations including, but not limited to: </p>
         <ul>
             <li>Performance anxiety</li>
@@ -46,7 +46,7 @@ import greenEyesImage from "@assets/images/green-eyes-01.webp";
 
         <p><a href="#top">Back to Top</a></p>
         
-        <h2>How does EMDR work?</h2>
+        <h3>How does EMDR work?</h3>
         <p>During EMDR, the therapist works with the client to identify a specific problem as a focus for the treatment session. The client then calls to mind the disturbing issue or event (in as little or as much detail as feels comfortable) regarding what was seen, felt, heard, thought, etc. The therapist will then guide the client asking them to track hand movements which result in side to side eye movements or another form of bilateral stimulation.  These bilateral movements are used until the memory becomes less disturbing and is associated with a positive thought or belief about yourself.</p>
         <p>A typical EMDR session lasts between 60-90 minutes and can be provided on a weekly basis (a more traditional model of therapy) or more intensive basis with multiple weekly sessions taking place over a 2-4 week period.  The number of sessions you will need depends on the type of problem you are presenting with, your life circumstances and your experience of previous trauma.</p>
         <p>We will work out together what approach will suit you best.</p>
@@ -54,7 +54,7 @@ import greenEyesImage from "@assets/images/green-eyes-01.webp";
 
         <p><a href="#top">Back to Top</a></p>
 
-        <h2>Why use EMDR as a treatment model?</h2>
+        <h3>Why use EMDR as a treatment model?</h3>
         <ul>
             <li>Clients do not have to talk about their trauma in detail</li>
             <li>It does not require the completion of homework</li>
@@ -64,7 +64,7 @@ import greenEyesImage from "@assets/images/green-eyes-01.webp";
 
         <p><a href="#top">Back to Top</a></p>
 
-        <h2>EMDR is endorsed by:</h2>
+        <h3>EMDR is endorsed by:</h3>
         <ul>
             <li>World Health Organisation (WHO)</li>
             <li>Phoenix Australia - Centre for Posttraumatic Mental Health</li>
@@ -79,7 +79,17 @@ import greenEyesImage from "@assets/images/green-eyes-01.webp";
 
         
         
-    
+        
+        <div class="cs-card-group">
+                <div class="cs-item">
+                    <h3 class="cs-h3">Read article:</h3>
+                    <p class="cs-item-text">
+                        A recent ABC News feature that delves into the transformative impact of EMDR therapy on mental health treatment.
+                        The article, titled "EMDR is being heralded as 'life-changing' for mental health treatment. But what is it?", explores how EMDR is helping individuals process traumatic memories and alleviate emotional distress.
+                    </p>
+                    <a href="https://www.abc.net.au/news/2025-06-25/emdr-therapy-for-mental-health-treatment/105453498" class="cs-link" target="_blank">Read Now</a>
+                </div>            
+            </div>
 
   </div>
 
@@ -166,6 +176,7 @@ html {
 
         h3 {
             font-size: (24/16rem);
+            margin-top: (32/16rem);
             color: var(--primary);
         }
 
@@ -180,7 +191,7 @@ html {
         }
 
         .cs-color {
-            color: var(--primary);
+            color: var(--secondary);
         }
 
         p {
@@ -250,67 +261,7 @@ html {
                     }
                 }
 
-                /* Add this attribute to the element that needs a tooltip */
-                [data-tooltip] {
-                position: relative;
-                z-index: 2;
-                cursor: pointer;
-                }
-
-                /* Hide the tooltip content by default */
-                [data-tooltip]:before,
-                [data-tooltip]:after {
-                visibility: hidden;
-                opacity: 0;
-                pointer-events: none;
-                }
-
-                /* Position tooltip above the element */
-                [data-tooltip]:before {
-                position: absolute;
-                bottom: 150%;
-                left: 50%;
-                margin-bottom: 5px;
-                margin-left: -80px;
-                padding: 7px;
-                width: 80%;
-                max-width: 660px;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                border-radius: 3px;
-                background-color: #000;
-                background-color: hsla(0, 0%, 20%, 0.9);
-                color: #fff;
-                content: attr(data-tooltip);
-                text-align: left;
-                font-size: 1rem;
-                line-height: 1.2;
-                white-space: pre-line;
-                z-index: 1 !important;
-                }
-
-                /* Triangle hack to make tooltip look like a speech bubble */
-                [data-tooltip]:after {
-                position: absolute;
-                bottom: 150%;
-                left: 50%;
-                margin-left: -5px;
-                width: 0;
-                border-top: 5px solid #000;
-                border-top: 5px solid hsla(0, 0%, 20%, 0.9);
-                border-right: 5px solid transparent;
-                border-left: 5px solid transparent;
-                content: " ";
-                font-size: 0;
-                line-height: 0;
-                }
-
-                /* Show tooltip content on hover */
-                [data-tooltip]:hover:before,
-                [data-tooltip]:hover:after {
-                visibility: visible;
-                opacity: 1;
-                }
+                
             }
         }
 
@@ -378,6 +329,65 @@ html {
 
         .cs-background {
             display: none;
+        }
+
+        .cs-card-group {
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            /* 16px - 20px */
+            gap: clamp(1rem, 2.3vw, 1.25rem);
+        }
+        .cs-item {
+            text-align: left;
+            list-style: none;
+            /* 24px - 32px top & bottom */
+            /* 16px - 32px left & right */
+            padding: clamp(1.5rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem);
+            background-color: #FBF9F5;
+            border-radius: 1rem;
+            display: flex;
+            grid-column: span 12;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .cs-h3 {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 4vw, 1.5625rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            /* 24px - 32px */
+            margin: 0 0 clamp(1.5rem, 3vw, 2rem);
+            /* 48px - 64px */
+            // padding-bottom: clamp(3rem, 7vw, 4rem);
+            color: var(--secondary);
+        }
+        .cs-item-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            margin: 0 0 2rem;
+            color: var(--primary);
+        }
+        .cs-link {
+            text-decoration: none;
+            line-height: 1.5em;
+            font-weight: 700;
+            margin: auto 0 0 0;
+            color: #986B1D;
+            position: relative;
+            z-index: 1;
+        }
+        .cs-link:before {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background: currentColor;
+            opacity: 1;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
         }
     }
 }

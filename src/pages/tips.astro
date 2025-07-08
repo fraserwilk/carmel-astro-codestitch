@@ -3,62 +3,41 @@ import BaseLayout from "src/layouts/BaseLayout.astro";
 import CTA from "@components/CTA.astro";
 
 import { Picture } from 'astro:assets';
-import blocksImage from "@assets/images/coloured-blocks.jpg";
+import greenEyesImage from "@assets/images/green-eyes-01.webp";
 ---
 
 <BaseLayout
-  title="Services"
-  description="Carmel Pound Psychology services"
+  title="Tips for finding the right therapist"
+  description="EMDR (Eye Movement Desensitisation and Reprocessing) Therapy is an evidence-based therapy and has been used in a variety of settings and countries over the last 30 years."
   preloadImg={import("@assets/images/landing.jpg")}
 >
-<!-- ============================================ -->
-<!--                    LANDING                   -->
-<!-- ============================================ -->
+
 
 <section id="int-hero">
-  <h1 id="home-h">Services</h1>
+  <h1 id="home-h">Tips for Finding the Right Therapist</h1>
   <div class="cs-picture">
-      <Picture src={blocksImage} alt="coloured blocks" aria-hidden="true" />
+      <Picture src={greenEyesImage} alt="EMDR therapy" aria-hidden="true" />
   </div>
 </section>
 
 <section id="content-page-715">
   <div class="cs-container">
       <div class="cs-content">
-          <h1 class="cs-title">h1 - A Personalized Approach To Your <span class="cs-color">Well-Being</span></h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4-6</h4>
-          <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam eum quae in temporibus cumque tempora expedita mollitia nostrum adipisci, ipsum commodi, cupiditate, sequi quos enim! Quaerat esse non sunt! Lorem ipsum dolor sit amet <a href="">link example</a>. Est, quis!
-          </p>
-          <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam eum quae in temporibus cumque tempora expedita mollitia nostrum <strong>adipisci, ipsum commodi</strong>, cupiditate, sequi quos enim! 
-          </p>
-          <h3>Heading 3</h3>
-          <ol>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          </ol>
-          <h4>Heading 4-6</h4>
-          <ul>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          </ul>
-      </div>
-      <!-- <div class="cs-image-group">
-        <div class="cs-picture">
-          <Picture src={carmelImage} formats={['png','webp','jpg']} alt="Carmel smiling" />
-        </div>
+        <h2 class="cs-title">Tips for Finding the <span class="cs-color">Right</span> Therapist</h2>
+        
+       <ul>
+            <li><strong>Identify your needs:</strong> Consider what kind of therapy you're looking for (e.g., individual, couples, family) and what issues you want to address.</li>
+            <li><strong>Research different types of therapists:</strong> Explore options like psychologists, psychiatrists, and counsellors, and understand their qualifications and areas of expertise.</li>
+            <li><strong>Seek recommendations:</strong> Ask trusted friends, family members, or healthcare professionals for referrals.</li>
+            <li><strong>Look for therapists who specialise in your concerns:</strong> Some therapists have experience working with specific issues or populations.</li>
+            <li><strong>Check credentials:</strong> Ensure the therapist is registered with a relevant professional body.</li>
+            <li><strong>Consider your comfort level:</strong> It's important to feel comfortable and safe with your therapist.</li>
+            <li><strong>Trust your instincts:</strong> If you don't feel a connection with a therapist, it's okay to seek someone else. Don't be afraid to shop around!</li>
+        </ul>
 
-          <!--Flower Graphic-->
-          <!--<img class="cs-flower" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fbig-abstract-flower.svg" alt="flower graphic" width="362" height="350" aria-hidden="true"> -->
 
-          <!--Spidey Sense Graphic-->
-          <!-- <img class="cs-sense" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fspider-sense.svg" alt="spidey sense graphic" width="80" height="89" aria-hidden="true"> -->
-      <!-- </div> -->
+        <p><a href="#top">Back to Top</a></p>
+
   </div>
 
 </section>
@@ -70,9 +49,15 @@ import blocksImage from "@assets/images/coloured-blocks.jpg";
 
 <style lang="less">
 
-/*-- -------------------------- -->
-<---        Content Page        -->
-<--- -------------------------- -*/
+html {
+    scroll-behavior: smooth;
+}
+
+#int-hero {
+    h1 {
+        display: none;
+    }
+}
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
@@ -124,9 +109,18 @@ import blocksImage from "@assets/images/coloured-blocks.jpg";
             color: var(--headerColor);
         }
 
+        h3[id]::before { 
+            display: block; 
+            content: ""; 
+            margin-top: -155px; 
+            height: 285px; 
+            visibility:visible; 
+            pointer-events: none;
+            }
+
         h2 {
             font-size: (32/16rem);
-            margin-top: (32/16rem);
+            margin: 0 0 2rem 0;
         }
 
         h3 {
@@ -145,7 +139,7 @@ import blocksImage from "@assets/images/coloured-blocks.jpg";
         }
 
         .cs-color {
-            color: var(--primary);
+            color: var(--secondary);
         }
 
         p {
@@ -195,6 +189,86 @@ import blocksImage from "@assets/images/coloured-blocks.jpg";
                     display: block;
                     top: (10/16rem);
                     left: (-12/16rem);
+                }
+
+                a {
+                    text-decoration: underline dotted;
+                    text-underline-offset: 0.4rem;
+                    color: var(--secondary);
+
+                    &:visited {
+                        color: var(--secondary);
+                    }
+
+                    &:visited {
+                    color: var(--primary);
+                    }
+
+                    &:hover {
+                    color: var(--secondary);
+                    }
+                }
+
+                /* Add this attribute to the element that needs a tooltip */
+                [data-tooltip] {
+                position: relative;
+                z-index: 2;
+                cursor: pointer;
+                }
+
+                /* Hide the tooltip content by default */
+                [data-tooltip]:before,
+                [data-tooltip]:after {
+                visibility: hidden;
+                opacity: 0;
+                pointer-events: none;
+                }
+
+                /* Position tooltip above the element */
+                [data-tooltip]:before {
+                position: absolute;
+                bottom: 150%;
+                left: 50%;
+                margin-bottom: 5px;
+                margin-left: -80px;
+                padding: 7px;
+                width: 80%;
+                max-width: 660px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                background-color: #000;
+                background-color: hsla(0, 0%, 20%, 0.9);
+                color: #fff;
+                content: attr(data-tooltip);
+                text-align: left;
+                font-size: 1rem;
+                line-height: 1.2;
+                white-space: pre-line;
+                z-index: 1 !important;
+                }
+
+                /* Triangle hack to make tooltip look like a speech bubble */
+                [data-tooltip]:after {
+                position: absolute;
+                bottom: 150%;
+                left: 50%;
+                margin-left: -5px;
+                width: 0;
+                border-top: 5px solid #000;
+                border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+                border-right: 5px solid transparent;
+                border-left: 5px solid transparent;
+                content: " ";
+                font-size: 0;
+                line-height: 0;
+                }
+
+                /* Show tooltip content on hover */
+                [data-tooltip]:hover:before,
+                [data-tooltip]:hover:after {
+                visibility: visible;
+                opacity: 1;
                 }
             }
         }
