@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import logoWhiteImage from "@assets/svgs/logo-white.svg";
-import logoBlackImage from "@assets/svgs/logo-black.svg";
+import logoWhiteImage from "@assets/svgs/logo-text-black.svg";
+import logoBlackImage from "@assets/svgs/cp-logo-white.svg";
 
 import client from "@data/client.json";
 ---
@@ -15,19 +15,17 @@ import client from "@data/client.json";
       <!-- Logo Group -->
       <div class="cs-logo-group">
           <a aria-label="go back to home" class="cs-logo" href="/">
-              <Image class="cs-logo-img" aria-hidden="true" src={logoWhiteImage} alt="logo">
+              <Image class="cs-logo-img" aria-hidden="true" src={logoBlackImage} alt="logo">
           </a>
       </div>
       <!-- Links -->
+       <div class="cs-nav">
       <ul class="cs-nav">
-          <li class="cs-nav-li">
-              <span class="cs-header">Sitemap</span>
-          </li>
           <li class="cs-nav-li">
               <a class="cs-nav-link" href="/">Home</a>
           </li>
           <li class="cs-nav-li">
-              <a class="cs-nav-link" href="/emdr">EMDR</a>
+              <a class="cs-nav-link" href="/emdr">EMDR - what is it?</a>
           </li>
           <li class="cs-nav-li">
               <a class="cs-nav-link" href="/work-with-me">Services</a>
@@ -36,11 +34,10 @@ import client from "@data/client.json";
               <a class="cs-nav-link" href="/about">About Carmel</a>
           </li>
       </ul>
+      </div>
       <!-- Contact Info -->
-      <ul class="cs-contact">
-          <li class="cs-nav-li">
-              <span class="cs-header">Contact</span>
-          </li>
+      <div class="cs-nav">
+        <ul class="cs-contact">
           <li class="cs-nav-li">
               <a class="cs-nav-link" href="/contact">Contact</a>
           </li>
@@ -48,6 +45,7 @@ import client from "@data/client.json";
               <a class="cs-contact-link" href={`mailto:${client.email}`}>Click to Email</a>
           </li>
       </ul>
+      </div>
   </div>
 </footer>
 
@@ -62,7 +60,7 @@ import client from "@data/client.json";
 @media only screen and (min-width: 0rem) {
     #cs-footer-269 {
         /* 60px - 100px top and bottom */
-        padding: clamp(1rem, 2vw, 6.25rem) (16/16rem);
+        padding: clamp(1rem, 1vw, 6.25rem) (16/16rem);
         background-color: var(--secondary);
 
         .cs-container {
@@ -76,13 +74,14 @@ import client from "@data/client.json";
             flex-wrap: wrap;
             /* 68px - 100px */
             column-gap: clamp(4.25rem, calc(8% + 2vw), 6.25rem);
-            padding: 2rem 0;
+            padding: 0 0 2rem 0;
         }
 
         .cs-logo-group {
             /* takes up all the space, lets the other ul's wrap below it */
             position: relative;
             margin-top: 1em;
+            width: 100%;
         }
 
         .cs-logo {
@@ -95,7 +94,7 @@ import client from "@data/client.json";
         }
 
         .cs-logo-img {
-            width: 6rem;
+            width: clamp(12rem, 20vw, 16rem);
             height: auto;
         } 
         
@@ -246,12 +245,6 @@ import client from "@data/client.json";
             margin-right: auto;
         }
 
-        .cs-text {
-            width: 80%;
-            max-width: (305/16rem);
-            margin: 0;
-        }
-
         .cs-nav,
         .cs-contact {
             /* 8px - 12px */
@@ -259,7 +252,5 @@ import client from "@data/client.json";
         }
     }
 }
-
-
 
 </style>

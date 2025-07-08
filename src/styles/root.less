@@ -53,9 +53,13 @@
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
     text-align: inherit;
+    text-align: justify;
     width: 100%;
     max-width: (850/16rem);
-    margin: 0;
+    margin-bottom: (16/16rem);
+    &:last-of-type {
+      margin-bottom: (32/16rem);
+    }
     color: var(--bodyTextColor);
 }
      
