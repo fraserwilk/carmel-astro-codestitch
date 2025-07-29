@@ -26,10 +26,9 @@ import contactDetailsImage from "@assets/images/landing.jpg";
     <div class="cs-container">
       <form id="cs-form" name="CPP Contact Form" netlify>
         <div class="cs-content">
-          <h2 class="">To book an initial consultation please enter your details below. 
+          <h2 class="">To book an initial consultation please enter your details below.
             I will reply with further details including my fees.</h2>
           <br />
-            <p class="cs-text">I'd love you to let me know how you found me.</p>
           </p>
         </div>
         <label>
@@ -63,12 +62,12 @@ import contactDetailsImage from "@assets/images/landing.jpg";
           />
         </label>
         <label>
-          How Did You Find Me
+          How Did You Find Me?
           <input
             type="text"
             id="find"
             name="find-us"
-            placeholder="How did you find me?"
+            placeholder="Let me know."
           />
         </label>
 
@@ -88,17 +87,17 @@ import contactDetailsImage from "@assets/images/landing.jpg";
             required
             name="Message"
             id="message"
-            placeholder="Write message..."></textarea>
+            placeholder="Any comments or questions?..."></textarea>
         </label>
         <button class="cs-button-solid" type="submit">Submit Message</button>
       </form>
       <div class="cs-right-section">
         <!--Email-->
-        <span class="cs-header">Email</span>
+        <span class="cs-header">Email:</span>
         <a class="cs-link" href={`mailto:${client.email}`}>{client.email}</a>
         <!--  -->
         <!--Address-->
-        <span class="cs-header">Address</span>
+        <span class="cs-header">Address:</span>
         <a class="cs-link" href={client.address.mapLink} target="_blank">
           {client.address.lineOne},
           <br />
