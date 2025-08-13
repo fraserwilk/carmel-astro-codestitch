@@ -1,1 +1,33 @@
-<!-- When you deploy the project to a live domain, go to www.xml-sitemaps.com, create a sitemap and paste the contents in here -->
+<urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+<loc>https://carmelpoundpsychology.com.au/</loc>
+<lastmod>2025-08-13T00:07:15+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://carmelpoundpsychology.com.au/emdr/</loc>
+<lastmod>2025-08-13T00:07:15+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://carmelpoundpsychology.com.au/work-with-me/</loc>
+<lastmod>2025-08-13T00:07:15+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://carmelpoundpsychology.com.au/about/</loc>
+<lastmod>2025-08-13T00:07:15+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://carmelpoundpsychology.com.au/contact/</loc>
+<lastmod>2025-08-13T00:07:15+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://carmelpoundpsychology.com.au/tips/</loc>
+<lastmod>2025-08-13T00:07:15+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+</urlset>
