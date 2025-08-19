@@ -49,6 +49,17 @@ const {description, title, preloadImg } = Astro.props;
     
             <!-- Sitewide Scripts -->
             <script defer src="/assets/js/nav.js"></script>
+
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-17Q1FH1FBV"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-17Q1FH1FBV');
+            </script>
+
             <!-- <script defer src="/assets/js/dark.js"></script> -->
    
             
