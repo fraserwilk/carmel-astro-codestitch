@@ -2,10 +2,10 @@
 import { Picture } from "astro:assets";
 import { Image } from "astro:assets";
 import playImage from "@assets/svgs/play.svg";
-import landingImage from "@assets/images/landing-m.webp";
+import landingImage from "@assets/images/landing-m-sml.webp";
 ---
 
-  <section id="hero-229">
+  <section id="hero-229" fetchPriority="high">
     <div class="cs-container">
       <div class="cs-flex-group">
         <h1 class="cs-title">Carmel Pound</h1>
@@ -28,7 +28,7 @@ import landingImage from "@assets/images/landing-m.webp";
 
     <!-- Background Image -->
     <div class="cs-picture">
-        <Picture src={landingImage} formats={['webp', 'jpg']} alt="calming trees" />
+        <Picture src={landingImage} layout='full-width' alt="calming trees" width={500} height={333} />
     </div>
 
   </section>
