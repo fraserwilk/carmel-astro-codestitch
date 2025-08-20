@@ -8,12 +8,9 @@ import BaseLayout from "src/layouts/BaseLayout.astro";
   preloadImg={import("@assets/images/landing-m.webp")}
 >
 
-  <section id="int-hero">
-    <h1 id="home-h">Page Not Found</h1>
-  </section>
-
   <section id="not-found">
     <div class="cs-container">
+      <h1 class="cs-title">Page Not Found</h1>
       <p class="cs-text">The page you requested doesn’t exist or may have been moved.</p>
       <a href="/" class="cs-button-solid">Return to Home</a>
     </div>
@@ -24,7 +21,22 @@ import BaseLayout from "src/layouts/BaseLayout.astro";
 <style lang="less">
   /* Mobile - 360px */
   @media only screen and (min-width: 0rem) {
+    :global(body) {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    :global(main#main) {
+      flex: 1;
+      display: flex;
+    }
+
     #not-found {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: var(--sectionPadding);
       text-align: center;
 
