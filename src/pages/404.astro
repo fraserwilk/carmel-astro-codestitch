@@ -1,0 +1,47 @@
+---
+import BaseLayout from "src/layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Page Not Found"
+  description="Sorry, we couldn’t find the page you’re looking for."
+  preloadImg={import("@assets/images/landing-m.webp")}
+>
+
+  <section id="int-hero">
+    <h1 id="home-h">Page Not Found</h1>
+  </section>
+
+  <section id="not-found">
+    <div class="cs-container">
+      <p class="cs-text">The page you requested doesn’t exist or may have been moved.</p>
+      <a href="/" class="cs-button-solid">Return to Home</a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style lang="less">
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #not-found {
+      padding: var(--sectionPadding);
+      text-align: center;
+
+      .cs-container {
+        width: 80%;
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: (16/16rem);
+      }
+
+      .cs-text {
+        margin: 0 0 (8/16rem);
+      }
+    }
+  }
+</style>
+
