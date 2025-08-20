@@ -6,7 +6,7 @@ import Footer from "@components/Footer.astro";
 import "@styles/root.less";
 // import "@styles/dark.less";
 
-const {description, title, preloadImg } = Astro.props;
+const { description = "", title = "", preloadImg = "" } = Astro.props;
 
 ---
 
@@ -54,7 +54,7 @@ const {description, title, preloadImg } = Astro.props;
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-17Q1FH1FBV"></script>
             <script>
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            function gtag(){dataLayer.push(arguments);} 
             gtag('js', new Date());
 
             gtag('config', 'G-17Q1FH1FBV');
@@ -77,6 +77,23 @@ const {description, title, preloadImg } = Astro.props;
                     ${ client.name }`)
             }
             </title>
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "LocalBusiness",
+                    name: client.name,
+                    url: `https://${client.domain}`,
+                    telephone: client.phoneForTel,
+                    address: {
+                        "@type": "PostalAddress",
+                        streetAddress: [client.address.lineOne, client.address.lineTwo].filter(Boolean).join(", "),
+                        addressLocality: client.address.city,
+                        addressRegion: client.address.state,
+                        postalCode: client.address.zip,
+                        addressCountry: "AU",
+                    },
+                })}
+            </script>
         </head>
         <body>
             <!--Screen reader skip main nav-->
