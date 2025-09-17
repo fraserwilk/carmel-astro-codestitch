@@ -65,8 +65,9 @@ if (Astro.url.pathname === "/") {
             <title>
                 {pageTitle}
             </title>
-            <script type="application/ld+json">
-                {JSON.stringify({
+            <script 
+                type="application/ld+json" 
+                set:html={JSON.stringify({
                     "@context": "https://schema.org",
                     "@type": ["LocalBusiness", "Psychologist"],
                     "@id": `https://${client.domain}`,
@@ -76,18 +77,19 @@ if (Astro.url.pathname === "/") {
                     logo: `https://${client.domain}/assets/images/logo-small.png`,
                     image: [`https://${client.domain}/assets/images/landing-m.webp`],
                     address: {
-                        "@type": "PostalAddress",
-                        streetAddress: [client.address.lineOne, client.address.lineTwo].filter(Boolean).join(", "),
-                        addressLocality: client.address.city,
-                        addressRegion: client.address.state,
-                        postalCode: client.address.zip,
-                        addressCountry: "AU",
+                    "@type": "PostalAddress",
+                    streetAddress: [client.address.lineOne, client.address.lineTwo].filter(Boolean).join(", "),
+                    addressLocality: client.address.city,
+                    addressRegion: client.address.state,
+                    postalCode: client.address.zip,
+                    addressCountry: "AU",
                     },
                     geo: { "@type": "GeoCoordinates", latitude: -34.481, longitude: 150.419 },
                     hasMap: client.address.mapLink,
                     knowsLanguage: ["en-AU"],
                 })}
-            </script>
+                />
+
         </head>
         <body>
             <!--Screen reader skip main nav-->
