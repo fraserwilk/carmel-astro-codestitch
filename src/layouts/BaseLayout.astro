@@ -69,7 +69,7 @@ if (Astro.url.pathname === "/") {
                 type="application/ld+json" 
                 set:html={JSON.stringify({
                     "@context": "https://schema.org",
-                    "@type": ["LocalBusiness", "Psychologist"],
+                    "@type": "Psychologist",
                     "@id": `https://${client.domain}`,
                     name: client.name,
                     url: `https://${client.domain}`,
@@ -85,8 +85,8 @@ if (Astro.url.pathname === "/") {
                     addressCountry: "AU",
                     },
                     geo: { "@type": "GeoCoordinates", latitude: -34.481, longitude: 150.419 },
-                    hasMap: client.address.mapLink,
-                    knowsLanguage: ["en-AU"],
+                    "hasMap": "https://www.google.com/maps/place/Bowral+NSW+2576",
+                    knowsLanguage: "en-AU",
                 })}
                 />
 
