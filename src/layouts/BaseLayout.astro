@@ -10,7 +10,6 @@ const { description = "", title = "", preloadImg = "" } = Astro.props;
 
 ---
 
-<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
 <html lang="en">
         <head>
             <!-- Standard meta tags -->
@@ -80,10 +79,13 @@ const { description = "", title = "", preloadImg = "" } = Astro.props;
             <script type="application/ld+json">
                 {JSON.stringify({
                     "@context": "https://schema.org",
-                    "@type": "LocalBusiness",
+                    "@type": ["LocalBusiness", "Psychologist"],
+                    "@id": `https://${client.domain}`,
                     name: client.name,
                     url: `https://${client.domain}`,
-                    telephone: client.phoneForTel,
+                    email: client.email,
+                    logo: `https://${client.domain}/assets/images/logo-small.png`,
+                    image: [`https://${client.domain}/assets/images/landing-m.webp`],
                     address: {
                         "@type": "PostalAddress",
                         streetAddress: [client.address.lineOne, client.address.lineTwo].filter(Boolean).join(", "),
@@ -92,6 +94,9 @@ const { description = "", title = "", preloadImg = "" } = Astro.props;
                         postalCode: client.address.zip,
                         addressCountry: "AU",
                     },
+                    geo: { "@type": "GeoCoordinates", latitude: -34.481, longitude: 150.419 },
+                    hasMap: client.address.mapLink,
+                    knowsLanguage: ["en-AU"],
                 })}
             </script>
         </head>
