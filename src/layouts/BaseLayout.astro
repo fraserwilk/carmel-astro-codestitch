@@ -8,6 +8,12 @@ import "@styles/root.less";
 
 const { description = "", title = "", preloadImg = "" } = Astro.props;
 
+let pageTitle = "";
+if (Astro.url.pathname === "/") {
+  pageTitle = `${title} | ${client.name} | ${client.address.city}, ${client.address.state}`;
+} else {
+  pageTitle = `${title} | ${client.name}`;
+}
 ---
 
 <html lang="en">
@@ -36,15 +42,7 @@ const { description = "", title = "", preloadImg = "" } = Astro.props;
             <meta name="apple-mobile-web-app-title" content="Carmel Pound Psychologist" />
             <link rel="manifest" href="/site.webmanifest" />
     
-            <!-- Preloads  -->
-            <!-- <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Figtree-Regular.woff2" crossorigin>
-            <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Figtree-Medium.woff2" crossorigin> -->
-
-    
-            <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
-            <!-- { (preloadImg) !== "" &&
-                <Image src={preloadImg} alt="calming trees" loading="eager" />
-            } -->
+            
     
             <!-- Sitewide Scripts -->
             <script defer src="/assets/js/nav.js"></script>
@@ -65,16 +63,7 @@ const { description = "", title = "", preloadImg = "" } = Astro.props;
     
             <!-- Title -->
             <title>
-                {Astro.url.pathname === "/" ?  (`${ title }
-                |
-                ${ client.name }
-                |
-                ${ client.address.city },
-                ${ client.address.state }`) :
-                (`${ title }
-                    |
-                    ${ client.name }`)
-            }
+                {pageTitle}
             </title>
             <script type="application/ld+json">
                 {JSON.stringify({
