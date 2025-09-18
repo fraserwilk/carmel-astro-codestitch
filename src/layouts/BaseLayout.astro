@@ -70,25 +70,30 @@ if (Astro.url.pathname === "/") {
                 set:html={JSON.stringify({
                     "@context": "https://schema.org",
                     "@type": "Psychologist",
-                    "@id": `https://${client.domain}`,
-                    name: client.name,
-                    url: `https://${client.domain}`,
-                    email: client.email,
-                    logo: `https://${client.domain}/assets/images/logo-small.png`,
-                    image: [`https://${client.domain}/assets/images/landing-m.webp`],
+                    "@id": "https://carmelpoundpsychology.com.au",
+                    name: "Carmel Pound Psychology",
+                    url: "https://carmelpoundpsychology.com.au",
+                    email: "carmelpound@gmail.com",
+                    logo: "https://carmelpoundpsychology.com.au/assets/images/logo-small.png",
+                    image: ["https://carmelpoundpsychology.com.au/assets/images/landing-m.webp"],
                     address: {
                     "@type": "PostalAddress",
-                    streetAddress: [client.address.lineOne, client.address.lineTwo].filter(Boolean).join(", "),
-                    addressLocality: client.address.city,
-                    addressRegion: client.address.state,
-                    postalCode: client.address.zip,
-                    addressCountry: "AU",
+                    streetAddress: "Bowral",
+                    addressLocality: "Southern Highlands",
+                    addressRegion: "NSW",
+                    postalCode: "2576",
+                    addressCountry: "AU"
                     },
-                    geo: { "@type": "GeoCoordinates", latitude: -34.481, longitude: 150.419 },
-                    "hasMap": "https://www.google.com/maps/place/Bowral+NSW+2576",
-                    knowsLanguage: "en-AU",
+                    geo: {
+                    "@type": "GeoCoordinates",
+                    latitude: -34.481,
+                    longitude: 150.419
+                    },
+                    hasMap: "https://www.google.com/maps/place/Bowral+NSW+2576",
+                    knowsLanguage: "en-AU"
                 })}
                 />
+
 
         </head>
         <body>
