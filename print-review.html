@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carmel Pound Psychology — Website Content Review (Print Version)</title>
+
+  <!-- Same fonts as the site -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ── Print review overrides ── */
+    :root {
+      --print-divider: #6B8F7E;
+    }
+
+    /* Hide nav, footer, CTAs that aren't content */
+    .site-header, .site-footer, .skip-link, .nav-toggle, .nav-mobile,
+    .btn, .cta-section, .hero-actions, .pathway-actions, .booking-cta-grid,
+    .contact-form-wrap, .cta-actions { display: none !important; }
+
+    /* Page label banner */
+    .page-label {
+      background: #2A2825;
+      color: #FAF8F4;
+      padding: 1rem 2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 0;
+      page-break-before: always;
+    }
+    .page-label:first-of-type {
+      page-break-before: auto;
+    }
+    .page-label span {
+      font-weight: 400;
+      opacity: 0.6;
+      margin-left: 1rem;
+      letter-spacing: 0.05em;
+      text-transform: none;
+    }
+
+    /* Cover page */
+    .review-cover {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--cream, #FAF8F4);
+    }
+    .review-cover h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 500;
+      color: #2A2825;
+      margin-bottom: 0.5rem;
+    }
+    .review-cover h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: #6B8F7E;
+      margin-bottom: 2rem;
+    }
+    .review-cover p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: #666;
+      max-width: 520px;
+      line-height: 1.7;
+    }
+    .review-cover .date {
+      margin-top: 2rem;
+      font-size: 0.82rem;
+      color: #999;
+    }
+
+    /* Section divider within a page */
+    .section-divider {
+      border: none;
+      border-top: 1px dashed #ccc;
+      margin: 2rem auto;
+      max-width: 200px;
+    }
+
+    /* Make images print-friendly */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Ensure page breaks work for print */
+    @media print {
+      .page-label { page-break-before: always; }
+      .page-label:first-of-type { page-break-before: auto; }
+      .review-cover { page-break-after: always; }
+      section { page-break-inside: avoid; }
+      img { page-break-inside: avoid; }
+
+      /* Force backgrounds to print */
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    }
+
+    /* Slightly reduce hero size for print context */
+    .hero { min-height: auto; padding: 3rem 0; }
+    .page-hero { padding: 2.5rem 0; }
+    .hero-image img {
+      max-height: 400px;
+      object-fit: contain;
+    }
+
+    /* Content note boxes */
+    .review-note {
+      background: #FFF8E1;
+      border: 1px solid #FFE082;
+      border-left: 4px solid #FFB300;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #5D4037;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       COVER PAGE
+  ══════════════════════════════════════ -->
+  <div class="review-cover">
+    <h1>Carmel Pound Psychology</h1>
+    <h2>Website Content Review</h2>
+    <p>
+      This document contains all the text and images from the new website,
+      laid out as they will appear online. Please read through each page
+      and note any changes, corrections, or additions needed.
+    </p>
+    <p class="date">March 2026 — Draft for review</p>
+    <p style="margin-top: 2rem; font-size: 0.82rem; color: #999;">
+      7 pages: Home · Therapy · EMDR Therapy · EMDR Consultation · About · Fees &amp; Bookings · Contact
+    </p>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 1: HOME
+  ══════════════════════════════════════ -->
+  <p class="page-label">Page 1: Home <span>index.html</span></p>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" style="min-height: auto; padding: 3rem 0;">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <p class="hero-eyebrow">Southern Highlands NSW &amp; Telehealth Australia-wide</p>
+            <h1 class="hero-title">A safe space to<br><em>find your way forward</em></h1>
+            <p class="hero-body">
+              Whether you're navigating a difficult time in your life or seeking expert EMDR consultation
+              as a practising therapist, Carmel Pound Psychology offers experienced, evidence-based
+              psychological support — delivered with warmth and care.
+            </p>
+            <p class="hero-location">
+              Bowral, Southern Highlands NSW · Telehealth available Australia-wide
+            </p>
+          </div>
+          <div class="hero-image" style="position:relative;">
+            <img src="images/carmel-hero.jpg" alt="Carmel Pound" style="max-height:400px; object-fit:contain; width:100%; border-radius:12px;">
+            <div class="hero-badge">
+              <div class="hero-badge-text">
+                <strong>EMDRAA Accredited<br>Consultant</strong>
+                <span>EMDR Association of Australia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- TWO PATHWAYS -->
+    <section class="pathways" style="padding: 3rem 0;">
+      <div class="container">
+        <div class="pathways-header">
+          <span class="section-label">Who are you here for?</span>
+          <h2 class="section-title">Two pathways, one practice</h2>
+          <p class="section-intro" style="margin: 0 auto;">
+            Carmel works with two distinct groups. Please choose the pathway that describes you —
+            each leads to information, services, and booking options tailored to your needs.
+          </p>
+        </div>
+        <div class="pathways-grid">
+          <article class="pathway-card pathway--client">
+            <div class="pathway-tag">For Individuals</div>
+            <h2 class="pathway-question">I'm looking for<br>psychological support</h2>
+            <p class="pathway-desc">
+              You may be carrying something heavy — trauma, anxiety, grief, or a sense that life has
+              become unmanageable. Carmel provides a calm, confidential space to work through
+              what you're experiencing at a pace that's right for you.
+            </p>
+            <ul class="pathway-list">
+              <li>Trauma and PTSD</li>
+              <li>Anxiety and panic</li>
+              <li>Grief and loss</li>
+              <li>Depression</li>
+              <li>Phobias and sleep difficulties</li>
+              <li>EMDR therapy where appropriate</li>
+            </ul>
+          </article>
+          <article class="pathway-card pathway--therapist">
+            <div class="pathway-tag">For Therapists</div>
+            <h2 class="pathway-question">I'm a therapist seeking<br>EMDR expertise</h2>
+            <p class="pathway-desc">
+              As one of a select group of EMDRAA Accredited Consultants in Australia, Carmel offers
+              professional consultation and supervision to therapists who wish to deepen their EMDR
+              practice and work towards accreditation.
+            </p>
+            <ul class="pathway-list">
+              <li>Individual EMDR consultation</li>
+              <li>Group EMDR consultation</li>
+              <li>EMDR supervision for practitioners</li>
+              <li>Telehealth consultation available</li>
+              <li>Support toward EMDRAA accreditation</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ABOUT TEASER -->
+    <section class="about-teaser" style="padding: 3rem 0;">
+      <div class="container">
+        <div class="about-teaser-inner">
+          <div class="about-image-wrap">
+            <img src="images/carmel-headshot.jpg" alt="Carmel Pound" style="border-radius: 12px;">
+            <div class="about-accent-block">
+              <strong>10+</strong>
+              <span>Years in private practice, Southern Highlands</span>
+            </div>
+          </div>
+          <div class="about-content">
+            <span class="section-label">About Carmel</span>
+            <h2 class="section-title">Experienced, warm,<br>and genuinely invested</h2>
+            <hr class="divider">
+            <p class="section-intro">
+              Carmel Pound is a registered psychologist with over a decade of private practice
+              experience in the Southern Highlands. Her career has taken her from Melbourne
+              and Sydney to working with communities in rural NSW and Vietnam — giving her a
+              breadth of experience that informs her calm, collaborative approach to psychological care.
+            </p>
+            <ul class="about-quals">
+              <li class="qual-item"><span class="qual-dot"></span>EMDR Accredited Consultant — EMDR Association of Australia (EMDRAA)</li>
+              <li class="qual-item"><span class="qual-dot"></span>AHPRA Registered Psychologist — Psychology Board of Australia approved supervisor</li>
+              <li class="qual-item"><span class="qual-dot"></span>Medicare registered — Mental Health Treatment Plan sessions available</li>
+              <li class="qual-item"><span class="qual-dot"></span>WorkCover NSW Accredited Practitioner</li>
+              <li class="qual-item"><span class="qual-dot"></span>Bachelor of Applied Science (Psychology) &amp; Graduate Diploma of Applied Psychology</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- EMDR OVERVIEW -->
+    <section class="emdr-overview" style="padding: 3rem 0;">
+      <div class="container">
+        <div class="emdr-overview-inner">
+          <div class="emdr-intro">
+            <span class="section-label">Understanding EMDR</span>
+            <h2 class="section-title">What is EMDR therapy?</h2>
+            <hr class="divider">
+            <p class="section-intro">
+              Eye Movement Desensitisation and Reprocessing (EMDR) is an evidence-based therapy
+              with approximately 30 years of research behind it. Endorsed by the World Health
+              Organisation and leading clinical bodies worldwide, it has helped millions of people
+              process difficult memories and find relief from distressing symptoms.
+            </p>
+            <blockquote class="emdr-intro-quote">
+              "You don't have to talk about your trauma in detail — EMDR works with the way
+              your brain naturally processes experience."
+            </blockquote>
+          </div>
+          <div class="emdr-cards" role="list">
+            <div class="emdr-card" role="listitem">
+              <div class="emdr-card-number">01</div>
+              <h3>Evidence-based &amp; widely endorsed</h3>
+              <p>Endorsed by the WHO, Phoenix Australia, and the American Psychiatric Association for trauma and PTSD treatment.</p>
+            </div>
+            <div class="emdr-card" role="listitem">
+              <div class="emdr-card-number">02</div>
+              <h3>No need to recount every detail</h3>
+              <p>EMDR does not require you to narrate your experience in depth, which many clients find a significant relief.</p>
+            </div>
+            <div class="emdr-card" role="listitem">
+              <div class="emdr-card-number">03</div>
+              <h3>Helps with a range of presentations</h3>
+              <p>Originally developed for PTSD, EMDR is now used for anxiety, depression, grief, phobias, performance anxiety, and more.</p>
+            </div>
+            <div class="emdr-card emdr-card-wide" role="listitem">
+              <div class="emdr-card-number">04</div>
+              <h3>Lasting results — in-person or telehealth</h3>
+              <p>Research shows that EMDR's benefits continue long after the therapy has concluded. Carmel offers both in-person sessions in Bowral and telehealth sessions for clients across Australia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- CREDENTIALS -->
+    <section class="credentials" style="padding: 2rem 0;">
+      <div class="container">
+        <div class="credentials-inner">
+          <div class="cred-item"><p class="cred-title">EMDRAA Accredited<br>Consultant</p><p class="cred-desc">EMDR Association<br>of Australia</p></div>
+          <div class="cred-item"><p class="cred-title">AHPRA Registered<br>Psychologist</p><p class="cred-desc">Psychology Board<br>of Australia</p></div>
+          <div class="cred-item"><p class="cred-title">APS Member &amp;<br>EMDR Panel</p><p class="cred-desc">Australian Psychological<br>Society</p></div>
+          <div class="cred-item"><p class="cred-title">Medicare Registered</p><p class="cred-desc">Mental Health Treatment<br>Plan rebates available</p></div>
+          <div class="cred-item"><p class="cred-title">Telehealth Available</p><p class="cred-desc">Therapy &amp; consultation<br>Australia-wide</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA TEXT -->
+    <section style="padding: 2rem 0; background: var(--sage-bg, #EDF3F0); text-align: center;">
+      <div class="container">
+        <h2 class="section-title">You don't have to figure this out on your own</h2>
+        <p class="section-intro" style="margin: 0 auto;">
+          Whether you're seeking support for yourself or looking to develop your EMDR practice,
+          Carmel is here to help. Get in touch to ask a question or book directly online.
+        </p>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 2: THERAPY
+  ══════════════════════════════════════ -->
+  <p class="page-label">Page 2: Therapy (For Clients) <span>therapy.html</span></p>
+
+  <section class="page-hero" style="padding: 2.5rem 0;">
+    <div class="container">
+      <div class="page-hero-inner">
+        <span class="section-label">For Individuals</span>
+        <h1 class="page-hero-title">Therapy<br><em>that meets you where you are</em></h1>
+        <p class="page-hero-lead">
+          Whether you're navigating a difficult chapter in your life or living with long-standing distress,
+          Carmel offers a calm, confidential space to work through what you're experiencing —
+          at a pace that's right for you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 2rem 0; background: var(--white);">
+    <div class="container">
+      <div class="two-col two-col--wide">
+        <div>
+          <span class="section-label">Who I work with</span>
+          <h2 class="section-title">Presentations Carmel<br>commonly supports</h2>
+          <hr class="divider">
+          <p class="section-intro">
+            Carmel works with adults experiencing a wide range of concerns. Each person's situation
+            is different, and she takes time to understand your specific needs before developing
+            a treatment approach.
+          </p>
+        </div>
+        <div>
+          <div class="conditions-grid" role="list">
+            <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Trauma &amp; PTSD</p></div>
+            <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Anxiety &amp; panic</p></div>
+            <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Grief &amp; loss</p></div>
+            <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Depression</p></div>
+            <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Phobias</p></div>
+            <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Sleep difficulties</p></div>
+            <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Work-related stress</p></div>
+            <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Life transitions</p></div>
+            <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Low self-esteem</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0;">
+    <div class="container">
+      <span class="section-label">What to expect</span>
+      <h2 class="section-title">How therapy with Carmel works</h2>
+      <hr class="divider">
+      <p class="section-intro">
+        Beginning therapy can feel daunting. Carmel takes a gentle, collaborative approach —
+        you'll never be pushed to move faster than you're ready to.
+      </p>
+      <div class="process-steps" style="margin-top: 2rem;">
+        <div class="process-step"><span class="step-number">01</span><div class="step-content"><h3>Initial consultation</h3><p>Your first session is an opportunity to talk about what's brought you to therapy, what you're hoping to get out of it, and any questions you have. There's no pressure to share more than you're comfortable with.</p></div></div>
+        <div class="process-step"><span class="step-number">02</span><div class="step-content"><h3>Understanding your situation</h3><p>Carmel takes time to understand your history, current circumstances, and goals. Together, you'll develop a shared sense of what you're working toward and how to get there.</p></div></div>
+        <div class="process-step"><span class="step-number">03</span><div class="step-content"><h3>Evidence-based treatment</h3><p>Drawing on approaches including Cognitive Behavioural Therapy (CBT), EMDR, and trauma-informed care, Carmel tailors her approach to what will be most effective for you.</p></div></div>
+        <div class="process-step"><span class="step-number">04</span><div class="step-content"><h3>Ongoing review</h3><p>Progress is regularly reviewed together. Therapy is a collaboration — your feedback shapes how sessions are conducted, and you're free to raise anything at any time.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0;">
+    <div class="container">
+      <span class="section-label">Practical information</span>
+      <h2 class="section-title" style="text-align:center;">Session details</h2>
+      <p class="section-intro" style="margin: 0 auto; text-align:center;">
+        Carmel offers sessions in person at her Bowral consulting rooms and via telehealth
+        for clients across Australia.
+      </p>
+      <div class="info-cards" style="margin-top: 2rem;">
+        <div class="info-card"><h3>Session length</h3><p>Standard sessions are 50 minutes. An initial consultation may run slightly longer to allow adequate time to discuss your situation and needs.</p></div>
+        <div class="info-card"><h3>Location &amp; telehealth</h3><p>In-person sessions are available in Bowral, Southern Highlands NSW. Telehealth sessions are available for clients throughout Australia via a secure video platform.</p></div>
+        <div class="info-card"><h3>Frequency</h3><p>Session frequency depends on your circumstances and goals. Many clients begin with fortnightly sessions, adjusting over time as progress is made.</p></div>
+        <div class="info-card"><h3>Medicare rebates</h3><p>Carmel is a Medicare-registered psychologist. If you have a Mental Health Treatment Plan from your GP, you may be eligible for a Medicare rebate on sessions.</p></div>
+        <div class="info-card"><h3>Confidentiality</h3><p>Everything you share is confidential. Carmel will discuss the limits of confidentiality (which are set by law) during your first session.</p></div>
+        <div class="info-card"><h3>WorkCover &amp; DVA</h3><p>Carmel is a WorkCover NSW Accredited Practitioner and is also able to see clients who have a DVA referral.</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 3: EMDR THERAPY
+  ══════════════════════════════════════ -->
+  <p class="page-label">Page 3: EMDR Therapy (For Clients) <span>emdr-clients.html</span></p>
+
+  <section class="page-hero" style="padding: 2.5rem 0;">
+    <div class="container">
+      <div class="page-hero-inner">
+        <span class="section-label">For Individuals</span>
+        <h1 class="page-hero-title">EMDR Therapy —<br><em>processing the past to free the present</em></h1>
+        <p class="page-hero-lead">
+          Eye Movement Desensitisation and Reprocessing (EMDR) is a powerful, evidence-based therapy
+          that has helped millions of people worldwide find relief from trauma, distressing memories,
+          and a wide range of mental health concerns.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 2rem 0; background: var(--white);">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <img src="images/emdr-cp.lMKVCM0x_hj1Mf.webp" alt="EMDR bilateral stimulation" style="width:100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+        </div>
+        <div>
+          <span class="section-label">Understanding EMDR</span>
+          <h2 class="section-title">What is EMDR?</h2>
+          <hr class="divider">
+          <p class="section-intro" style="max-width: 100%;">
+            EMDR was developed in the late 1980s and has since become one of the most thoroughly
+            researched and widely endorsed psychological treatments available. It works by helping
+            the brain process memories and experiences that have become "stuck" — often as a result
+            of trauma or overwhelming life events.
+          </p>
+          <ul style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem; list-style: none; padding: 0;">
+            <li style="font-size: 0.95rem; color: var(--text-mid); line-height: 1.75;"><strong style="color: var(--text-dark);">You don't have to recount your experience in detail.</strong> Unlike some talk therapies, EMDR does not require you to narrate every aspect of a traumatic event — many clients find this a significant relief.</li>
+            <li style="font-size: 0.95rem; color: var(--text-mid); line-height: 1.75;"><strong style="color: var(--text-dark);">Lasting results.</strong> Research consistently shows that EMDR's benefits are sustained long after therapy concludes.</li>
+            <li style="font-size: 0.95rem; color: var(--text-mid); line-height: 1.75;"><strong style="color: var(--text-dark);">Widely endorsed.</strong> EMDR is recommended by the World Health Organisation, Phoenix Australia, the American Psychiatric Association, SAMHSA, and NICE (UK), among others.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0; background: var(--cream);">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">EMDR for a range of presentations</h2>
+      <p class="section-intro" style="margin: 0 auto; text-align:center;">Originally developed for PTSD, EMDR is now used effectively for many different presentations.</p>
+      <div class="conditions-grid" role="list" style="margin-top: 2rem;">
+        <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>PTSD &amp; complex trauma</p></div>
+        <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Childhood trauma &amp; abuse</p></div>
+        <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Single-incident trauma (accidents, assaults)</p></div>
+        <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Anxiety &amp; panic disorder</p></div>
+        <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Phobias &amp; specific fears</p></div>
+        <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Grief &amp; complicated bereavement</p></div>
+        <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Depression</p></div>
+        <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Performance anxiety</p></div>
+        <div class="condition-item" role="listitem"><span class="condition-dot"></span><p>Medical trauma &amp; health anxiety</p></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0; background: var(--sage-bg);">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">The eight phases of EMDR</h2>
+      <p class="section-intro" style="margin: 0 auto; text-align:center;">EMDR follows a structured eight-phase protocol. Each phase has a specific purpose and builds on the one before it.</p>
+      <div class="phases-grid" role="list" style="margin-top: 2rem;">
+        <div class="phase-card" role="listitem"><p class="phase-number">Phase 1</p><h3>History &amp; Treatment Planning</h3><p>Understanding your history, identifying target memories and experiences, and developing a treatment plan together.</p></div>
+        <div class="phase-card" role="listitem"><p class="phase-number">Phase 2</p><h3>Preparation</h3><p>Building trust, explaining the process, and equipping you with stabilisation and resourcing techniques before processing begins.</p></div>
+        <div class="phase-card" role="listitem"><p class="phase-number">Phase 3</p><h3>Assessment</h3><p>Identifying the specific target memory, the negative belief associated with it, and what you'd prefer to believe instead.</p></div>
+        <div class="phase-card" role="listitem"><p class="phase-number">Phase 4</p><h3>Desensitisation</h3><p>Processing the target memory using bilateral stimulation — typically eye movements or tapping — until distress reduces significantly.</p></div>
+        <div class="phase-card" role="listitem"><p class="phase-number">Phase 5</p><h3>Installation</h3><p>Strengthening the positive belief you want to associate with the memory, replacing the old negative belief.</p></div>
+        <div class="phase-card" role="listitem"><p class="phase-number">Phase 6</p><h3>Body Scan</h3><p>Checking for any remaining tension or disturbance held in the body, and processing these until the body feels clear.</p></div>
+        <div class="phase-card" role="listitem"><p class="phase-number">Phase 7</p><h3>Closure</h3><p>Ensuring you leave each session feeling settled, with techniques to manage anything that arises between sessions.</p></div>
+        <div class="phase-card" role="listitem"><p class="phase-number">Phase 8</p><h3>Re-evaluation</h3><p>At the start of each subsequent session, reviewing progress and checking that previous work has held before moving forward.</p></div>
+      </div>
+      <blockquote style="margin-top: 2rem; padding: 1.5rem 2rem; background: var(--white); border-left: 3px solid var(--sage); border-radius: 0 8px 8px 0; font-family: var(--font-heading); font-size: 1.15rem; font-style: italic; color: var(--text-dark); line-height: 1.6;">
+        "EMDR works with the brain's own natural processing system — the same system that already
+        helps you make sense of most experiences. It's not about forgetting; it's about the memory
+        losing its power to distress you."
+      </blockquote>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0;">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <span class="section-label">What to expect</span>
+          <h2 class="section-title">What EMDR sessions look like</h2>
+          <hr class="divider">
+          <div class="process-steps">
+            <div class="process-step"><span class="step-number">01</span><div class="step-content"><h3>Before processing begins</h3><p>Carmel will spend as much time as needed on preparation — getting to know you, explaining the approach, and ensuring you have strong stabilisation skills before any processing work begins. You will never be rushed.</p></div></div>
+            <div class="process-step"><span class="step-number">02</span><div class="step-content"><h3>During processing</h3><p>You'll be asked to hold the target memory in mind while engaging in bilateral stimulation — typically following Carmel's hand movements with your eyes, or tapping on alternate sides of your body. The processing happens naturally; you don't have to analyse or talk through the memory in detail.</p></div></div>
+            <div class="process-step"><span class="step-number">03</span><div class="step-content"><h3>Telehealth EMDR</h3><p>EMDR is effective via telehealth. Carmel uses adapted bilateral stimulation techniques for video sessions. Many clients across Australia access EMDR with Carmel this way.</p></div></div>
+            <div class="process-step"><span class="step-number">04</span><div class="step-content"><h3>Between sessions</h3><p>Processing can continue between sessions, with memories sometimes spontaneously resolving further. Carmel will equip you with tools to manage anything that arises between appointments.</p></div></div>
+          </div>
+        </div>
+        <div>
+          <img src="images/emdr-nature.jpg" alt="Peaceful natural setting" style="width:100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+          <div style="margin-top: 1.5rem; background: var(--sage-light); border-radius: 8px; padding: 1.5rem; border: 1px solid rgba(107,143,126,0.25);">
+            <strong style="font-size:0.9rem; color:var(--text-dark);">EMDRAA Accredited Consultant</strong>
+            <p style="font-size:0.82rem; color:var(--text-mid); line-height:1.6; margin-top:0.25rem;">
+              Carmel is one of a select group of EMDRAA Accredited Consultants in Australia,
+              reflecting her advanced expertise in EMDR therapy and supervision.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- EMDR FAQs -->
+  <section style="padding: 2rem 0; background: var(--cream);">
+    <div class="container">
+      <h2 class="section-title">EMDR FAQs</h2>
+      <hr class="divider">
+      <div style="max-width: 720px; margin-top: 1.5rem;">
+        <p style="margin-bottom: 0.5rem;"><strong>Is EMDR safe?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem;">Yes. EMDR is a well-researched therapy with an excellent safety record. It is recommended by major health organisations worldwide and has been used with millions of people across diverse clinical populations. Carmel will not begin processing work until you feel adequately prepared and resourced.</p>
+
+        <p style="margin-bottom: 0.5rem;"><strong>Do I have to talk about my trauma in detail?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem;">No. This is one of EMDR's significant advantages. You will be asked to briefly identify the memory and hold it in mind during processing, but you are not required to explain or analyse it verbally.</p>
+
+        <p style="margin-bottom: 0.5rem;"><strong>How many sessions will I need?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem;">This varies depending on the nature and complexity of what you're working through. Single-incident traumas can sometimes be resolved in a small number of sessions, while complex trauma typically takes longer.</p>
+
+        <p style="margin-bottom: 0.5rem;"><strong>Can EMDR be done via telehealth?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem;">Yes. EMDR via telehealth has been shown to be effective. Carmel uses adapted bilateral stimulation techniques for video sessions and has extensive experience delivering EMDR this way.</p>
+
+        <p style="margin-bottom: 0.5rem;"><strong>Is EMDR covered by Medicare?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem;">EMDR sessions with Carmel are eligible for a Medicare rebate in the same way as any other psychological treatment, provided you have a valid Mental Health Treatment Plan from your GP.</p>
+
+        <p style="margin-bottom: 0.5rem;"><strong>What does bilateral stimulation actually feel like?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75;">Most people find bilateral stimulation — whether eye movements, tapping, or auditory tones — to be quite gentle and unremarkable in itself. Many clients are surprised that the process feels more like a natural unfolding than an intense or confronting experience.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 4: EMDR CONSULTATION
+  ══════════════════════════════════════ -->
+  <p class="page-label">Page 4: EMDR Consultation &amp; Supervision (For Therapists) <span>emdr-consultation.html</span></p>
+
+  <section class="page-hero" style="padding: 2.5rem 0; background: linear-gradient(145deg, var(--cream) 0%, var(--cream-alt) 60%, var(--blush-light) 100%);">
+    <div class="container">
+      <div class="page-hero-inner">
+        <span class="section-label section-label--blush">For Therapists</span>
+        <h1 class="page-hero-title">EMDR Supervision<br><em style="color: var(--blush);">&amp; Case Consultation</em></h1>
+        <p class="page-hero-lead">
+          Carmel Pound is one of a select group of EMDRAA Accredited Consultants in Australia.
+          She offers individual and group EMDR supervision and case consultation to therapists who want
+          to deepen their EMDR practice and work towards professional accreditation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 2rem 0;">
+    <div class="container">
+      <span class="section-label section-label--blush">Who this is for</span>
+      <h2 class="section-title">Is this the right fit for your stage of practice?</h2>
+      <hr class="divider divider--blush">
+      <p class="section-intro">Carmel's consultation is best suited to therapists who have completed EMDR training and are looking to build confidence, competence, and formal recognition in their EMDR practice.</p>
+      <div style="margin-top: 1.5rem; background: var(--blush-light); border-radius: 8px; padding: 1.5rem; border: 1px solid rgba(168,120,98,0.2); max-width: 600px;">
+        <strong style="font-size: 0.88rem; color: var(--blush-dark);">This service is for you if you are…</strong>
+        <ul style="margin-top: 0.75rem; list-style: disc; padding-left: 1.5rem; color: var(--text-mid); font-size: 0.9rem; line-height: 1.8;">
+          <li>A trained therapist working toward EMDRAA accreditation (Level I or II)</li>
+          <li>An EMDRAA accredited practitioner seeking ongoing consultation hours</li>
+          <li>A therapist wanting to deepen your EMDR skills with complex presentations</li>
+          <li>A therapist based anywhere in Australia (telehealth available)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0;">
+    <div class="container">
+      <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--text-dark);">EMDRAA Accredited Consultant</h3>
+      <p style="color: var(--text-mid); line-height: 1.75; margin-top: 0.75rem;">
+        Carmel holds the highest level of EMDR accreditation available through the EMDR Association of Australia — Accredited Consultant status. This designation recognises advanced clinical expertise in EMDR and the ability to supervise and train other practitioners.
+      </p>
+      <p style="color: var(--text-mid); line-height: 1.75; margin-top: 0.75rem;">
+        She is also an AHPRA-registered psychologist and Psychology Board of Australia approved supervisor, with over a decade of private practice experience in the Southern Highlands.
+      </p>
+      <p style="margin-top: 1rem; padding: 1rem 1.25rem; background: rgba(168,120,98,0.08); border-radius: 6px; border-left: 3px solid var(--blush); color: var(--text-mid); line-height: 1.75; font-size: 0.9rem;">
+        <strong style="color: var(--blush-dark);">New:</strong> Carmel has recently been selected to join a small panel of EMDR Consultants providing EMDR case consultations to members of the Australian Psychological Society (APS).
+      </p>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0; background: var(--cream);">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">Consultation options</h2>
+      <div class="consult-cards" style="margin-top: 2rem;">
+        <div class="consult-card">
+          <span class="consult-card-tag">One-on-one</span>
+          <h3>Individual Consultation</h3>
+          <p>Individual consultation provides dedicated, personalised attention to your EMDR clinical work. Sessions are tailored to your current stage of practice and the specific cases or challenges you're bringing.</p>
+          <ul>
+            <li>Case conceptualisation and protocol selection</li>
+            <li>Review of EMDR process with specific clients</li>
+            <li>Stuck points and complex presentations</li>
+            <li>Phase-by-phase guidance</li>
+            <li>Debrief and reflective practice</li>
+            <li>Hours count toward EMDRAA accreditation</li>
+          </ul>
+        </div>
+        <div class="consult-card">
+          <span class="consult-card-tag">Small group</span>
+          <h3>Group Consultation</h3>
+          <p>Group consultation brings together a small number of therapists for peer learning, case discussion, and collective skill development.</p>
+          <ul>
+            <li>Facilitated case presentations and discussion</li>
+            <li>Shared learning from diverse clinical examples</li>
+            <li>Peer reflection and collegial support</li>
+            <li>Typically 4–6 participants per group</li>
+            <li>Hours count toward EMDRAA accreditation</li>
+            <li>Contact Carmel to enquire about upcoming groups</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0;">
+    <div class="container">
+      <span class="section-label section-label--blush">What to expect</span>
+      <h2 class="section-title">How consultation with Carmel works</h2>
+      <hr class="divider divider--blush">
+      <div class="process-steps" style="margin-top: 1.5rem;">
+        <div class="process-step"><span class="step-number">01</span><div class="step-content"><h3>Initial enquiry</h3><p>Contact Carmel to discuss your needs and goals — whether you're working toward accreditation or seeking specific skill development.</p></div></div>
+        <div class="process-step"><span class="step-number">02</span><div class="step-content"><h3>Booking and scheduling</h3><p>Sessions are booked through the Halaxy booking platform. Carmel will discuss session frequency based on your accreditation requirements.</p></div></div>
+        <div class="process-step"><span class="step-number">03</span><div class="step-content"><h3>Consultation sessions</h3><p>Sessions are typically 50 minutes. Bring your case material, questions, or specific challenges.</p></div></div>
+        <div class="process-step"><span class="step-number">04</span><div class="step-content"><h3>Documentation</h3><p>Carmel provides documentation of hours completed for your EMDRAA accreditation application. EMDRAA documentation requirements are your responsibility to manage.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- Therapist FAQs -->
+  <section style="padding: 2rem 0; background: var(--cream);">
+    <div class="container">
+      <h2 class="section-title">Therapist FAQs</h2>
+      <hr class="divider divider--blush">
+      <div style="max-width: 720px; margin-top: 1.5rem;">
+        <p style="margin-bottom: 0.5rem;"><strong>Do I need to have completed formal EMDR training first?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem;">Yes. Carmel's consultation services are designed for therapists who have completed (or are currently completing) EMDRAA-approved EMDR training.</p>
+
+        <p style="margin-bottom: 0.5rem;"><strong>What professional backgrounds do you work with?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem;">Carmel works with psychologists, social workers, counsellors, and other therapists who have completed EMDR training.</p>
+
+        <p style="margin-bottom: 0.5rem;"><strong>How often should I schedule consultation sessions?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem;">Monthly consultation is common for therapists actively doing EMDR work, but Carmel will discuss the right frequency with you.</p>
+
+        <p style="margin-bottom: 0.5rem;"><strong>Is consultation available interstate?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem;">Yes. All consultation is available via telehealth, making it accessible to therapists across Australia.</p>
+
+        <p style="margin-bottom: 0.5rem;"><strong>What are the fees for consultation?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75;">Current fees are listed on the fees &amp; bookings page. Consultation fees are not eligible for Medicare rebates — they are a professional development expense.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 5: ABOUT
+  ══════════════════════════════════════ -->
+  <p class="page-label">Page 5: About Carmel <span>about.html</span></p>
+
+  <section class="page-hero" style="padding: 2.5rem 0;">
+    <div class="container">
+      <div class="page-hero-inner">
+        <span class="section-label">The person behind the practice</span>
+        <h1 class="page-hero-title">About Carmel</h1>
+        <p class="page-hero-lead">
+          Carmel Pound is a registered psychologist with over a decade of private practice
+          experience, a genuine passion for EMDR, and a warm, collaborative approach to
+          supporting both clients and fellow practitioners.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 2rem 0;">
+    <div class="container">
+      <div class="bio-layout">
+        <div class="bio-image-wrap">
+          <img src="images/carmel-about.jpg" alt="Carmel Pound" style="border-radius: 12px;">
+        </div>
+        <div>
+          <span class="section-label">Carmel's story</span>
+          <h2 class="section-title">Experienced, warm, and genuinely invested</h2>
+          <hr class="divider">
+          <div class="bio-content">
+            <p>Carmel Pound's path to psychology took her across Australia and beyond. After completing her undergraduate studies in Melbourne, she moved to Sydney before spending time working with communities in rural New South Wales — an experience that gave her a deep appreciation for the diverse ways people come to need psychological support, and the courage it takes to seek it.</p>
+            <p>A period working in Vietnam further broadened her perspective, exposing her to different cultural frameworks around mental health, resilience, and healing — all of which she brings to her practice today. Eventually, Carmel settled in the Southern Highlands, where she has been in private practice for over a decade.</p>
+            <p>Over that time, she has developed a particular expertise and passion for EMDR — Eye Movement Desensitisation and Reprocessing. The evidence base for EMDR is among the strongest in psychological treatment, and Carmel found it consistently effective for her clients, particularly those carrying trauma. This led her to pursue advanced training and, eventually, Accredited Consultant status with the EMDR Association of Australia — one of a select group of practitioners to hold this designation.</p>
+            <p>Today, Carmel divides her practice between individual therapy (with EMDR where appropriate) and professional consultation and supervision for therapists who are themselves building EMDR skills. She is equally at home sitting with a client working through something deeply personal, and in conversation with a therapist navigating a complex case.</p>
+            <p>Carmel's approach is calm, collaborative, and unhurried. She believes that good therapy is built on a strong foundation of trust and genuine understanding — and that the therapeutic relationship itself is one of the most powerful ingredients in meaningful change.</p>
+            <blockquote style="margin: 2rem 0; padding: 1.5rem 1.75rem; background: var(--sage-light); border-left: 3px solid var(--sage); border-radius: 0 6px 6px 0; font-family: var(--font-heading); font-size: 1.15rem; font-style: italic; color: var(--text-dark); line-height: 1.6;">
+              "I came to psychology because I wanted to do something that genuinely mattered. Twenty-odd years later, that still feels true — particularly on the days when a client tells me something shifted."
+            </blockquote>
+            <p>Outside of her clinical work, Carmel is committed to giving back to the profession. Supporting therapists through EMDR consultation is a role she values highly — helping practitioners build the skills and confidence to offer this powerful therapy to their own clients has a multiplying effect that she finds deeply meaningful.</p>
+            <p>Most recently, Carmel has been selected to join a small panel of EMDR Consultants chosen by the Australian Psychological Society (APS) to provide EMDR case consultations to APS members across Australia — a recognition of both her expertise and her standing within the field.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0; background: var(--sage-bg);">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">Qualifications &amp; accreditations</h2>
+      <div class="quals-grid" role="list" style="margin-top: 2rem;">
+        <div class="qual-card" role="listitem"><div class="qual-card-text"><strong>EMDRAA Accredited Consultant</strong><span>EMDR Association of Australia (EMDRAA)</span></div></div>
+        <div class="qual-card" role="listitem"><div class="qual-card-text"><strong>AHPRA Registered Psychologist</strong><span>Psychology Board of Australia</span></div></div>
+        <div class="qual-card" role="listitem"><div class="qual-card-text"><strong>Psychology Board Approved Supervisor</strong><span>Supervision of provisional and registered psychologists</span></div></div>
+        <div class="qual-card" role="listitem"><div class="qual-card-text"><strong>Medicare Registered Psychologist</strong><span>Mental Health Treatment Plan rebates available</span></div></div>
+        <div class="qual-card" role="listitem"><div class="qual-card-text"><strong>WorkCover NSW Accredited Practitioner</strong><span>Psychological treatment of work-related injuries</span></div></div>
+        <div class="qual-card" role="listitem"><div class="qual-card-text"><strong>Bachelor of Applied Science (Psychology)</strong><span>With Graduate Diploma of Applied Psychology</span></div></div>
+        <div class="qual-card" role="listitem"><div class="qual-card-text"><strong>Member, Australian Psychological Society (APS)</strong><span>Selected for APS EMDR Case Consultation Panel</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0; background: var(--cream);">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">Clinical approach &amp; values</h2>
+      <div class="approach-grid" style="margin-top: 2rem;">
+        <div class="approach-card"><h3>Trauma-informed</h3><p>All of Carmel's clinical work is underpinned by an understanding of how trauma affects the mind, body, and sense of self. Creating safety first, always.</p></div>
+        <div class="approach-card"><h3>Collaborative</h3><p>Therapy is done with you, not to you. Carmel values your insight into your own experience, invites ongoing feedback, and works to ensure you feel in control.</p></div>
+        <div class="approach-card"><h3>Evidence-based</h3><p>Carmel draws on approaches with strong research support — including EMDR, CBT, and trauma-focused interventions — while tailoring her methods to each individual.</p></div>
+        <div class="approach-card"><h3>Paced and unhurried</h3><p>There is no race to process difficult material. Carmel takes the time needed and will never pressure you to move faster than you're ready to.</p></div>
+        <div class="approach-card"><h3>Warm and direct</h3><p>Carmel's manner is warm, genuine, and straightforward. She will offer honest feedback and clear guidance while maintaining a safe, non-judgemental space.</p></div>
+        <div class="approach-card"><h3>Invested in professional growth</h3><p>For therapists seeking consultation, Carmel brings a genuine investment in your professional development and the wellbeing of the people you serve.</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 6: FEES & BOOKINGS
+  ══════════════════════════════════════ -->
+  <p class="page-label">Page 6: Fees &amp; Bookings <span>bookings.html</span></p>
+
+  <section class="page-hero" style="padding: 2.5rem 0;">
+    <div class="container">
+      <div class="page-hero-inner">
+        <span class="section-label">Practical information</span>
+        <h1 class="page-hero-title">Fees &amp; <em>Bookings</em></h1>
+        <p class="page-hero-lead">
+          Clear information about session fees, Medicare rebates, and how to book —
+          so you can focus on what matters.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 2rem 0;">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">How to book</h2>
+      <div class="booking-steps" style="margin-top: 2rem;">
+        <div class="booking-step"><div class="booking-step-num">1</div><h3>Choose your pathway</h3><p>Clients seeking therapy send a short enquiry — Carmel will get back to you personally. Therapists seeking EMDR supervision or case consultation book directly online via Halaxy.</p></div>
+        <div class="booking-step"><div class="booking-step-num">2</div><h3>Share a little about yourself</h3><p>Clients: briefly describe what you're looking for and when you're available. Therapists: select a session type and a time that suits you in Halaxy.</p></div>
+        <div class="booking-step"><div class="booking-step-num">3</div><h3>Confirm your appointment</h3><p>Clients will hear back from Carmel directly — usually within one business day — to confirm a time. Therapists receive an immediate booking confirmation from Halaxy.</p></div>
+      </div>
+
+      <div style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+        <div style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 8px; border-top: 3px solid var(--sage);">
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-dark);">For Clients</h3>
+          <p style="font-size: 0.9rem; color: var(--text-mid); line-height: 1.7;">Individual therapy &amp; EMDR therapy. Online via Zoom or in person in Bowral, NSW.</p>
+          <p style="font-size: 0.85rem; color: var(--text-mid); margin-top: 0.75rem;"><strong>Current availability:</strong> Monday &amp; Wednesday — in person (Bowral). Tuesday &amp; Thursday — telehealth only.</p>
+        </div>
+        <div style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 8px; border-top: 3px solid var(--blush);">
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-dark);">For Therapists</h3>
+          <p style="font-size: 0.9rem; color: var(--text-mid); line-height: 1.7;">EMDR supervision and case consultation. Telehealth Australia-wide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0; background: var(--cream);">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">Current fees</h2>
+      <div class="fees-grid" style="margin-top: 2rem;">
+        <div class="fee-card fee-card--sage">
+          <div class="fee-card-header"><span class="fee-card-tag">For Clients</span><h3 class="fee-card-title">Therapy &amp; EMDR</h3></div>
+          <div class="fee-row"><div class="fee-row-label">Standard session (50 min)<small>Individual therapy or EMDR therapy</small></div><span class="fee-row-amount">$240</span></div>
+          <div class="fee-row"><div class="fee-row-label">Initial consultation (60 min)<small>First appointment, extended for history &amp; assessment</small></div><span class="fee-row-amount">$240</span></div>
+          <div class="fee-row"><div class="fee-row-label">Medicare rebate<small>With a valid Mental Health Treatment Plan from your GP (as at April 2026)</small></div><span class="fee-row-amount">$98.95</span></div>
+          <div class="fee-row"><div class="fee-row-label">Out-of-pocket (gap)<small>After Medicare rebate</small></div><span class="fee-row-amount">$141.05</span></div>
+          <div class="fee-note">Medicare rebates are available for up to 10 individual therapy sessions per calendar year with a valid Mental Health Treatment Plan. A GP referral is not required to see Carmel, but is required to access Medicare rebates.</div>
+        </div>
+        <div class="fee-card fee-card--blush">
+          <div class="fee-card-header"><span class="fee-card-tag">For Therapists</span><h3 class="fee-card-title">EMDR Supervision &amp; Case Consultation</h3></div>
+          <div class="fee-row"><div class="fee-row-label">Individual consultation (50 min)<small>One-on-one EMDR supervision &amp; case consultation</small></div><span class="fee-row-amount">$225</span></div>
+          <div class="fee-row"><div class="fee-row-label">Group consultation (per person)<small>Small group, max 4 participants · 1 or 2 hour sessions</small></div><span class="fee-row-amount">$240/hr ÷ participants</span></div>
+          <div class="fee-note">Consultation fees are not eligible for Medicare rebates. These are professional development expenses.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0;">
+    <div class="container" style="max-width: 720px;">
+      <h2 class="section-title">Appointment policy</h2>
+      <hr class="divider">
+      <div class="policy-box">
+        <h3>Cancellation &amp; rescheduling</h3>
+        <p>If you need to cancel or reschedule an appointment, please do so with as much notice as possible. A minimum of <strong>48 hours' notice</strong> is required to avoid a cancellation fee.</p>
+        <p>Appointments cancelled or not attended within 48 hours of the scheduled time may incur a late cancellation fee. This fee is not eligible for Medicare rebate.</p>
+        <p>Carmel understands that unexpected circumstances arise — please contact her as soon as possible if something comes up.</p>
+      </div>
+      <div style="margin-top: 1.5rem; padding: 1.5rem; background: var(--cream); border-radius: 8px; border: 1px solid var(--border);">
+        <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.5rem;">Payment</h3>
+        <p style="font-size: 0.875rem; color: var(--text-mid); line-height: 1.75;">Payment is due at the time of your session. Payments are processed securely through Halaxy. Medicare rebates are processed at the time of payment where applicable.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- Booking FAQs -->
+  <section style="padding: 2rem 0; background: var(--sage-bg);">
+    <div class="container">
+      <h2 class="section-title">Booking FAQs</h2>
+      <hr class="divider">
+      <div style="max-width: 720px; margin-top: 1.5rem;">
+        <p style="margin-bottom: 0.5rem;"><strong>Do I need a GP referral to see Carmel?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem;">No. You can book directly without a GP referral. However, to access a Medicare rebate you will need a Mental Health Treatment Plan prepared by your GP or psychiatrist.</p>
+
+        <p style="margin-bottom: 0.5rem;"><strong>How many Medicare-rebated sessions am I entitled to?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem;">Under the Better Access initiative, most people are eligible for up to 10 individual therapy sessions per calendar year. After the first 6 sessions, your GP will need to review and re-refer.</p>
+
+        <p style="margin-bottom: 0.5rem;"><strong>Is telehealth covered by Medicare?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem;">Yes. Medicare rebates apply to both in-person and telehealth sessions.</p>
+
+        <p style="margin-bottom: 0.5rem;"><strong>Can I use private health insurance?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75; margin-bottom: 1.5rem;">Some private health funds include psychology cover. You cannot claim both a Medicare rebate and a private health insurance rebate for the same session.</p>
+
+        <p style="margin-bottom: 0.5rem;"><strong>What if I'm not sure whether I need therapy or EMDR?</strong></p>
+        <p style="color: var(--text-mid); line-height: 1.75;">That's completely fine — just book a standard client appointment. Carmel will discuss your situation and recommend the most appropriate approach.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       PAGE 7: CONTACT
+  ══════════════════════════════════════ -->
+  <p class="page-label">Page 7: Contact <span>contact.html</span></p>
+
+  <section class="page-hero" style="padding: 2.5rem 0;">
+    <div class="container">
+      <div class="page-hero-inner">
+        <span class="section-label">Get in touch</span>
+        <h1 class="page-hero-title">Contact <em>Carmel</em></h1>
+        <p class="page-hero-lead">
+          Whether you have a question before booking, want to know if Carmel's practice is
+          the right fit for you, or need to reach her for another reason — please don't
+          hesitate to get in touch.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 2rem 0;">
+    <div class="container">
+      <h2 class="section-title">Contact form fields</h2>
+      <p style="color: var(--text-mid); line-height: 1.75; margin-top: 1rem;">
+        Carmel aims to respond to all enquiries within one business day. For urgent mental
+        health concerns, please contact Lifeline on 13 11 14 or your nearest emergency department.
+      </p>
+      <div style="margin-top: 1.5rem; padding: 1.5rem; background: var(--cream); border-radius: 8px; border: 1px solid var(--border);">
+        <p style="font-size: 0.9rem; color: var(--text-mid); line-height: 2;">
+          <strong>Form fields:</strong> First name*, Last name*, Email address*, Phone number, Enquiry type* (options: A client interested in therapy / A client interested in EMDR therapy / A therapist seeking EMDR consultation / A therapist interested in group consultation / Other), Message*
+        </p>
+        <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.75rem;">
+          Your information is handled in accordance with Carmel's Privacy Policy. It will not be shared with third parties without your consent.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0;">
+    <div class="container">
+      <h2 class="section-title">Contact details</h2>
+      <div style="margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        <div style="padding: 1.25rem; background: var(--cream); border-radius: 8px;">
+          <strong style="display:block; margin-bottom: 0.5rem;">Email</strong>
+          <p style="color: var(--text-mid);">carmelpound@gmail.com</p>
+          <p style="font-size: 0.78rem; color: var(--text-light); margin-top: 0.25rem;">Aim to respond within 1 business day</p>
+        </div>
+        <div style="padding: 1.25rem; background: var(--cream); border-radius: 8px;">
+          <strong style="display:block; margin-bottom: 0.5rem;">Consulting rooms</strong>
+          <p style="color: var(--text-mid);">Bowral, Southern Highlands NSW 2576</p>
+          <p style="font-size: 0.78rem; color: var(--text-light); margin-top: 0.25rem;">Exact address provided upon booking</p>
+        </div>
+        <div style="padding: 1.25rem; background: var(--cream); border-radius: 8px;">
+          <strong style="display:block; margin-bottom: 0.5rem;">Telehealth</strong>
+          <p style="color: var(--text-mid);">Available Australia-wide via secure video</p>
+          <p style="font-size: 0.78rem; color: var(--text-light); margin-top: 0.25rem;">Telehealth link provided upon booking</p>
+        </div>
+        <div style="padding: 1.25rem; background: var(--cream); border-radius: 8px;">
+          <strong style="display:block; margin-bottom: 0.5rem;">Bookings</strong>
+          <p style="color: var(--text-mid);">Online via Halaxy booking portal</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0; background: #FFF3F0;">
+    <div class="container">
+      <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--text-dark); margin-bottom: 1rem;">Crisis information</h3>
+      <p style="color: var(--text-mid); line-height: 1.75;">
+        <strong>If you or someone else is in crisis,</strong> please do not use the contact form. Call <strong>000</strong> in an emergency, or contact:
+      </p>
+      <ul style="margin-top: 0.75rem; list-style: none; padding: 0; color: var(--text-mid); line-height: 2;">
+        <li><strong style="color: var(--text-dark);">Lifeline</strong> — 13 11 14 (24 hours)</li>
+        <li><strong style="color: var(--text-dark);">Beyond Blue</strong> — 1300 22 4636</li>
+        <li><strong style="color: var(--text-dark);">Suicide Call Back Service</strong> — 1300 659 467</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section style="padding: 2rem 0; background: var(--cream);">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">After you reach out</h2>
+      <div class="info-cards" style="margin-top: 2rem;">
+        <div class="info-card"><h3>Prompt reply</h3><p>Carmel aims to respond to all enquiries within one business day. You'll receive a personal response — not an automated one.</p></div>
+        <div class="info-card"><h3>No pressure</h3><p>There's no obligation when you enquire. Carmel will answer your questions and help you work out whether her practice is the right fit.</p></div>
+        <div class="info-card"><h3>Confidential from the outset</h3><p>Anything you share in your enquiry is treated with the same confidentiality as information shared within a session.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- End marker -->
+  <div style="text-align: center; padding: 3rem 0; background: #2A2825; color: rgba(255,255,255,0.5); font-family: 'Inter', sans-serif; font-size: 0.82rem;">
+    End of content review — 7 pages · March 2026 draft
+  </div>
+
+</body>
+</html>
