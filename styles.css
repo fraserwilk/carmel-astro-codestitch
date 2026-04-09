@@ -906,6 +906,13 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 
+.cred-logo {
+  height: 52px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+}
+
 .cred-title {
   font-size: 0.85rem;
   font-weight: 600;
