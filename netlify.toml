@@ -1,3 +1,50 @@
 [build]
   publish = "."
   command = "echo 'Static site — no build required'"
+
+# ── Old Astro URL → New page redirects ──────────────────────────────
+[[redirects]]
+  from = "/emdr"
+  to   = "/emdr-clients.html"
+  status = 301
+
+[[redirects]]
+  from = "/work-with-me"
+  to   = "/therapy.html"
+  status = 301
+
+[[redirects]]
+  from = "/tips"
+  to   = "/index.html"
+  status = 301
+
+# ── Clean URL support (no .html extension) ──────────────────────────
+[[redirects]]
+  from = "/about"
+  to   = "/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to   = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/bookings"
+  to   = "/bookings.html"
+  status = 301
+
+[[redirects]]
+  from = "/therapy"
+  to   = "/therapy.html"
+  status = 301
+
+[[redirects]]
+  from = "/emdr-clients"
+  to   = "/emdr-clients.html"
+  status = 301
+
+[[redirects]]
+  from = "/emdr-consultation"
+  to   = "/emdr-consultation.html"
+  status = 301
